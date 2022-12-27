@@ -1,4 +1,4 @@
-import React, { useState, useRef, MutableRefObject } from "react";
+import React, { useState, useRef, MutableRefObject, useEffect } from "react";
 
 interface AppProps {
   message: string;
@@ -9,10 +9,15 @@ const Hero = ({ message }: AppProps): JSX.Element => {
   const [mouseY, setMouseY] = useState();
   const [mouseXColor, setMouseXColor] = useState("");
   const [mouseYColor, setMouseYColor] = useState("");
-  const myRef = useRef() as MutableRefObject<HTMLDivElement>;
+  const [screenY, setScreenY] = useState(0);
+
+  const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
+
+  const transitionClasses =
+    "transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300";
 
   const executeScroll = () => {
-    myRef.current.scrollIntoView();
+    heroBottomAnchor.current.scrollIntoView();
   };
 
   document.onmousemove = handleMouseMove;
@@ -68,44 +73,42 @@ const Hero = ({ message }: AppProps): JSX.Element => {
     } else setMouseXColor("from-white");
   }
 
+  useEffect(() => {}, []);
+
   return (
     <div
-      className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} h-screen flex justify-center items-center flex-col relative saturate-200`}
+      className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} h-screen flex justify-center items-center flex-col relative saturate-200 group`}
+      ref={(el) => {
+        if (!el) return;
+        console.log(el.getBoundingClientRect().top);
+      }}
     >
-      <div className="absolute">
-        <h1
-          className={`text-7xl bold ${
-            mouseX && mouseX > 700 && mouseY && mouseY > 400
-              ? "text-gray-100"
-              : "text-gray-900 shadow-indigo-500/40"
-          }`}
-        >
+      <div
+        id="TextContainer"
+        className={`absolute ${
+          mouseY && mouseY > 300
+            ? "text-gray-100"
+            : "text-gray-900 shadow-indigo-500/40"
+        }`}
+      >
+        <h1 className={`text-7xl bold ${transitionClasses}`}>
           Merry Christmas
         </h1>
-        <h3
-          className={`text-4xl bold mb-5 ${
-            mouseX && mouseX > 700 && mouseY && mouseY > 400
-              ? "text-gray-100"
-              : "text-gray-900"
-          }`}
-        >
+        <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
           & Happy New Year
         </h3>
         <button
           className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
           onClick={executeScroll}
-          // onClick={() =>
-          //   window.scrollTo({ top: 1000, left: 0, behavior: "smooth" })
-          // }
         >
           Continue
         </button>
-        {/* <div className="flex flex-row justify-center space-x-6">
+        <div className="flex flex-row justify-center space-x-6">
           <div className="text-semibold text-lg">X: {mouseX}</div>
           <div className="text-semibold text-lg">Y: {mouseY}</div>
-        </div> */}
+        </div>
       </div>
-      <div ref={myRef} className="absolute bottom-0" />
+      <div ref={heroBottomAnchor} className="absolute bottom-0" />
     </div>
   );
 };
