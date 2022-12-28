@@ -88,22 +88,20 @@ const Hero = ({ message }: AppProps): JSX.Element => {
       setScrollTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
-
+    updateHero();
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  function updateHero(scrollTop: number) {
-    if (-130 > scrollText) return setScrollColor("blur-xl");
+  const updateHero = () => {
+    if (-200 > scrollText) return setScrollColor("blur-3xl");
+    else if (-160 > scrollText) return setScrollColor("blur-2xl");
+    else if (-130 > scrollText) return setScrollColor("blur-xl");
     else if (-100 > scrollText) return setScrollColor("blur-lg");
     else if (-70 > scrollText) return setScrollColor("blur-md");
     else if (-40 > scrollText) return setScrollColor("blur");
     else if (0 > scrollText) return setScrollColor("blur-sm");
     else return setScrollColor("");
-  }
-
-  useEffect(() => {
-    updateHero(scrollTop);
-  }, [scrollTop]);
+  };
 
   return (
     <div className="h-screen flex flex-col">
