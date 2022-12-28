@@ -14,7 +14,7 @@ const Navbar = (): JSX.Element => {
             />
           </svg>
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-            Grow by Henrik
+            Henrik Cheng
           </span>
         </a>
         <button

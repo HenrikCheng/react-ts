@@ -6,13 +6,13 @@ interface AppProps {
 }
 
 const Hero = ({ message }: AppProps): JSX.Element => {
-  const [mouseX, setMouseX] = useState();
-  const [mouseY, setMouseY] = useState();
-  const [mouseXColor, setMouseXColor] = useState("");
-  const [mouseYColor, setMouseYColor] = useState("");
-  const [scrollTop, setScrollTop] = useState(0);
-  const [scrollColor, setScrollColor] = useState("");
-  const [scrollText, setScrollText] = useState(0);
+  const [mouseX, setMouseX] = useState<number | null>();
+  const [mouseY, setMouseY] = useState<number | null>();
+  const [mouseXColor, setMouseXColor] = useState<string | null>();
+  const [mouseYColor, setMouseYColor] = useState<string | null>();
+  const [pixelsFromTop, setPixelsFromTop] = useState<number | undefined>();
+  const [scrollBlur, setScrollBlur] = useState<string | null>();
+  const [pixelsHeroTextTop, setPixelsHeroTextTop] = useState<number | undefined>();
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -76,7 +76,7 @@ const Hero = ({ message }: AppProps): JSX.Element => {
     } else setMouseXColor("from-white");
   }
   const onScroll = (e: any) => {
-    setScrollTop(e.target.documentElement.scrollTop);
+    setPixelsFromTop(e.target.documentElement.scrollTop);
   };
 
   useEffect(() => {
@@ -85,29 +85,30 @@ const Hero = ({ message }: AppProps): JSX.Element => {
 
   useEffect(() => {
     const onScroll = (e: any) => {
-      setScrollTop(e.target.documentElement.scrollTop);
+      setPixelsFromTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
     updateHero();
     return () => window.removeEventListener("scroll", onScroll);
-  }, [scrollTop]);
+  }, [pixelsFromTop]);
 
   const updateHero = () => {
-    if (-200 > scrollText) return setScrollColor("blur-3xl");
-    else if (-160 > scrollText) return setScrollColor("blur-2xl");
-    else if (-130 > scrollText) return setScrollColor("blur-xl");
-    else if (-100 > scrollText) return setScrollColor("blur-lg");
-    else if (-70 > scrollText) return setScrollColor("blur-md");
-    else if (-40 > scrollText) return setScrollColor("blur");
-    else if (0 > scrollText) return setScrollColor("blur-sm");
-    else return setScrollColor("");
+    if (!pixelsHeroTextTop) return;
+    else if (-200 > pixelsHeroTextTop) return setScrollBlur("blur-3xl");
+    else if (-160 > pixelsHeroTextTop) return setScrollBlur("blur-2xl");
+    else if (-130 > pixelsHeroTextTop) return setScrollBlur("blur-xl");
+    else if (-100 > pixelsHeroTextTop) return setScrollBlur("blur-lg");
+    else if (-70 > pixelsHeroTextTop) return setScrollBlur("blur-md");
+    else if (-40 > pixelsHeroTextTop) return setScrollBlur("blur");
+    else if (0 > pixelsHeroTextTop) return setScrollBlur("blur-sm");
+    else return setScrollBlur("");
   };
 
   return (
     <div className="h-screen flex flex-col">
       <Navbar />
       <div
-        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 ${scrollColor}`}
+        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 ${scrollBlur}`}
       >
         <div
           id="TextContainer"
@@ -121,7 +122,7 @@ const Hero = ({ message }: AppProps): JSX.Element => {
           <h1
             ref={(el) => {
               if (!el) return;
-              setScrollText(el.getBoundingClientRect().top);
+              setPixelsHeroTextTop(el.getBoundingClientRect().top);
             }}
             className={`text-7xl bold ${transitionClasses}`}
           >
@@ -139,7 +140,8 @@ const Hero = ({ message }: AppProps): JSX.Element => {
           {/* <div className="flex flex-row justify-center space-x-6">
             <div className="text-semibold text-lg">X: {mouseX}</div>
             <div className="text-semibold text-lg">Y: {mouseY}</div>
-            <div className="text-semibold text-lg">scrollTop: {scrollTop}</div>
+            <div className="text-semibold text-lg">pixelsFromTop: {pixelsFromTop}</div>
+            <div className="text-semibold text-lg">pixelsHeroTextTop: {pixelsHeroTextTop}</div>
           </div> */}
         </div>
         <div ref={heroBottomAnchor} className="absolute bottom-0" />
