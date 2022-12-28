@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-// enum AvailableColors {
-//   rose,
-//   amber,
-// }
-
-const AvailableColors = ["bg-amber", "bg-rose"];
+enum AvailableColors {
+  amber,
+  rose,
+  teal,
+}
 
 const Grid = (): JSX.Element => {
   const [isHovered, setIsHovered] = useState(0);
   const [currentColor, setCurrentColor] = useState(AvailableColors[0]);
-  console.log("🚀 ~ file: Index.tsx:13 ~ Grid ~ currentColor", currentColor);
   let grids = [];
 
   for (let index = 1; index <= 81; index++) {
@@ -19,15 +17,16 @@ const Grid = (): JSX.Element => {
 
   const gridColor = (isHovered: number, grid: number) => {
     const difference = Math.abs(isHovered - grid);
-    if (isHovered === grid) return `bg-amber-600`;
-    else if (difference === 1 || difference === 9) return `bg-amber-500`;
+    if (isHovered === grid) return `bg-${currentColor}-600`;
+    else if (difference === 1 || difference === 9)
+      return `bg-${currentColor}-500`;
     else if (
       difference === 2 ||
       difference === 8 ||
       difference === 10 ||
       difference === 18
     )
-      return `bg-amber-400`;
+      return `bg-${currentColor}-400`;
     else if (
       difference === 3 ||
       difference === 7 ||
@@ -36,7 +35,7 @@ const Grid = (): JSX.Element => {
       difference === 19 ||
       difference === 27
     )
-      return `bg-amber-300`;
+      return `bg-${currentColor}-300`;
     else if (
       difference === 4 ||
       difference === 6 ||
@@ -47,11 +46,16 @@ const Grid = (): JSX.Element => {
       difference === 28 ||
       difference === 36
     )
-      return `bg-amber-200`;
+      return `bg-${currentColor}-200 transition`;
   };
 
-  const switchColor = () => {
-    setCurrentColor(AvailableColors[1]);
+  const incrementGridColor = () => {
+    if (currentColor === AvailableColors[0])
+      setCurrentColor(AvailableColors[1]);
+    else if (currentColor === AvailableColors[1])
+      setCurrentColor(AvailableColors[2]);
+    else if (currentColor === AvailableColors[2])
+      setCurrentColor(AvailableColors[0]);
   };
 
   return (
@@ -60,17 +64,21 @@ const Grid = (): JSX.Element => {
         <button
           type="button"
           key={grid}
-          onClick={() => switchColor()}
+          onClick={() => incrementGridColor()}
           onMouseEnter={() => setIsHovered(grid)}
-          onMouseLeave={() => setIsHovered(0)}
           className={`h-20 bg-slate-800 text-white flex justify-center items-center rounded-2xl transition ease-in-out duration-300 ${gridColor(
             isHovered,
             grid
           )}`}
-        >
-          {gridColor(isHovered, grid)}
-        </button>
+        ></button>
       ))}
+      <div className="hidden">
+        <div className="bg-rose-600 bg-teal-600" />
+        <div className="bg-rose-500 bg-teal-500" />
+        <div className="bg-rose-400 bg-teal-400" />
+        <div className="bg-rose-300 bg-teal-300" />
+        <div className="bg-rose-200 bg-teal-200" />
+      </div>
     </div>
   );
 };
