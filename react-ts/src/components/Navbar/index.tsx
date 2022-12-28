@@ -1,15 +1,18 @@
-import React, { useState, useRef, MutableRefObject, useEffect } from "react";
-
 const Navbar = (): JSX.Element => {
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="https://google.com/" className="flex items-center">
-          <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            className="h-6 mr-3 sm:h-9"
-            alt="Flowbite Logo"
-          />
+        <a href="#" className="flex items-center space-x-2">
+          <svg height={30} width={30}>
+            <circle
+              cx="15"
+              cy="15"
+              r="12"
+              stroke="white"
+              strokeWidth="3"
+              fill="teal"
+            />
+          </svg>
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Grow by Henrik
           </span>
