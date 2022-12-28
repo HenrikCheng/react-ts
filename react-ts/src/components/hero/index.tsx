@@ -136,11 +136,11 @@ const Hero = ({ message }: AppProps): JSX.Element => {
           >
             Continue
           </button>
-          <div className="flex flex-row justify-center space-x-6">
+          {/* <div className="flex flex-row justify-center space-x-6">
             <div className="text-semibold text-lg">X: {mouseX}</div>
             <div className="text-semibold text-lg">Y: {mouseY}</div>
             <div className="text-semibold text-lg">scrollTop: {scrollTop}</div>
-          </div>
+          </div> */}
         </div>
         <div ref={heroBottomAnchor} className="absolute bottom-0" />
       </div>
