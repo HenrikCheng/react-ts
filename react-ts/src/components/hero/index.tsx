@@ -1,18 +1,19 @@
 import React, { useState, useRef, MutableRefObject, useEffect } from "react";
-import Navbar from "../Navbar";
 
-interface AppProps {
-  message: string;
+interface Props {
+  menuOpen: boolean;
 }
 
-const Hero = ({ message }: AppProps): JSX.Element => {
+const Hero = ({ menuOpen }: Props): JSX.Element => {
   const [mouseX, setMouseX] = useState<number | null>();
   const [mouseY, setMouseY] = useState<number | null>();
   const [mouseXColor, setMouseXColor] = useState<string | null>();
   const [mouseYColor, setMouseYColor] = useState<string | null>();
-  const [pixelsFromTop, setPixelsFromTop] = useState<number | undefined>();
+  const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
   const [scrollBlur, setScrollBlur] = useState<string | null>();
-  const [pixelsHeroTextTop, setPixelsHeroTextTop] = useState<number | undefined>();
+  const [pixelsHeroTextTop, setPixelsHeroTextTop] = useState<
+    number | undefined
+  >();
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -106,7 +107,6 @@ const Hero = ({ message }: AppProps): JSX.Element => {
 
   return (
     <div className="h-screen flex flex-col">
-      <Navbar />
       <div
         className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 ${scrollBlur}`}
       >
@@ -126,10 +126,10 @@ const Hero = ({ message }: AppProps): JSX.Element => {
             }}
             className={`text-7xl bold ${transitionClasses}`}
           >
-            Merry Christmas
+            Välkommen
           </h1>
           <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
-            & Happy New Year
+            till min sida
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
@@ -140,8 +140,12 @@ const Hero = ({ message }: AppProps): JSX.Element => {
           {/* <div className="flex flex-row justify-center space-x-6">
             <div className="text-semibold text-lg">X: {mouseX}</div>
             <div className="text-semibold text-lg">Y: {mouseY}</div>
-            <div className="text-semibold text-lg">pixelsFromTop: {pixelsFromTop}</div>
-            <div className="text-semibold text-lg">pixelsHeroTextTop: {pixelsHeroTextTop}</div>
+            <div className="text-semibold text-lg">
+              pixelsFromTop: {pixelsFromTop}
+            </div>
+            <div className="text-semibold text-lg">
+              pixelsHeroTextTop: {pixelsHeroTextTop}
+            </div>
           </div> */}
         </div>
         <div ref={heroBottomAnchor} className="absolute bottom-0" />

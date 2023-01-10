@@ -1,27 +1,60 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-const Navbar = (): JSX.Element => {
+interface Props {
+  setMenuOpen: any;
+  menuOpen: boolean;
+}
+
+const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
+  const [toggleMenu, setToggleMenu] = useState(menuOpen);
+  useEffect(() => {
+    setMenuOpen(!menuOpen);
+  }, [toggleMenu]);
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900">
+    <nav
+      className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative`}
+    >
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-        <a href="mailto:henrikcheng@live.se" className="flex items-center space-x-2">
-          <FontAwesomeIcon
-            icon={faEnvelope}
-            className="hover:text-gray-100 fa-lg text-gray-500"
-          />
+        <div className="flex flex-row space-x-2">
+          <a
+            href="https://www.linkedin.com/in/henrik-cheng-a8a3b9180/"
+            className="flex items-center"
+          >
+            <FontAwesomeIcon
+              icon={faLinkedin}
+              className="hover:text-gray-100 fa-lg text-gray-500"
+            />
+          </a>
+          <a
+            href="mailto:henrikcheng@live.se"
+            className="flex items-center space-x-2"
+          >
+            <FontAwesomeIcon
+              icon={faEnvelope}
+              className="hover:text-gray-100 fa-lg text-gray-500"
+            />
+          </a>
+          <a href="tel:+46704561258">
+            <FontAwesomeIcon
+              icon={faPhone}
+              className="hover:text-gray-100 text-gray-500"
+            />
+          </a>
           <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
             Henrik Cheng
           </span>
-        </a>
+        </div>
         <button
-          onClick={() => console.log("burger button click")}
+          onClick={() => setToggleMenu(!toggleMenu)}
           data-collapse-toggle="navbar-default"
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
+          disabled={!menuOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
