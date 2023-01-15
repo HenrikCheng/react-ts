@@ -1,18 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import { useAppDispatch } from "../../app/hooks";
+import { toggleModal } from "../Modal/modalSlice";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-interface Props {
-  setMenuOpen: any;
-  menuOpen: boolean;
-}
+const Navbar = () => {
+  const dispatch = useAppDispatch();
 
-const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
-  const [toggleMenu, setToggleMenu] = useState(menuOpen);
-  useEffect(() => {
-    setMenuOpen(!menuOpen);
-  }, [toggleMenu]);
   return (
     <nav
       className={`bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 relative`}
@@ -48,13 +44,12 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
           </span>
         </div>
         <button
-          onClick={() => setToggleMenu(!toggleMenu)}
+          onClick={() => dispatch(toggleModal())}
           data-collapse-toggle="navbar-default"
           type="button"
           className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-default"
           aria-expanded="false"
-          disabled={!menuOpen}
         >
           <span className="sr-only">Open main menu</span>
           <svg
@@ -79,7 +74,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
                 className="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:p-0 dark:text-white"
                 aria-current="page"
               >
-                Home
+                Hem
               </a>
             </li>
             <li>
@@ -87,7 +82,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
                 href="#"
                 className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                About
+                Om mig
               </a>
             </li>
             <li>
@@ -95,7 +90,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
                 href="#"
                 className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Services
+                CV
               </a>
             </li>
             <li>
@@ -103,7 +98,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
                 href="#"
                 className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Pricing
+                Demoprojekt
               </a>
             </li>
             <li>
@@ -111,7 +106,7 @@ const Navbar = ({ menuOpen, setMenuOpen }: Props): JSX.Element => {
                 href="#"
                 className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
               >
-                Contact
+                Kontakt
               </a>
             </li>
           </ul>

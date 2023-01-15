@@ -1,10 +1,6 @@
 import React, { useState, useRef, MutableRefObject, useEffect } from "react";
 
-interface Props {
-  menuOpen: boolean;
-}
-
-const Hero = ({ menuOpen }: Props): JSX.Element => {
+const Hero = () => {
   const [mouseX, setMouseX] = useState<number | null>();
   const [mouseY, setMouseY] = useState<number | null>();
   const [mouseXColor, setMouseXColor] = useState<string | null>();
