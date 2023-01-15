@@ -59,7 +59,7 @@ const Grid = (): JSX.Element => {
   };
 
   return (
-    <div className="grid grid-cols-9 md:gap-4 lg:gap-x-10 sm:p-4 bg-slate-900">
+    <div className="grid grid-cols-12 md:gap-4 lg:gap-x-10 sm:p-4 bg-slate-900">
       {grids.map((grid) => (
         <button
           type="button"

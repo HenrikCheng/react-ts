@@ -24,7 +24,7 @@ function App() {
       )}
       <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <Hero menuOpen={menuOpen} />
-      <Grid />
+      {/* <Grid /> */}
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <Counter />
