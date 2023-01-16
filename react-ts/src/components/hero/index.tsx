@@ -91,13 +91,13 @@ const Hero = () => {
 
   const updateHero = () => {
     if (!pixelsHeroTextTop) return;
-    else if (-200 > pixelsHeroTextTop) return setScrollBlur("blur-3xl");
-    else if (-160 > pixelsHeroTextTop) return setScrollBlur("blur-2xl");
-    else if (-130 > pixelsHeroTextTop) return setScrollBlur("blur-xl");
-    else if (-100 > pixelsHeroTextTop) return setScrollBlur("blur-lg");
-    else if (-70 > pixelsHeroTextTop) return setScrollBlur("blur-md");
-    else if (-40 > pixelsHeroTextTop) return setScrollBlur("blur");
-    else if (0 > pixelsHeroTextTop) return setScrollBlur("blur-sm");
+    else if (-180 > pixelsHeroTextTop) return setScrollBlur("blur-3xl");
+    else if (-140 > pixelsHeroTextTop) return setScrollBlur("blur-2xl");
+    else if (-100 > pixelsHeroTextTop) return setScrollBlur("blur-xl");
+    else if (-60 > pixelsHeroTextTop) return setScrollBlur("blur-lg");
+    else if (-20 > pixelsHeroTextTop) return setScrollBlur("blur-md");
+    else if (10 > pixelsHeroTextTop) return setScrollBlur("blur");
+    else if (40 > pixelsHeroTextTop) return setScrollBlur("blur-sm");
     else return setScrollBlur("");
   };
 
@@ -133,7 +133,7 @@ const Hero = () => {
           >
             Continue
           </button>
-          {/* <div className="flex flex-row justify-center space-x-6">
+          <div className="flex flex-row justify-center space-x-6">
             <div className="text-semibold text-lg">X: {mouseX}</div>
             <div className="text-semibold text-lg">Y: {mouseY}</div>
             <div className="text-semibold text-lg">
@@ -142,7 +142,7 @@ const Hero = () => {
             <div className="text-semibold text-lg">
               pixelsHeroTextTop: {pixelsHeroTextTop}
             </div>
-          </div> */}
+          </div>
         </div>
         <div ref={heroBottomAnchor} className="absolute bottom-0" />
       </div>

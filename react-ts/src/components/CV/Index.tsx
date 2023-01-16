@@ -1,13 +1,5 @@
-import React from "react"; // we need this to make JSX compile
+import React from "react";
 
-type CVProps = {
-  title: string;
-  paragraph: string;
-};
+const CV: React.FC<{}> = (props) => <div>CV</div>;
 
-export const CV = ({ title, paragraph }: CVProps) => (
-  <aside>
-    <h2>{title}</h2>
-    <p>{paragraph}</p>
-  </aside>
-);
+export default CV;
