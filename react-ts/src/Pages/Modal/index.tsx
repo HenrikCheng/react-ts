@@ -2,7 +2,7 @@ import React from "react";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { toggleModal, selectModal } from "./modalSlice";
 
-const Modal = () => {
+const Modal: React.FC<{}> = () => {
   const showModal = useAppSelector(selectModal);
   const dispatch = useAppDispatch();
   if (showModal) {
