@@ -13,6 +13,7 @@ import Demo from "../Demo";
 import Contact from "../Contact";
 // import Grid from "./components/Grid";
 import "../../App.css";
+import CardContainer from "../../components/Card/cardcontainer";
 
 const Home = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
@@ -28,16 +29,18 @@ const Home = () => {
   }, [pixelsFromTop]);
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <Modal />
       <div className={`${showModal && `fixed blur-sm`}`}>
         <Navbar />
         <Hero />
         {/* <Grid /> */}
-        <About />
-        <CV />
-        <Demo />
-        <Contact />
+        <CardContainer>
+          <About />
+          <Demo />
+          <CV />
+          <Contact />
+        </CardContainer>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Counter />
