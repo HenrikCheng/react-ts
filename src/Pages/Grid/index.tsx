@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, PropsWithChildren } from "react";
 
 enum AvailableColors {
   amber,
@@ -6,7 +6,10 @@ enum AvailableColors {
   teal,
 }
 
-const Grid = (): JSX.Element => {
+type Props = {
+  a: string
+} & PropsWithChildren
+const Grid = ({a, children}: Props) => {
   let grids = [];
   for (let index = 1; index <= 81; index++) {
     grids.push(index);

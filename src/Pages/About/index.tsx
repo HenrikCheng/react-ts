@@ -14,9 +14,11 @@ const About: React.FC<{}> = (props) => {
       <img
         src={AboutImage}
         alt="Portrait of Henrik"
-        className="rounded-full h-80 w-80"
+        className="rounded-full w-80"
+        // className="w-full object-cover h-80"
       />
-      <Text content="Henrik är en person med stort intresse för design, problemlösning och programmering. Han är alltid intresserad av att lära sig nya saker och utvecklas. Henrik har en läkarexamen från Karolinska Institutet och yrkeserfarenhet efter AT-tjänstgöring. Läkaryrket har format Henrik till en person som är effektiv i sitt arbete och givit honom vana att arbeta i team." />
+      <Text content="Henrik har ett stort intresse för design och problemlösning. Henrik har en bakgrund som läkare, vilket har format honom till en person som är effektiv i sitt arbete och givit honom vana att arbeta i team för kundens bästa. Han är alltid intresserad av att lära sig nya saker och utvecklas i sin roll." />
+      <Text content="Henrik tycker om att spendera tid med vänner och familj, exempelvis med att spela brädspel och padel. Henrik är nyfiken på omvärlden och gillar äventyr och investering. Det modigaste och roligaste Henrik har gjort var att cykla från Sverige till Paris för att samla in pengar till Barncancerfonden." />
     </div>
   );
 };

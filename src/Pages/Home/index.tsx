@@ -24,10 +24,6 @@ const Home = () => {
 
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
-    console.log(
-      "🚀 ~ file: index.tsx:19 ~ Home ~ pixelsFromTop",
-      pixelsFromTop
-    );
     return () => window.removeEventListener("scroll", onScroll);
   }, [pixelsFromTop]);
 
@@ -42,10 +38,10 @@ const Home = () => {
         <CV />
         <Demo />
         <Contact />
-        <header className="App-header">
+        {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Counter />
-        </header>
+        </header> */}
       </div>
     </div>
   );
