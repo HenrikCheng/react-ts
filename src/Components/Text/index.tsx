@@ -7,7 +7,7 @@ interface HeaderProps {
 
 const Header = ({ content, classes }: HeaderProps) => (
   <div>
-    <p className={classes || "text-left mx-4"}>{content}</p>
+    <p className={classes || "text-gray-700 text-base text-left mb-6 mx-2"}>{content}</p>
   </div>
 );
 

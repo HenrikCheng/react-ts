@@ -5,7 +5,7 @@ interface CardProps {
 }
 
 const Card = ({ children }: CardProps) => (
-  <div className="flex flex-col items-center space-y-4 mt-10 bg-white shadow-lg sm:m-6 py-10 md:px-10 px-4 max-w-2xl">
+  <div className="max-w-lg rounded overflow-hidden shadow-lg">
     {children}
   </div>
 );

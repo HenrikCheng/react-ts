@@ -11,9 +11,8 @@ import CV from "../CV";
 import About from "../About";
 import Demo from "../Demo";
 import Contact from "../Contact";
-// import Grid from "./components/Grid";
 import "../../App.css";
-import CardContainer from "../../components/Card/cardcontainer";
+import CardGrid from "../../components/Card/cardGrid";
 
 const Home = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
@@ -35,12 +34,12 @@ const Home = () => {
         <Navbar />
         <Hero />
         {/* <Grid /> */}
-        <CardContainer>
+        <CardGrid>
           <About />
           <Demo />
           <CV />
           <Contact />
-        </CardContainer>
+        </CardGrid>
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Counter />
