@@ -132,7 +132,7 @@ const Hero = () => {
             Välkommen
           </h1>
           <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
-            till min sida
+            till Henriks sida
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"

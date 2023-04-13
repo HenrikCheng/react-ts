@@ -16,14 +16,17 @@ const About: React.FC<{}> = (props) => {
       </div>
 
       <div className="px-6 pt-4 pb-2 flex flex-row">
-        <span className="inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #nyfiken
-        </span>
-        <span className="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #teamwork
+      <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #Kreativ
         </span>
         <span className="inline-block bg-indigo-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-          #kunskaptörstig
+          #Kunskaptörstig
+        </span>
+        <span className="inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #Nyfiken
+        </span>
+        <span className="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          #Teamwork
         </span>
       </div>
     </Card>
