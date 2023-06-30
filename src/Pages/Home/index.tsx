@@ -28,12 +28,11 @@ const Home = () => {
   }, [pixelsFromTop]);
 
   return (
-    <div className="bg-gray-100">
+    <main className="bg-gray-100">
       <Modal />
       <div className={`${showModal && `fixed blur-sm`}`}>
         <Navbar />
         <Hero />
-        {/* <Grid /> */}
         <CardGrid>
           <About />
           <Demo />
@@ -45,7 +44,7 @@ const Home = () => {
           <Counter />
         </header> */}
       </div>
-    </div>
+    </main>
   );
 };
 

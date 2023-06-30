@@ -8,7 +8,11 @@ const About: React.FC<{}> = (props) => {
   // const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   return (
     <Card>
-      <img className="w-full grayscale" src={AboutImage} alt="Portrait of Henrik" />
+      <img
+        className="w-full grayscale p-10"
+        src={AboutImage}
+        alt="Portrait of Henrik"
+      />
       <div className="px-6 py-4">
         <Header title="Om Henrik" classes="text-4xl font-semibold mb-4" />
         <Text content="Henrik har ett stort intresse för design och problemlösning. Henrik har en bakgrund som läkare, vilket har format honom till en person som är effektiv i sitt arbete och givit honom vana att arbeta i team för kundens bästa. Han är alltid intresserad av att lära sig nya saker och utvecklas i sin roll." />
@@ -16,7 +20,7 @@ const About: React.FC<{}> = (props) => {
       </div>
 
       <div className="px-6 pt-4 pb-2 flex flex-row">
-      <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+        <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
           #Kreativ
         </span>
         <span className="inline-block bg-indigo-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">

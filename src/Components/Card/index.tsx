@@ -5,7 +5,7 @@ interface CardProps {
 }
 
 const Card = ({ children }: CardProps) => (
-  <div className="max-w-lg rounded overflow-hidden shadow-lg bg-white">
+  <div className="max-w-3xl rounded overflow-hidden shadow-lg bg-white">
     {children}
   </div>
 );

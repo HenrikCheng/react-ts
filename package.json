@@ -1,7 +1,7 @@
 {
   "name": "react-ts",
   "version": "0.1.0",
-  "homepage": "https://henrikcheng.github.io/aboutme",
+  "homepage": "https://henrikcheng.github.io/react-ts",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.2.1",
