@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/react-ts/static/css/main.9359778b.css",
-    "main.js": "/react-ts/static/js/main.c6036be7.js",
+    "main.css": "/react-ts/static/css/main.29d2541e.css",
+    "main.js": "/react-ts/static/js/main.fc0f7ad9.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
     "static/media/FilmApp.png": "/react-ts/static/media/FilmApp.297e4129a8be74ba770a.png",
     "static/media/tictactoe.png": "/react-ts/static/media/tictactoe.4ea5f841276d093cc4f7.png",
     "static/media/AboutImage.jpeg": "/react-ts/static/media/AboutImage.be7a906eb43fc5633c88.jpeg",
     "index.html": "/react-ts/index.html",
-    "main.9359778b.css.map": "/react-ts/static/css/main.9359778b.css.map",
-    "main.c6036be7.js.map": "/react-ts/static/js/main.c6036be7.js.map",
+    "main.29d2541e.css.map": "/react-ts/static/css/main.29d2541e.css.map",
+    "main.fc0f7ad9.js.map": "/react-ts/static/js/main.fc0f7ad9.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9359778b.css",
-    "static/js/main.c6036be7.js"
+    "static/css/main.29d2541e.css",
+    "static/js/main.fc0f7ad9.js"
   ]
 }
