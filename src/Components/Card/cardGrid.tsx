@@ -4,10 +4,10 @@ const Container = () => {
   const itemArray = Array.from({ length: 10 });
 
   return (
-    <div className="App" style={{ width: "100%", overflowX: "scroll" }}>
-      <div style={{ display: "flex" }}>
+    <div className="w-full overflow-x-scroll">
+      <div className="flex space-x-6">
         {itemArray.map((_, index) => (
-          <Item key={index} number={index} />
+          <Item key={index} number={index + 1} />
         ))}
       </div>
     </div>
@@ -20,11 +20,8 @@ type ItemProps = {
 
 const Item = ({ number }: ItemProps) => {
   return (
-    <div
-      style={{ height: "300px", width: "514px", margin: "16px" }}
-      className="bg-slate-500"
-    >
-      <div style={{ height: "100%", width: "514px" }}>Hello {number}</div>
+    <div className="bg-slate-500 h-96">
+      <div className="h-full w-96">Hello {number}</div>
     </div>
   );
 };
