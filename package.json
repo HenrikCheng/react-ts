@@ -18,6 +18,7 @@
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.10",
     "@types/react-fontawesome": "^1.6.5",
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^8.0.5",
@@ -52,6 +53,7 @@
     ]
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.195",
     "autoprefixer": "^10.4.13",
     "gh-pages": "^5.0.0",
     "postcss": "^8.4.20",
