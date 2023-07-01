@@ -35,10 +35,10 @@ const Home = () => {
         <Hero />
         <CardGrid>
           <About />
-          <Demo />
           <CV />
           <Contact />
         </CardGrid>
+        <Demo />
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <Counter />

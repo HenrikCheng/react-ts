@@ -91,31 +91,24 @@ const Hero = () => {
 
   const updateHero = () => {
     if (!pixelsHeroTextTop) return;
-    else if (-180 > pixelsHeroTextTop)
-      return setScrollBlur("blur-3xl -translate-y-28");
-    else if (-140 > pixelsHeroTextTop)
-      return setScrollBlur("blur-2xl -translate-y-24");
-    else if (-100 > pixelsHeroTextTop)
-      return setScrollBlur("blur-xl -translate-y-20");
-    else if (-60 > pixelsHeroTextTop)
-      return setScrollBlur("blur-lg -translate-y-16");
-    else if (-20 > pixelsHeroTextTop)
-      return setScrollBlur("blur-md -translate-y-12");
-    else if (10 > pixelsHeroTextTop)
-      return setScrollBlur("blur -translate-y-8");
-    else if (40 > pixelsHeroTextTop)
-      return setScrollBlur("blur-sm -translate-y-4");
+    else if (-50 > pixelsHeroTextTop) return setScrollBlur("blur-3xl");
+    else if (-25 > pixelsHeroTextTop) return setScrollBlur("blur-2xl");
+    else if (0 > pixelsHeroTextTop) return setScrollBlur("blur-xl");
+    else if (25 > pixelsHeroTextTop) return setScrollBlur("blur-lg");
+    else if (50 > pixelsHeroTextTop) return setScrollBlur("blur-md");
+    else if (75 > pixelsHeroTextTop) return setScrollBlur("blur");
+    else if (100 > pixelsHeroTextTop) return setScrollBlur("blur-sm");
     else return setScrollBlur("");
   };
 
   return (
     <div className="h-screen flex flex-col">
       <div
-        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 ${scrollBlur}`}
+        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200`}
       >
         <div
           id="TextContainer"
-          className={`${
+          className={`${scrollBlur} ${
             (mouseY && mouseY > 600) ||
             (mouseX && mouseX > 400 && mouseY && mouseY > 400)
               ? "text-gray-100"
@@ -129,16 +122,16 @@ const Hero = () => {
             }}
             className={`text-7xl bold ${transitionClasses}`}
           >
-            Välkommen
+            HENRIK CHENG
           </h1>
           <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
-            till Henriks sida
+            Portfolio
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
             onClick={executeScroll}
           >
-            Continue
+            Läs mer
           </button>
           {/* <div className="flex flex-row justify-center space-x-6">
             <div className="text-semibold text-lg">X: {mouseX}</div>
