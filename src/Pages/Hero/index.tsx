@@ -121,12 +121,14 @@ const Hero = () => {
               if (!el) return;
               setPixelsHeroTextTop(el.getBoundingClientRect().top);
             }}
-            className={`text-7xl bold ${transitionClasses} group-hover:-translate-y-2`}
+            className={`text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
           >
             HENRIK CHENG
           </h1>
-          <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
-            Portfölj
+          <h3
+            className={`text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
+          >
+            PORTFOLIO
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
