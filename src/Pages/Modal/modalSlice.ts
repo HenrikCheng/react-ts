@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
 export interface CounterState {
-  value: boolean;
+  modal: boolean;
   status: "idle" | "loading" | "failed";
 }
 
 const initialState: CounterState = {
-  value: false,
+  modal: false,
   status: "idle",
 };
 
@@ -16,13 +16,13 @@ export const modelSlice = createSlice({
   initialState,
   reducers: {
     toggleModal: (state) => {
-      state.value = !state.value;
+      state.modal = !state.modal;
     },
   },
 });
 
 export const { toggleModal } = modelSlice.actions;
 
-export const selectModal = (state: RootState) => state.modal.value;
+export const selectModal = (state: RootState) => state.modal.modal;
 
 export default modelSlice.reducer;

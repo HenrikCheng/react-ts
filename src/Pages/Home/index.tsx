@@ -28,7 +28,7 @@ const Home = () => {
   return (
     <main className="bg-gray-100">
       <Modal />
-      <div className={`${showModal && `fixed blur-sm`}`}>
+      <div className={`${showModal ? `fixed blur-sm` : ""}`}>
         <Navbar />
         <Hero />
         <CardGrid>
