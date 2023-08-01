@@ -87,6 +87,7 @@ const Hero = () => {
     window.addEventListener("scroll", onScroll);
     updateHero();
     return () => window.removeEventListener("scroll", onScroll);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pixelsFromTop]);
 
   const updateHero = () => {

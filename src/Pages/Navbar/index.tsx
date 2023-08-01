@@ -35,7 +35,7 @@ const Navbar = () => {
               <FontAwesomeIcon icon={faEnvelope} className="text-lg" />
             </a>
             <a
-              href="tel:+46704561258"
+              href="tel:+46725133704"
               className="text-gray-500 hover:text-gray-100 mr-8"
             >
               <FontAwesomeIcon icon={faPhone} className="text-lg" />

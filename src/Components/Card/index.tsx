@@ -2,10 +2,15 @@ import { ReactNode } from "react"; // we need this to make JSX compile
 
 interface CardProps {
   children: ReactNode;
+  classes?: string;
 }
 
-const Card = ({ children }: CardProps) => (
-  <div className="max-w-3xl rounded overflow-hidden shadow-lg bg-white">
+const Card = ({ children, classes }: CardProps) => (
+  <div
+    className={
+      classes || `max-w-3xl rounded overflow-hidden shadow-lg bg-white`
+    }
+  >
     {children}
   </div>
 );

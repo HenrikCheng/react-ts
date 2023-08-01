@@ -37,10 +37,6 @@ const Home = () => {
           <Contact />
         </CardGrid>
         <Demo />
-        {/* <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <Counter />
-        </header> */}
       </div>
     </main>
   );

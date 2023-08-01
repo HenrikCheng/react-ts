@@ -22,7 +22,7 @@ type ItemProps = {
 const Item = ({ number }: ItemProps) => {
   return (
     <div className="h-96">
-      <div className="w-96 h-0 bg-blue-500">Hello {number}</div>
+      <div className="w-96 bg-blue-500">Hello {number}</div>
       <img src={AboutImage} alt="placeholder" className="h-full w-96" />
     </div>
   );
