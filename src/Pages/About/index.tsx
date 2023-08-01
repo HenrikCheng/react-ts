@@ -33,12 +33,12 @@ const About: React.FC<{}> = (props) => {
         </div>
       </div>
       <img
-        className="w-1/2 xl:w-1/3 object-cover xl:order-1 rounded-l-xl"
+        className="w-1/2 xl:w-1/3 object-cover xl:order-1 rounded-bl-xl xl:rounded-l-xl"
         src={AboutImage}
         alt="Portrait of Henrik"
       />
       <img
-        className="w-1/2 xl:w-1/3 object-cover xl:order-3 absolute xl:static bottom-0 right-0 rounded-r-xl"
+        className="w-1/2 xl:w-1/3 object-cover xl:order-3 absolute xl:static bottom-0 right-0 rounded-br-xl xl:rounded-r-xl"
         src={BikeImage}
         alt="Portrait of Henrik"
       />

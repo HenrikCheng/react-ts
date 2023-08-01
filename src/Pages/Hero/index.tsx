@@ -14,7 +14,7 @@ const Hero = () => {
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
 
   const transitionClasses =
-    "transition ease-in-out delay-150 group-hover:-translate-y-1 group-hover:scale-110 duration-300";
+    "transition ease-in-out delay-150 group-hover:scale-110 duration-300";
 
   const executeScroll = () => {
     heroBottomAnchor.current.scrollIntoView();
@@ -121,7 +121,7 @@ const Hero = () => {
               if (!el) return;
               setPixelsHeroTextTop(el.getBoundingClientRect().top);
             }}
-            className={`text-7xl bold ${transitionClasses}`}
+            className={`text-7xl bold ${transitionClasses} group-hover:-translate-y-2`}
           >
             HENRIK CHENG
           </h1>
