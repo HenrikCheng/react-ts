@@ -1,9 +1,7 @@
-import React, { useState, useRef, MutableRefObject, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAppSelector } from "../../app/hooks";
 import { selectModal } from "../Modal/modalSlice";
 
-import logo from "../../logo.svg";
-import { Counter } from "../../features/counter/Counter";
 import Navbar from "../Navbar";
 import Hero from "../Hero";
 import Modal from "../Modal";

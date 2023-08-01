@@ -1,4 +1,4 @@
-import React, { useState, useRef, MutableRefObject, useEffect } from "react";
+import { useState, useRef, MutableRefObject, useEffect } from "react";
 
 const Hero = () => {
   const [mouseX, setMouseX] = useState<number | null>();
@@ -125,7 +125,7 @@ const Hero = () => {
             HENRIK CHENG
           </h1>
           <h3 className={`text-4xl bold mb-5 ${transitionClasses}`}>
-            Portfolio
+            Portfölj
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"

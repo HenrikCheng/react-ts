@@ -15,8 +15,10 @@ const About: React.FC<{}> = (props) => {
       />
       <div className="px-6 py-4">
         <Header title="Om Henrik" classes="text-4xl font-semibold mb-4" />
-        <Text content="Henrik har ett stort intresse för design och problemlösning. Henrik har en bakgrund som läkare, vilket har format honom till en person som är effektiv i sitt arbete och givit honom vana att arbeta i team för kundens bästa. Han är alltid intresserad av att lära sig nya saker och utvecklas i sin roll." />
-        <Text content="Henrik tycker om att spendera tid med vänner och familj, exempelvis med att spela brädspel och padel. Henrik är nyfiken på omvärlden och gillar äventyr och investering. Det modigaste och roligaste Henrik har gjort var att cykla från Sverige till Paris för att samla in pengar till Barncancerfonden." />
+        <Text content="Jag har ett stort intresse för design och problemlösning. Min bakgrund som läkare har format mig till en effektiv arbetare och gett mig värdefulla färdigheter att samarbeta i team för att uppnå det bästa för våra kunder. Jag älskar att lära mig nya saker och strävar alltid efter att utvecklas i min roll." />
+        <Text content="När jag inte är engagerad i mitt arbete, spenderar jag gärna tid med mina vänner och familj. Vi njuter av att spela brädspel och padel tillsammans. Jag är väldigt nyfiken på omvärlden och älskar äventyr, så investeringar har blivit ett av mina intressen." />
+        <Text content="Ett av de modigaste och roligaste äventyren jag har upplevt var när jag cyklade från Sverige till Paris för att samla in pengar till Barncancerfonden. Det var en minnesvärd resa som visade på mitt engagemang för att hjälpa andra." />
+        <Text content="Sammanfattningsvis är jag en person som älskar design och problemlösning, samtidigt som jag värderar samarbete och utveckling. Min nyfikenhet på omvärlden driver mig mot spännande äventyr, och min vilja att stödja viktiga ändamål gör mitt liv meningsfullt och givande." />
       </div>
 
       <div className="px-6 pt-4 pb-2 flex flex-row">

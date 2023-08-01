@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"; // we need this to make JSX compile
+import { ReactNode } from "react"; // we need this to make JSX compile
 
 interface CardProps {
   children: ReactNode;

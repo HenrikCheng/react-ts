@@ -1,6 +1,7 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+import AboutImage from "../../images/AboutImage.jpeg";
 
-const Container = () => {
+const ProjectSwiper = () => {
   const itemArray = Array.from({ length: 10 });
 
   return (
@@ -20,8 +21,9 @@ type ItemProps = {
 
 const Item = ({ number }: ItemProps) => {
   return (
-    <div className="bg-slate-500 h-96">
-      <div className="h-full w-96">Hello {number}</div>
+    <div className="h-96">
+      <div className="w-96 h-0 bg-blue-500">Hello {number}</div>
+      <img src={AboutImage} alt="placeholder" className="h-full w-96" />
     </div>
   );
 };
@@ -32,8 +34,8 @@ interface CardContainerProps {
 
 const CardGrid = ({ children }: CardContainerProps) => (
   <div className="flex flex-col w-full items-center">
-    <Container />
     {children}
+    <ProjectSwiper />
   </div>
 );
 
