@@ -19,6 +19,7 @@ const Navbar = () => {
       setScrollPosition(currentScrollPos);
       setVisible(visible);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -26,7 +27,6 @@ const Navbar = () => {
   }, [scrollPosition]);
 
   const dispatch = useAppDispatch();
-
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
 
   const executeScroll = () => {
@@ -39,8 +39,8 @@ const Navbar = () => {
   return (
     <nav
       className={`sticky top-0 h-0 text-gray-900 z-40 ${
-        visible ? "block" : "hidden"
-      }`}
+        visible ? "translate-y-0" : "-translate-y-24"
+      } transition-transform delay-100 duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
