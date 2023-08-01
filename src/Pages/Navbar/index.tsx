@@ -1,4 +1,4 @@
-import React, { useRef, MutableRefObject } from "react";
+import { useRef, MutableRefObject, useState, useEffect } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { toggleModal } from "../Modal/modalSlice";
 
@@ -7,6 +7,24 @@ import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  // Hide menu when scrolling down, show menu when scrolling up
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+      const visible = scrollPosition > currentScrollPos;
+
+      setScrollPosition(currentScrollPos);
+      setVisible(visible);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [scrollPosition]);
+
   const dispatch = useAppDispatch();
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
@@ -19,7 +37,11 @@ const Navbar = () => {
     "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold";
 
   return (
-    <nav className="sticky top-0 z-10 h-0 text-gray-900">
+    <nav
+      className={`sticky top-0 h-0 text-gray-900 z-40 ${
+        visible ? "block" : "hidden"
+      }`}
+    >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
           <div className="flex items-center">
