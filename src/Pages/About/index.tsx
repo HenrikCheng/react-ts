@@ -7,7 +7,7 @@ import Card from "../../components/Card";
 
 const About: React.FC<{}> = (props) => {
   return (
-    <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow-lg rounded-xl">
+    <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl">
       <div className="lg:px-4 2xl:px-24 py-4 xl:order-2">
         <div>
           <Header title="Om Henrik" classes="text-4xl font-semibold mb-4" />
