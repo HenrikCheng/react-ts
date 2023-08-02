@@ -1,4 +1,7 @@
 import { useState, useRef, MutableRefObject, useEffect } from "react";
+import { useAppDispatch } from "../../app/hooks";
+
+import { updateTextColor } from "./bgColorSlice";
 
 const Hero = () => {
   const [mouseX, setMouseX] = useState<number | null>();
@@ -7,6 +10,7 @@ const Hero = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
+  const dispatch = useAppDispatch();
 
   const transitionClasses =
     "transition ease-in-out delay-150 group-hover:scale-110 duration-300";
@@ -61,6 +65,10 @@ const Hero = () => {
     return () => window.removeEventListener("scroll", onScroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pixelsFromTop]);
+
+  useEffect(() => {
+    dispatch(updateTextColor(mouseYColor));
+  }, [dispatch, mouseYColor]);
 
   return (
     <div className="h-screen flex flex-col sm:mb-8">

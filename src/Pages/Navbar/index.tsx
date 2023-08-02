@@ -1,48 +1,25 @@
-import { useState, useEffect } from "react";
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleModal } from "../Modal/modalSlice";
-
+import { selectTextColor } from "../Hero/bgColorSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const [visible, setVisible] = useState(true);
-
-  // // Hide menu when scrolling down, show menu when scrolling up
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const currentScrollPos = window.scrollY;
-  //     if (currentScrollPos + 60 < window.innerHeight) {
-  //       setVisible(true);
-  //       return;
-  //     }
-  //     const visible = scrollPosition > currentScrollPos;
-  //     setScrollPosition(currentScrollPos);
-  //     setVisible(visible);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, [scrollPosition]);
-
   const dispatch = useAppDispatch();
+  const menuColor = useAppSelector(selectTextColor);
 
   const linkStyles =
     "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
 
   return (
     <nav
-      className={`sticky top-0 text-gray-900 z-30 
-      ${true ? "translate-y-0" : "-translate-y-24"} 
+      className={`sticky top-0 text-gray-900 z-30 translate-y-0
       ${
         window.scrollY + 100 < window.innerHeight
           ? "h-0"
-          : "from-white bg-gradient-to-r to-pink-900 saturate-200"
-      } transition-transform delay-100 duration-300 ease-in-out`}
+          : "from-white bg-gradient-to-r saturate-200"
+      } ${menuColor} transition-transform delay-100 duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
