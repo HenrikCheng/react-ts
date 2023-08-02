@@ -1,4 +1,5 @@
-import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { toggleModal, selectModal } from "./modalSlice";
 
@@ -7,15 +8,18 @@ const Modal = () => {
   const dispatch = useAppDispatch();
   if (showModal) {
     return (
-      <>
-        <div className="fixed inset-0 z-20 shadow-xl bg-white mx-20 my-32 min-w-fit">
-          Modal
-          <button type="button" onClick={() => dispatch(toggleModal())}>
-            _x
+      <div className="relative">
+        <div className="fixed top-0 bottom-0 left-0 right-0 bg-red-500 z-50 flex flex-col px-4 pt-5">
+          <button
+            className="self-end"
+            type="button"
+            onClick={() => dispatch(toggleModal())}
+          >
+            <FontAwesomeIcon icon={faX} className="fa-xl" />
           </button>
+          <div>Modal</div>
         </div>
-        <div className="fixed inset-0 z-10 blur h-screen w-screen"></div>
-      </>
+      </div>
     );
   } else {
     return <></>;

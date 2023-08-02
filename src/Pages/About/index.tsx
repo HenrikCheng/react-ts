@@ -9,7 +9,7 @@ const About: React.FC<{}> = (props) => {
   return (
     <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl">
       <div className="lg:px-4 2xl:px-24 py-4 xl:order-2">
-        <div>
+        <div id="AboutMe">
           <Header title="Om Henrik" classes="text-4xl font-semibold mb-4" />
           <Text content="Jag har ett stort intresse för design och problemlösning. Min bakgrund som läkare har format mig till en effektiv arbetare och gett mig värdefulla färdigheter att samarbeta i team för att uppnå det bästa för våra kunder. Jag älskar att lära mig nya saker och strävar alltid efter att utvecklas i min roll." />
           <Text content="När jag inte är engagerad i mitt arbete, spenderar jag gärna tid med mina vänner och familj. Vi njuter av att spela brädspel och padel tillsammans. Jag är väldigt nyfiken på omvärlden och älskar äventyr, så investeringar har blivit ett av mina intressen." />

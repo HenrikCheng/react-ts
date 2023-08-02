@@ -28,16 +28,16 @@ const Home = () => {
   return (
     <main className="bg-gray-100">
       <Modal />
-      <div className={`${showModal ? `fixed blur-sm` : ""}`}>
-        <Navbar />
-        <Hero />
-        <CardGrid>
-          <About />
-          <CV />
-          <Contact />
-        </CardGrid>
-        <Demo />
-      </div>
+      {/* <div className={`${showModal ? `fixed blur-sm` : ""}`}> */}
+      <Navbar />
+      <Hero />
+      <CardGrid>
+        <About />
+        <CV />
+        <Contact />
+      </CardGrid>
+      <Demo />
+      {/* </div> */}
     </main>
   );
 };

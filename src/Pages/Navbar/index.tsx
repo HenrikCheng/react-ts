@@ -27,18 +27,13 @@ const Navbar = () => {
   }, [scrollPosition]);
 
   const dispatch = useAppDispatch();
-  const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
-
-  const executeScroll = () => {
-    heroBottomAnchor.current.scrollIntoView();
-  };
 
   const linkStyles =
-    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold";
+    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
 
   return (
     <nav
-      className={`sticky top-0 h-0 text-gray-900 z-40 ${
+      className={`sticky top-0 h-0 text-gray-900 z-30 ${
         visible ? "translate-y-0" : "-translate-y-24"
       } transition-transform delay-100 duration-300 ease-in-out`}
     >
@@ -51,13 +46,22 @@ const Navbar = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="fa-xl lg:fa-2x" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+              />
             </a>
             <a href="mailto:henrikcheng@live.se" className="mr-3">
-              <FontAwesomeIcon icon={faEnvelope} className="fa-xl lg:fa-2x" />
+              <FontAwesomeIcon
+                icon={faEnvelope}
+                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+              />
             </a>
             <a href="tel:+46725133704" className="mr-8">
-              <FontAwesomeIcon icon={faPhone} className="fa-xl lg:fa-2x" />
+              <FontAwesomeIcon
+                icon={faPhone}
+                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+              />
             </a>
             <span className="text-2xl font-semibold md:hidden lg:block">
               Henrik Cheng
@@ -79,20 +83,16 @@ const Navbar = () => {
               <li>
                 <button
                   type="button"
-                  onClick={executeScroll}
+                  onClick={() => window.scrollTo({ top: 0, left: 0 })}
                   className={linkStyles}
                 >
                   Hem
                 </button>
               </li>
               <li>
-                <button
-                  type="button"
-                  onClick={executeScroll}
-                  className={linkStyles}
-                >
+                <a href="#AboutMe" className={linkStyles}>
                   Om mig
-                </button>
+                </a>
               </li>
               <li>
                 <a href="#CV" className={linkStyles}>
@@ -100,13 +100,13 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <a href="#Demo" onClick={executeScroll} className={linkStyles}>
-                  Demoprojekt
+                <a href="#Contact" className={linkStyles}>
+                  Kontakt
                 </a>
               </li>
               <li>
-                <a href="#Contact" className={linkStyles}>
-                  Kontakt
+                <a href="#Demo" className={linkStyles}>
+                  Demoprojekt
                 </a>
               </li>
             </ul>

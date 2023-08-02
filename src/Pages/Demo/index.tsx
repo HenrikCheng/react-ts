@@ -42,7 +42,7 @@ const Project = ({ number }: ItemProps) => {
 
 const Demo: React.FC<{}> = (props) => {
   return (
-    <div>
+    <div id="Demo">
       <ProjectSwiper />
       <div className="bg-white flex flex-col space-y-4 items-center">
         <a
