@@ -105,7 +105,7 @@ const Hero = () => {
   return (
     <div className="h-screen flex flex-col mb-8">
       <div
-        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 select-none`}
+        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 select-none w-full`}
       >
         <div
           id="TextContainer"
@@ -121,12 +121,12 @@ const Hero = () => {
               if (!el) return;
               setPixelsHeroTextTop(el.getBoundingClientRect().top);
             }}
-            className={`text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
+            className={`text-5xl md:text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
           >
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
+            className={`text-4xl md:text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
           >
             PORTFOLIO
           </h3>

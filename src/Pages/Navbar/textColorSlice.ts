@@ -23,6 +23,7 @@ export const textColorSlice = createSlice({
 
 export const { toggleTextColor } = textColorSlice.actions;
 
-export const selectModal = (state: RootState) => state.modal.modal;
+export const selectTextColor = (state: RootState) =>
+  state.textColor.textIsBlack;
 
 export default textColorSlice.reducer;
