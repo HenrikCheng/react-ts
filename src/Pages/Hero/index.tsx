@@ -3,7 +3,6 @@ import { useState, useRef, MutableRefObject, useEffect } from "react";
 const Hero = () => {
   const [mouseX, setMouseX] = useState<number | null>();
   const [mouseY, setMouseY] = useState<number | null>();
-  const [mouseXColor, setMouseXColor] = useState<string | null>();
   const [mouseYColor, setMouseYColor] = useState<string | null>();
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
 
@@ -45,8 +44,6 @@ const Hero = () => {
     } else if (event.pageY > 100) {
       setMouseYColor("to-pink-50");
     } else setMouseYColor("to-white");
-
-    setMouseXColor("from-white");
   }
   const onScroll = (e: any) => {
     setPixelsFromTop(e.target.documentElement.scrollTop);
@@ -68,7 +65,7 @@ const Hero = () => {
   return (
     <div className="h-screen flex flex-col sm:mb-8">
       <div
-        className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 select-none w-full`}
+        className={`from-white bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 select-none w-full`}
       >
         <div
           id="TextContainer"

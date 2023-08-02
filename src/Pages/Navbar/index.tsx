@@ -7,42 +7,39 @@ import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const [visible, setVisible] = useState(true);
+  // const [scrollPosition, setScrollPosition] = useState(0);
+  // const [visible, setVisible] = useState(true);
 
-  // Hide menu when scrolling down, show menu when scrolling up
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-      if (currentScrollPos + 60 < window.innerHeight) {
-        setVisible(true);
-        return;
-      }
-      const visible = scrollPosition > currentScrollPos;
-      setScrollPosition(currentScrollPos);
-      setVisible(visible);
-    };
+  // // Hide menu when scrolling down, show menu when scrolling up
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const currentScrollPos = window.scrollY;
+  //     if (currentScrollPos + 60 < window.innerHeight) {
+  //       setVisible(true);
+  //       return;
+  //     }
+  //     const visible = scrollPosition > currentScrollPos;
+  //     setScrollPosition(currentScrollPos);
+  //     setVisible(visible);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [scrollPosition]);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, [scrollPosition]);
 
   const dispatch = useAppDispatch();
 
   const linkStyles =
-    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
-
-  console.log("window scroll: ", window.scrollY);
-  console.log("window height: ", window.innerHeight);
+    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
 
   return (
     <nav
-      className={`sticky top-0 text-gray-900 z-30 ${
-        visible ? "translate-y-0" : "-translate-y-24"
-      } ${
-        window.scrollY < window.innerHeight
+      className={`sticky top-0 text-gray-900 z-30 
+      ${true ? "translate-y-0" : "-translate-y-24"} 
+      ${
+        window.scrollY + 100 < window.innerHeight
           ? "h-0"
           : "from-white bg-gradient-to-r to-pink-900 saturate-200"
       } transition-transform delay-100 duration-300 ease-in-out`}
@@ -73,7 +70,7 @@ const Navbar = () => {
                 className="fa-xl lg:fa-2x hover:drop-shadow-lg"
               />
             </a>
-            <span className="text-2xl font-semibold hidden lg:block">
+            <span className="text-2xl xl:text-3xl font-semibold hidden lg:block">
               Henrik Cheng
             </span>
           </div>
