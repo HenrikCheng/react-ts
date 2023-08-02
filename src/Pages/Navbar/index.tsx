@@ -51,15 +51,17 @@ const Navbar = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedin} className="fa-2x" />
+              <FontAwesomeIcon icon={faLinkedin} className="fa-xl lg:fa-2x" />
             </a>
             <a href="mailto:henrikcheng@live.se" className="mr-3">
-              <FontAwesomeIcon icon={faEnvelope} className="fa-2x" />
+              <FontAwesomeIcon icon={faEnvelope} className="fa-xl lg:fa-2x" />
             </a>
             <a href="tel:+46725133704" className="mr-8">
-              <FontAwesomeIcon icon={faPhone} className="fa-2x" />
+              <FontAwesomeIcon icon={faPhone} className="fa-xl lg:fa-2x" />
             </a>
-            <span className="text-2xl font-semibold">Henrik Cheng</span>
+            <span className="text-2xl font-semibold md:hidden lg:block">
+              Henrik Cheng
+            </span>
           </div>
           <button
             onClick={() => dispatch(toggleModal())}
@@ -70,7 +72,7 @@ const Navbar = () => {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <FontAwesomeIcon icon={faBars} className="fa-2x" />
+            <FontAwesomeIcon icon={faBars} className="fa-xl lg:fa-2x" />
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">

@@ -38,7 +38,7 @@ const About: React.FC<{}> = (props) => {
         alt="Portrait of Henrik"
       />
       <img
-        className="w-1/2 xl:w-1/3 object-cover xl:order-3 absolute xl:static bottom-0 right-0 rounded-br-xl xl:rounded-r-xl"
+        className="w-1/2 xl:w-1/3 object-cover xl:order-3 absolute xl:static bottom-0 right-0 rounded-br-xl xl:rounded-r-xl object-left"
         src={BikeImage}
         alt="Portrait of Henrik"
       />
