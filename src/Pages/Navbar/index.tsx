@@ -1,4 +1,4 @@
-import { useRef, MutableRefObject, useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useAppDispatch } from "../../app/hooks";
 import { toggleModal } from "../Modal/modalSlice";
 
@@ -14,8 +14,11 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      if (currentScrollPos === 0) {
+        setVisible(true);
+        return;
+      }
       const visible = scrollPosition > currentScrollPos;
-
       setScrollPosition(currentScrollPos);
       setVisible(visible);
     };
@@ -63,7 +66,7 @@ const Navbar = () => {
                 className="fa-xl lg:fa-2x hover:drop-shadow-lg"
               />
             </a>
-            <span className="text-2xl font-semibold md:hidden lg:block">
+            <span className="text-2xl font-semibold hidden lg:block">
               Henrik Cheng
             </span>
           </div>

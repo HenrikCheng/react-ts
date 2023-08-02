@@ -1,6 +1,4 @@
 import { useState, useEffect } from "react";
-import { useAppSelector } from "../../app/hooks";
-import { selectModal } from "../Modal/modalSlice";
 
 import Navbar from "../Navbar";
 import Hero from "../Hero";
@@ -14,7 +12,6 @@ import CardGrid from "../../components/Card/cardGrid";
 
 const Home = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
-  const showModal = useAppSelector(selectModal);
 
   const onScroll = (e: any) => {
     setPixelsFromTop(e.target.documentElement.scrollTop);
@@ -28,7 +25,6 @@ const Home = () => {
   return (
     <main className="bg-gray-100">
       <Modal />
-      {/* <div className={`${showModal ? `fixed blur-sm` : ""}`}> */}
       <Navbar />
       <Hero />
       <CardGrid>
@@ -37,7 +33,6 @@ const Home = () => {
         <Contact />
       </CardGrid>
       <Demo />
-      {/* </div> */}
     </main>
   );
 };

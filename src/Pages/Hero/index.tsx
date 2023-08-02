@@ -50,6 +50,9 @@ const Hero = () => {
       setMouseYColor("to-pink-50");
     } else setMouseYColor("to-white");
 
+    setMouseXColor("from-white");
+    return;
+
     if (event.pageX > 1000) {
       setMouseXColor("from-indigo-900");
     } else if (event.pageX > 900) {
@@ -121,12 +124,12 @@ const Hero = () => {
               if (!el) return;
               setPixelsHeroTextTop(el.getBoundingClientRect().top);
             }}
-            className={`text-5xl md:text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
+            className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
           >
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-4xl md:text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
+            className={`text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
           >
             PORTFOLIO
           </h3>
