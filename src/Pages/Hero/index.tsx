@@ -6,10 +6,6 @@ const Hero = () => {
   const [mouseXColor, setMouseXColor] = useState<string | null>();
   const [mouseYColor, setMouseYColor] = useState<string | null>();
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
-  const [scrollBlur, setScrollBlur] = useState<string | null>();
-  const [pixelsHeroTextTop, setPixelsHeroTextTop] = useState<
-    number | undefined
-  >();
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
 
@@ -51,29 +47,6 @@ const Hero = () => {
     } else setMouseYColor("to-white");
 
     setMouseXColor("from-white");
-    return;
-
-    if (event.pageX > 1000) {
-      setMouseXColor("from-indigo-900");
-    } else if (event.pageX > 900) {
-      setMouseXColor("from-indigo-800");
-    } else if (event.pageX > 800) {
-      setMouseXColor("from-indigo-700");
-    } else if (event.pageX > 700) {
-      setMouseXColor("from-indigo-600");
-    } else if (event.pageX > 600) {
-      setMouseXColor("from-indigo-500");
-    } else if (event.pageX > 500) {
-      setMouseXColor("from-indigo-400");
-    } else if (event.pageX > 400) {
-      setMouseXColor("from-indigo-300");
-    } else if (event.pageX > 300) {
-      setMouseXColor("from-indigo-200");
-    } else if (event.pageX > 200) {
-      setMouseXColor("from-indigo-100");
-    } else if (event.pageX > 100) {
-      setMouseXColor("from-indigo-50");
-    } else setMouseXColor("from-white");
   }
   const onScroll = (e: any) => {
     setPixelsFromTop(e.target.documentElement.scrollTop);
@@ -88,50 +61,33 @@ const Hero = () => {
       setPixelsFromTop(e.target.documentElement.scrollTop);
     };
     window.addEventListener("scroll", onScroll);
-    updateHero();
     return () => window.removeEventListener("scroll", onScroll);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pixelsFromTop]);
 
-  const updateHero = () => {
-    if (!pixelsHeroTextTop) return;
-    else if (-50 > pixelsHeroTextTop) return setScrollBlur("blur-3xl");
-    else if (-25 > pixelsHeroTextTop) return setScrollBlur("blur-2xl");
-    else if (0 > pixelsHeroTextTop) return setScrollBlur("blur-xl");
-    else if (25 > pixelsHeroTextTop) return setScrollBlur("blur-lg");
-    else if (50 > pixelsHeroTextTop) return setScrollBlur("blur-md");
-    else if (75 > pixelsHeroTextTop) return setScrollBlur("blur");
-    else if (100 > pixelsHeroTextTop) return setScrollBlur("blur-sm");
-    else return setScrollBlur("");
-  };
-
   return (
-    <div className="h-screen flex flex-col mb-8">
+    <div className="h-screen flex flex-col sm:mb-8">
       <div
         className={`${mouseXColor} bg-gradient-to-r ${mouseYColor} grow flex justify-center items-center flex-col group saturate-200 select-none w-full`}
       >
         <div
           id="TextContainer"
-          className={`${scrollBlur} ${
+          className={`${
             (mouseY && mouseY > 600) ||
-            (mouseX && mouseX > 400 && mouseY && mouseY > 400)
+            (mouseX && mouseX > 400 && mouseY && mouseY > 500)
               ? "text-gray-100"
               : "text-gray-900"
           }`}
         >
           <h1
-            ref={(el) => {
-              if (!el) return;
-              setPixelsHeroTextTop(el.getBoundingClientRect().top);
-            }}
             className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
           >
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-bold mb-5 ${transitionClasses} font-thin tracking-widest font-mono`}
+            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-5 ${transitionClasses} group-hover:translate-y-1 font-thin tracking-widest font-mono`}
           >
-            PORTFOLIO
+            FRONTEND DEVELOPER
           </h3>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"

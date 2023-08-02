@@ -22,35 +22,70 @@ const Modal = () => {
             <FontAwesomeIcon icon={faX} className="fa-xl" />
           </button>
           <div className="">
-            <ul className="flex flex-col items-center p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
+            <h4 className="text-3xl font-thin tracking-widest">HENRIK CHENG</h4>
+            <h5 className="text-2xl font-thin tracking-widest">
+              FRONTEND DEVELOPER
+            </h5>
+            <ul className="flex flex-col items-center p-4 mt-4 border-double border-4 border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
               <li>
                 <button
                   type="button"
-                  onClick={() => window.scrollTo({ top: 0, left: 0 })}
+                  onClick={() => {
+                    dispatch(toggleModal());
+                    window.scrollTo({ top: 0, left: 0 });
+                  }}
                   className={linkStyles}
                 >
                   Hem
                 </button>
               </li>
               <li>
-                <a href="#AboutMe" className={linkStyles}>
-                  Om mig
-                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(toggleModal());
+                  }}
+                >
+                  <a href="#AboutMe" className={linkStyles}>
+                    Om mig
+                  </a>
+                </button>
               </li>
               <li>
-                <a href="#CV" className={linkStyles}>
-                  CV
-                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(toggleModal());
+                  }}
+                >
+                  <a href="#CV" className={linkStyles}>
+                    CV
+                  </a>
+                </button>
               </li>
               <li>
-                <a href="#Contact" className={linkStyles}>
-                  Kontakt
-                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(toggleModal());
+                  }}
+                >
+                  <a href="#Contact" className={linkStyles}>
+                    Kontakt
+                  </a>
+                </button>
               </li>
               <li>
-                <a href="#Demo" className={linkStyles}>
-                  Demoprojekt
-                </a>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(toggleModal());
+                  }}
+                >
+                  <a href="#Demo" className={linkStyles}>
+                    Demoprojekt
+                  </a>
+                </button>
               </li>
             </ul>
           </div>

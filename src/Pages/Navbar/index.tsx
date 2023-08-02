@@ -14,7 +14,11 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      if (currentScrollPos === 0) {
+      console.log(
+        "🚀 ~ file: index.tsx:17 ~ handleScroll ~ currentScrollPos:",
+        currentScrollPos
+      );
+      if (currentScrollPos <= 300) {
         setVisible(true);
         return;
       }
@@ -84,13 +88,9 @@ const Navbar = () => {
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
               <li>
-                <button
-                  type="button"
-                  onClick={() => window.scrollTo({ top: 0, left: 0 })}
-                  className={linkStyles}
-                >
+                <a href="#Home" className={linkStyles}>
                   Hem
-                </button>
+                </a>
               </li>
               <li>
                 <a href="#AboutMe" className={linkStyles}>
