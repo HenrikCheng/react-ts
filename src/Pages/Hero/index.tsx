@@ -85,7 +85,7 @@ const Hero = () => {
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl font-bold mb-5 ${transitionClasses} group-hover:translate-y-1 font-thin tracking-widest font-mono`}
+            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-5 ${transitionClasses} group-hover:translate-y-1 tracking-widest font-mono`}
           >
             FRONTEND DEVELOPER
           </h3>

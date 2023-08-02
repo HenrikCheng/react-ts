@@ -8,7 +8,8 @@ interface CardProps {
 const Card = ({ children, classes }: CardProps) => (
   <div
     className={
-      classes || `max-w-3xl rounded overflow-hidden shadow-lg bg-white`
+      classes ||
+      `flex flex-col container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4`
     }
   >
     {children}

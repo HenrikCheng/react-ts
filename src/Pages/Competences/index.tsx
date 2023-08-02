@@ -1,0 +1,72 @@
+import React from "react";
+import Header from "../../components/Header";
+import Card from "../../components/Card";
+
+const Competences: React.FC<{}> = (props) => {
+  const skillsArray = [
+    ".NET Core",
+    "Accessible design",
+    "Agil Scrum",
+    "Agile Methods",
+    "Axios",
+    "Bootstrap",
+    "Cobol",
+    "Content Management Systems (CMS)",
+    "CSS",
+    "Figma",
+    "GraphQL",
+    "HTML",
+    "JavaScript",
+    "Jest Test",
+    "JIRA",
+    "jQuery",
+    "Kanban",
+    "Legitimerad läkare",
+    "Microsoft Azure",
+    "NextJS",
+    "Node.js",
+    "Postman",
+    "React",
+    "React Hooks",
+    "React Native",
+    "React-storybook",
+    "Redux",
+    "Responsiv design",
+    "REST API",
+    "REST based API",
+    "Scrum Master",
+    "SCSS/SASS",
+    "Storybook",
+    "Structured Query Language",
+    "SWR",
+    "Tailwind CSS",
+    "Take care",
+    "Teamworking skills",
+    "TypeScript",
+    "UI Design",
+    "Webflow",
+    "Version Control - GIT",
+  ];
+  const midIndex = Math.ceil(skillsArray.length / 2);
+
+  const topString = skillsArray.slice(0, midIndex).join(" | ");
+  const bottomString = skillsArray.slice(midIndex).join(" | ");
+
+  return (
+    <Card classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none">
+      <div id="Competences">
+        <Header title="Competences" classes="text-4xl font-semibold mb-4" />
+        <div className="flex flex-col overflow-hidden tracking-widest font-mono text-lg">
+          <div className="animate-leftRight-infinite whitespace-nowrap">
+            {topString}
+          </div>
+          <div className="flex animate-rightLeft-infinite whitespace-nowrap">
+            {bottomString}
+          </div>
+        </div>
+      </div>
+    </Card>
+  );
+};
+
+export default Competences;

@@ -9,6 +9,7 @@ import Demo from "../Demo";
 import Contact from "../Contact";
 import "../../App.css";
 import CardGrid from "../../components/Card/cardGrid";
+import Competences from "../Competences";
 
 const Home = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
@@ -29,6 +30,7 @@ const Home = () => {
       <Hero />
       <CardGrid>
         <About />
+        <Competences />
         <CV />
         <Contact />
       </CardGrid>

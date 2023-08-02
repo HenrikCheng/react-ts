@@ -14,11 +14,7 @@ const Navbar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
-      console.log(
-        "🚀 ~ file: index.tsx:17 ~ handleScroll ~ currentScrollPos:",
-        currentScrollPos
-      );
-      if (currentScrollPos <= 300) {
+      if (currentScrollPos + 60 < window.innerHeight) {
         setVisible(true);
         return;
       }
@@ -38,10 +34,17 @@ const Navbar = () => {
   const linkStyles =
     "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
 
+  console.log("window scroll: ", window.scrollY);
+  console.log("window height: ", window.innerHeight);
+
   return (
     <nav
-      className={`sticky top-0 h-0 text-gray-900 z-30 ${
+      className={`sticky top-0 text-gray-900 z-30 ${
         visible ? "translate-y-0" : "-translate-y-24"
+      } ${
+        window.scrollY < window.innerHeight
+          ? "h-0"
+          : "from-white bg-gradient-to-r to-pink-900 saturate-200"
       } transition-transform delay-100 duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4">
