@@ -20,35 +20,58 @@ const Hero = () => {
   };
 
   document.onmousemove = handleMouseMove;
-
   function handleMouseMove(event: any) {
-    event = event || window.event; // IE-ism
+    if (window.innerWidth >= 640) {
+      event = event || window.event; // IE-ism
+      setMouseX(event.pageX);
+      setMouseY(event.pageY);
 
-    setMouseX(event.pageX);
-    setMouseY(event.pageY);
-
-    if (event.pageY > 1000) {
-      setMouseYColor("to-pink-900");
-    } else if (event.pageY > 900) {
-      setMouseYColor("to-pink-800");
-    } else if (event.pageY > 800) {
-      setMouseYColor("to-pink-700");
-    } else if (event.pageY > 700) {
-      setMouseYColor("to-pink-600");
-    } else if (event.pageY > 600) {
-      setMouseYColor("to-pink-500");
-    } else if (event.pageY > 500) {
-      setMouseYColor("to-pink-400");
-    } else if (event.pageY > 400) {
-      setMouseYColor("to-pink-300");
-    } else if (event.pageY > 300) {
-      setMouseYColor("to-pink-200");
-    } else if (event.pageY > 200) {
-      setMouseYColor("to-pink-100");
-    } else if (event.pageY > 100) {
-      setMouseYColor("to-pink-50");
-    } else setMouseYColor("to-white");
+      if (event.pageY > 900) {
+        setMouseYColor("to-pink-800");
+      } else if (event.pageY > 800) {
+        setMouseYColor("to-pink-700");
+      } else if (event.pageY > 700) {
+        setMouseYColor("to-pink-600");
+      } else if (event.pageY > 600) {
+        setMouseYColor("to-pink-500");
+      } else if (event.pageY > 500) {
+        setMouseYColor("to-pink-400");
+      } else if (event.pageY > 400) {
+        setMouseYColor("to-pink-300");
+      } else if (event.pageY > 300) {
+        setMouseYColor("to-pink-200");
+      } else if (event.pageY > 200) {
+        setMouseYColor("to-pink-100");
+      } else if (event.pageY > 100) {
+        setMouseYColor("to-pink-50");
+      } else setMouseYColor("to-white");
+    }
   }
+
+  useEffect(() => {
+    if (window.innerWidth < 640) {
+      if (window.scrollY > 900) {
+        setMouseYColor("to-pink-800");
+      } else if (window.scrollY > 800) {
+        setMouseYColor("to-pink-700");
+      } else if (window.scrollY > 700) {
+        setMouseYColor("to-pink-600");
+      } else if (window.scrollY > 600) {
+        setMouseYColor("to-pink-500");
+      } else if (window.scrollY > 500) {
+        setMouseYColor("to-pink-400");
+      } else if (window.scrollY > 400) {
+        setMouseYColor("to-pink-300");
+      } else if (window.scrollY > 300) {
+        setMouseYColor("to-pink-200");
+      } else if (window.scrollY > 200) {
+        setMouseYColor("to-pink-100");
+      } else if (window.scrollY > 100) {
+        setMouseYColor("to-pink-50");
+      } else setMouseYColor("to-white");
+    }
+  }, [window.scrollY]);
+
   const onScroll = (e: any) => {
     setPixelsFromTop(e.target.documentElement.scrollTop);
   };
@@ -100,16 +123,6 @@ const Hero = () => {
           >
             Läs mer
           </button>
-          {/* <div className="flex flex-row justify-center space-x-6">
-            <div className="text-semibold text-lg">X: {mouseX}</div>
-            <div className="text-semibold text-lg">Y: {mouseY}</div>
-            <div className="text-semibold text-lg">
-              pixelsFromTop: {pixelsFromTop}
-            </div>
-            <div className="text-semibold text-lg">
-              pixelsHeroTextTop: {pixelsHeroTextTop}
-            </div>
-          </div> */}
         </div>
         <div ref={heroBottomAnchor} className="absolute bottom-0" />
       </div>
