@@ -1,24 +1,22 @@
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleModal } from "../Modal/modalSlice";
-import { selectTextColor } from "../Hero/bgColorSlice";
+import { selectBgColor, selectTextColor } from "../Hero/colorSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
-  const menuColor = useAppSelector(selectTextColor);
+  const menuColor = useAppSelector(selectBgColor);
+  const textColor = useAppSelector(selectTextColor);
 
-  const linkStyles =
-    "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
+  const linkStyles = `${textColor} block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2`;
 
   return (
     <nav
       className={`sticky top-0 text-gray-900 z-30 translate-y-0
       ${
-        window.scrollY + 100 < window.innerHeight
-          ? "h-0"
-          : "from-white bg-gradient-to-r saturate-200"
+        window.scrollY + 100 < window.innerHeight ? "h-0" : "bg-slate-800"
       } ${menuColor} transition-transform delay-100 duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4">
@@ -32,22 +30,24 @@ const Navbar = () => {
             >
               <FontAwesomeIcon
                 icon={faLinkedin}
-                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+                className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
               />
             </a>
             <a href="mailto:henrikcheng@live.se" className="mr-3">
               <FontAwesomeIcon
                 icon={faEnvelope}
-                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+                className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
               />
             </a>
             <a href="tel:+46725133704" className="mr-8">
               <FontAwesomeIcon
                 icon={faPhone}
-                className="fa-xl lg:fa-2x hover:drop-shadow-lg"
+                className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
               />
             </a>
-            <span className="text-2xl xl:text-3xl font-semibold hidden lg:block">
+            <span
+              className={`text-2xl xl:text-3xl font-semibold hidden lg:block ${textColor}`}
+            >
               Henrik Cheng
             </span>
           </div>
