@@ -16,8 +16,10 @@ const Navbar = () => {
     <nav
       className={`sticky top-0 text-gray-900 z-30 translate-y-0
       ${
-        window.scrollY + 100 < window.innerHeight ? "h-0" : "bg-slate-800"
-      } ${menuColor} transition-transform delay-100 duration-300 ease-in-out shadow-2xl`}
+        window.scrollY + 100 < window.innerHeight
+          ? "bg-transparent"
+          : "bg-slate-800"
+      } ${menuColor} transition-transform delay-100 duration-300 ease-in-out`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
