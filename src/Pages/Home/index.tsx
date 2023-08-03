@@ -10,6 +10,7 @@ import Contact from "../Contact";
 import "../../App.css";
 import CardGrid from "../../components/Card/cardGrid";
 import Competences from "../Competences";
+import Footer from "../Footer";
 
 const Home = () => {
   const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
@@ -35,6 +36,7 @@ const Home = () => {
         <Contact />
       </CardGrid>
       <Demo />
+      <Footer />
     </main>
   );
 };

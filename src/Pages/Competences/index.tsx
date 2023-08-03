@@ -69,6 +69,15 @@ const Competences: React.FC<{}> = (props) => {
             {bottomString}
           </div>
         </div>
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+          <a
+            href="https://www.linkedin.com/in/henrik-cheng-a8a3b9180/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Utforska fler
+          </a>
+        </button>
       </div>
     </Card>
   );
