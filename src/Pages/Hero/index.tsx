@@ -4,8 +4,7 @@ import { useAppDispatch } from "../../app/hooks";
 import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {
-  const [mouseYColor, setMouseYColor] = useState<string | null>();
-  const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
+  const [bgColor, setBgColor] = useState<string | null>();
 
   const dispatch = useAppDispatch();
 
@@ -14,41 +13,24 @@ const Hero = () => {
 
   useEffect(() => {
     if (window.scrollY > 900) {
-      setMouseYColor("bg-slate-800");
+      setBgColor("bg-slate-800");
     } else if (window.scrollY > 750) {
-      setMouseYColor("bg-slate-700");
+      setBgColor("bg-slate-700");
     } else if (window.scrollY > 600) {
-      setMouseYColor("bg-slate-600");
+      setBgColor("bg-slate-600");
     } else if (window.scrollY > 450) {
-      setMouseYColor("bg-slate-500");
+      setBgColor("bg-slate-500");
     } else if (window.scrollY > 300) {
-      setMouseYColor("bg-slate-400");
+      setBgColor("bg-slate-400");
     } else if (window.scrollY > 150) {
-      setMouseYColor("bg-slate-300");
-    } else setMouseYColor("bg-slate-200");
+      setBgColor("bg-slate-300");
+    } else setBgColor("bg-slate-200");
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [window.scrollY]);
 
-  const onScroll = (e: any) => {
-    setPixelsFromTop(e.target.documentElement.scrollTop);
-  };
-
   useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    const onScroll = (e: any) => {
-      setPixelsFromTop(e.target.documentElement.scrollTop);
-    };
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pixelsFromTop]);
-
-  useEffect(() => {
-    dispatch(updateBgColor(mouseYColor));
-  }, [dispatch, mouseYColor]);
+    dispatch(updateBgColor(bgColor));
+  }, [dispatch, bgColor]);
 
   const handleTextColorChange = () => {
     if (window.scrollY > 600) {
@@ -63,16 +45,19 @@ const Hero = () => {
   return (
     <div className="h-screen flex flex-col sm:mb-8">
       <div
-        className={`${mouseYColor} grow flex justify-center items-center flex-col group select-none w-full`}
+        className={`${bgColor} grow flex justify-center items-center flex-col group select-none w-full`}
       >
-        <div id="TextContainer" className={handleTextColorChange()}>
+        <div
+          id="TextContainer"
+          className={`${handleTextColorChange()} transition ease-in-out delay-150 group-hover:scale-110 duration-300`}
+        >
           <h1
-            className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin ${transitionClasses} group-hover:-translate-y-2 tracking-widest`}
+            className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
           >
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-5 ${transitionClasses} group-hover:translate-y-1 tracking-widest font-mono`}
+            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-5 tracking-widest font-mono`}
           >
             FRONTEND DEVELOPER
           </h3>
