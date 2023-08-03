@@ -60,7 +60,7 @@ const Competences: React.FC<{}> = (props) => {
   return (
     <Card classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none">
       <div id="Competences">
-        <Header title="Competences" classes="text-4xl font-semibold mb-4" />
+        <Header title="Kompetenser" classes="text-4xl font-semibold mb-4" />
         <div className="flex flex-col overflow-hidden tracking-widest font-mono text-lg">
           <div className="animate-leftRight-infinite whitespace-nowrap">
             {topString}

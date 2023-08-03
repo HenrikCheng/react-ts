@@ -8,7 +8,7 @@ export interface colorSlice {
 }
 
 const initialState: colorSlice = {
-  bgColor: "to-white",
+  bgColor: "bg-slate-200",
   textColor: "text-black",
   status: "idle",
 };

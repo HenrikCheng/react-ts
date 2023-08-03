@@ -17,7 +17,7 @@ const Navbar = () => {
       className={`sticky top-0 text-gray-900 z-30 translate-y-0
       ${
         window.scrollY + 100 < window.innerHeight ? "h-0" : "bg-slate-800"
-      } ${menuColor} transition-transform delay-100 duration-300 ease-in-out`}
+      } ${menuColor} transition-transform delay-100 duration-300 ease-in-out shadow-2xl`}
     >
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center py-4">
@@ -60,7 +60,10 @@ const Navbar = () => {
             aria-expanded="false"
           >
             <span className="sr-only">Open main menu</span>
-            <FontAwesomeIcon icon={faBars} className="fa-xl lg:fa-2x" />
+            <FontAwesomeIcon
+              icon={faBars}
+              className={`${textColor} fa-xl lg:fa-2x `}
+            />
           </button>
           <div className="hidden w-full md:block md:w-auto" id="navbar-default">
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
