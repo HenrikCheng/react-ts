@@ -71,7 +71,7 @@ const Competences: React.FC<{}> = (props) => {
         </div>
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
           <a
-            href="https://www.linkedin.com/in/henrik-cheng/details/skills/"
+            href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
           >
