@@ -34,8 +34,8 @@ const Home = () => {
         <Competences />
         <CV />
         <Contact />
+        <Demo />
       </CardGrid>
-      <Demo />
       <Footer />
     </main>
   );
