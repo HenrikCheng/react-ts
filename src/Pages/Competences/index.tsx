@@ -58,8 +58,11 @@ const Competences: React.FC<{}> = (props) => {
   const bottomString = skillsArray.slice(midIndex).join(" | ");
 
   return (
-    <Card classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none">
-      <div id="Competences">
+    <Card
+      classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none"
+      id="Competences"
+    >
+      <div>
         <Header title="Kompetenser" classes="text-4xl font-semibold mb-4" />
         <div className="flex flex-col overflow-hidden tracking-widest font-mono text-lg">
           <div className="animate-leftRight-infinite whitespace-nowrap">

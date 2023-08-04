@@ -6,7 +6,7 @@ const Contact: React.FC<{}> = (props) => {
   return (
     <Card>
       <Header title="Kontakt" classes="text-4xl font-semibold mb-4" />
-      <p className="text-xl font-semibold mb-4 text-start">
+      <p className="text-xl font-semibold mb-4">
         För att komma i kontakt med Henrik som konsult kan du ta kontakt med:
       </p>
       <p>

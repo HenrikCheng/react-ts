@@ -58,6 +58,18 @@ const Modal = () => {
                     dispatch(toggleModal());
                   }}
                 >
+                  <a href="#Competences" className={linkStyles}>
+                    Kompetenser
+                  </a>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => {
+                    dispatch(toggleModal());
+                  }}
+                >
                   <a href="#CV" className={linkStyles}>
                     CV
                   </a>
