@@ -5,13 +5,29 @@ import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 
 const ProjectSwiper = () => {
-  const itemArray = Array.from({ length: 4 });
+  const projects = [
+    {
+      href: "https://henrikcheng.github.io/film-app/",
+      imageSrc: FilmPic,
+      imageAlt: "click to go to video app",
+    },
+    {
+      href: "https://henrikcheng.github.io/tic-tac-toe/",
+      imageSrc: TicTacToePic,
+      imageAlt: "click to go to tictactoe game",
+    },
+  ];
 
   return (
     <div className="w-full overflow-x-scroll">
       <div className="flex space-x-6">
-        {itemArray.map((_, index) => (
-          <Project key={index} number={index + 1} />
+        {projects.map((project, index) => (
+          <Project
+            key={index}
+            href={project.href}
+            imageSrc={project.imageSrc}
+            imageAlt={project.imageAlt}
+          />
         ))}
       </div>
     </div>
@@ -30,14 +46,10 @@ const Project = ({ number, href, imageSrc, imageAlt, title }: ItemProps) => {
   return (
     <div className="h-96 w-96">
       <div className="w-96">
-        <a
-          href="https://henrikcheng.github.io/tic-tac-toe/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href={href} target="_blank" rel="noreferrer">
           <img
-            src={TicTacToePic}
-            alt="click to go to tictactoe game"
+            src={imageSrc}
+            alt={imageAlt}
             className="max-h-96 max-w-96 hover:scale-105 transition duration-300 ease-in-out"
           />
         </a>
