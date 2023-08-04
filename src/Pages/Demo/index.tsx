@@ -51,7 +51,7 @@ const Demo: React.FC<{}> = (props) => {
     <Card>
       <div id="Demo">
         <ProjectSwiper />
-        <div className="bg-white flex flex-col space-y-4 items-center">
+        {/* <div className="bg-white flex flex-col space-y-4 items-center">
           <a
             href="https://henrikcheng.github.io/film-app/"
             target="_blank"
@@ -74,7 +74,7 @@ const Demo: React.FC<{}> = (props) => {
               alt="click to go to tictactoe game"
             />
           </a>
-        </div>
+        </div> */}
       </div>
     </Card>
   );
