@@ -16,12 +16,16 @@ const Contact: React.FC<{}> = (props) => {
         <p>
           Företag: <span className="font-semibold">Tretton37</span>
         </p>
-        <p>
-          Telefon: <span className="font-semibold">+46708908222</span>
+        <p className="font-semibold">
+          Telefon: <a href="tel:+46708908222">+46708908222</a>
         </p>
         <p>
           E-post:
-          <span className="font-semibold">johan.lundborg@tretton37.com</span>
+          <span className="font-semibold">
+            <a href="mailto:johan.lundborg@tretton37.com">
+              johan.lundborg@tretton37.com
+            </a>
+          </span>
         </p>
         <p className="mt-4">
           Tveka inte att höra av dig om du har några frågor eller om du är

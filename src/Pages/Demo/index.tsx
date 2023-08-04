@@ -19,10 +19,14 @@ const ProjectSwiper = () => {
 };
 
 type ItemProps = {
-  number: number;
+  href?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  title?: string;
+  number?: number;
 };
 
-const Project = ({ number }: ItemProps) => {
+const Project = ({ number, href, imageSrc, imageAlt, title }: ItemProps) => {
   return (
     <div className="h-96 w-96">
       <div className="w-96">

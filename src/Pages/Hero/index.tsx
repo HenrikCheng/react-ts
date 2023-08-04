@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef, MutableRefObject, useEffect } from "react";
 import { useAppDispatch } from "../../app/hooks";
 
 import { updateBgColor, updateTextColor } from "./colorSlice";
@@ -6,10 +6,12 @@ import { updateBgColor, updateTextColor } from "./colorSlice";
 const Hero = () => {
   const [bgColor, setBgColor] = useState<string | null>();
 
+  const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
 
-  const transitionClasses =
-    "transition ease-in-out delay-150 group-hover:scale-110 duration-300";
+  const executeScroll = () => {
+    heroBottomAnchor.current.scrollIntoView();
+  };
 
   useEffect(() => {
     if (window.scrollY > 900) {
@@ -57,15 +59,24 @@ const Hero = () => {
             HENRIK CHENG
           </h1>
           <h3
-            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl mb-5 tracking-widest font-mono`}
+            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl tracking-widest font-mono`}
           >
             FRONTEND DEVELOPER
           </h3>
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3">
-            <a href="#AboutMe">Läs mer</a>
+          <h5
+            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 tracking-widest font-mono`}
+          >
+            Tretton37
+          </h5>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
+            onClick={executeScroll}
+          >
+            Läs mer
           </button>
         </div>
       </div>
+      <div ref={heroBottomAnchor} className="absolute bottom-0" />
     </div>
   );
 };

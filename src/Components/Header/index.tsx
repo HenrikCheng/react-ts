@@ -8,7 +8,7 @@ interface HeaderProps {
 
 const Header = ({ title, subTitle, classes }: HeaderProps) => (
   <div>
-    <div className={classes || "font-bold text-xl mb-4"}>{title}</div>
+    <div className={classes || "font-bold text-xl mb-2"}>{title}</div>
     {subTitle && <p>{subTitle}</p>}
   </div>
 );
