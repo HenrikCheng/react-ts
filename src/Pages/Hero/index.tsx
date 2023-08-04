@@ -13,7 +13,16 @@ const Hero = () => {
     heroBottomAnchor.current.scrollIntoView();
   };
 
+  const handleTextColorChange = () => {
+    if (window.scrollY > 350) {
+      dispatch(updateTextColor("text-gray-100"));
+    } else {
+      dispatch(updateTextColor("text-gray-900"));
+    }
+  };
+
   useEffect(() => {
+    handleTextColorChange();
     if (window.scrollY > 900) {
       setBgColor("bg-slate-800");
     } else if (window.scrollY > 750) {
@@ -34,16 +43,6 @@ const Hero = () => {
     dispatch(updateBgColor(bgColor));
   }, [dispatch, bgColor]);
 
-  const handleTextColorChange = () => {
-    if (window.scrollY > 600) {
-      dispatch(updateTextColor("text-gray-100"));
-      return "text-gray-100";
-    } else {
-      dispatch(updateTextColor("text-gray-900"));
-      return "text-gray-900";
-    }
-  };
-
   return (
     <div className="h-screen flex flex-col sm:mb-8">
       <div
@@ -51,7 +50,7 @@ const Hero = () => {
       >
         <div
           id="TextContainer"
-          className={`${handleTextColorChange()} transition ease-in-out delay-150 group-hover:scale-110 duration-300`}
+          className="transition ease-in-out delay-150 group-hover:scale-110 duration-300"
         >
           <h1
             className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
@@ -64,9 +63,9 @@ const Hero = () => {
             FRONTEND DEVELOPER
           </h3>
           <h5
-            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 tracking-widest font-mono`}
+            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 font-mono font-thin`}
           >
-            Tretton37
+            @Tretton37
           </h5>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
