@@ -1,6 +1,6 @@
 import { useState, useRef, MutableRefObject, useEffect } from "react";
-import { useAppDispatch } from "../../app/hooks";
 
+import { useAppDispatch } from "../../app/hooks";
 import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {

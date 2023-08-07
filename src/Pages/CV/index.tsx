@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../../components/Card";
 import Header from "../../components/Header";
@@ -70,8 +72,10 @@ const CV: React.FC<{}> = (props) => {
             href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
+            className="space-x-2"
           >
-            Mer information
+            <span>Mer information</span>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </button>
       </div>

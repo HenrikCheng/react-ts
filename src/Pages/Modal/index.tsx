@@ -35,7 +35,7 @@ const Modal = () => {
     if (showModal && windowWidth >= 768) {
       dispatch(toggleModal());
     }
-  }, [showModal, windowWidth]);
+  }, [dispatch, showModal, windowWidth]);
 
   if (showModal) {
     return (

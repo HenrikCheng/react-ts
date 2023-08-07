@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 import Header from "../../components/Header";
 import Card from "../../components/Card";
 
@@ -72,13 +75,18 @@ const Competences: React.FC<{}> = (props) => {
             {bottomString}
           </div>
         </div>
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+        <button
+          type="button"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3"
+        >
           <a
             href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
+            className="space-x-2"
           >
-            Utforska fler
+            <span>Utforska fler</span>
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
           </a>
         </button>
       </div>
