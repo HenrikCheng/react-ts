@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
@@ -9,6 +11,31 @@ const Modal = () => {
 
   const linkStyles =
     "block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2";
+
+  // State to keep track of the current window width
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    // Event handler to update the window width state when the resize event occurs
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    // Add event listener for the 'resize' event
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    // Close the modal when it is open and the window width is greater than or equal to 768px
+    if (showModal && windowWidth >= 768) {
+      dispatch(toggleModal());
+    }
+  }, [showModal, windowWidth]);
 
   if (showModal) {
     return (

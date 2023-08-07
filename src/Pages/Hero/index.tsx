@@ -75,7 +75,7 @@ const Hero = () => {
           </button>
         </div>
       </div>
-      <div ref={heroBottomAnchor} className="absolute bottom-0" />
+      <div ref={heroBottomAnchor} />
     </div>
   );
 };
