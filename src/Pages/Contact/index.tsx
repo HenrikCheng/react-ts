@@ -19,11 +19,9 @@ const Contact: React.FC<{}> = (props) => {
       </p>
       <p>
         E-post:
-        <span className="font-semibold">
-          <a href="mailto:johan.lundborg@tretton37.com">
-            johan.lundborg@tretton37.com
-          </a>
-        </span>
+        <a href="mailto:johan.lundborg@tretton37.com" className="font-semibold">
+          johan.lundborg@tretton37.com
+        </a>
       </p>
       <p className="mt-4">
         Tveka inte att höra av dig om du har några frågor eller om du är
