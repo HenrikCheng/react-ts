@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/react-ts/static/css/main.c4075f60.css",
-    "main.js": "/react-ts/static/js/main.bad194ec.js",
+    "main.css": "/react-ts/static/css/main.8e601b98.css",
+    "main.js": "/react-ts/static/js/main.ac4bf041.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
+    "static/media/tretton37.png": "/react-ts/static/media/tretton37.23a6534dbb702f4abcdc.png",
     "static/media/FilmApp.png": "/react-ts/static/media/FilmApp.297e4129a8be74ba770a.png",
     "static/media/BikeImage.jpg": "/react-ts/static/media/BikeImage.bc33c592620ce8d6c4cb.jpg",
     "static/media/tictactoe.png": "/react-ts/static/media/tictactoe.4ea5f841276d093cc4f7.png",
     "static/media/AboutImage.jpeg": "/react-ts/static/media/AboutImage.be7a906eb43fc5633c88.jpeg",
     "index.html": "/react-ts/index.html",
-    "main.c4075f60.css.map": "/react-ts/static/css/main.c4075f60.css.map",
-    "main.bad194ec.js.map": "/react-ts/static/js/main.bad194ec.js.map",
+    "main.8e601b98.css.map": "/react-ts/static/css/main.8e601b98.css.map",
+    "main.ac4bf041.js.map": "/react-ts/static/js/main.ac4bf041.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c4075f60.css",
-    "static/js/main.bad194ec.js"
+    "static/css/main.8e601b98.css",
+    "static/js/main.ac4bf041.js"
   ]
 }
