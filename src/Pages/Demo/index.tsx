@@ -18,11 +18,13 @@ const Project = ({ href, imageSrc, imageAlt, githubLink }: ItemProps) => {
   return (
     <div className="h-96 w-96">
       <div className="w-96">
-        <img
-          src={imageSrc}
-          alt={imageAlt || imageSrc}
-          className="h-80 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover mb-2 hover:cursor-pointer"
-        />
+        <a href={href} target="_blank" rel="noreferrer">
+          <img
+            src={imageSrc}
+            alt={imageAlt || imageSrc}
+            className="h-80 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover mb-2 hover:cursor-pointer"
+          />
+        </a>
         {githubLink && (
           <div>
             <span>Source code available: </span>

@@ -1,7 +1,34 @@
+import React, { useEffect } from "react";
+import { Map, View } from "ol";
+import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer";
+import { OSM, Vector as VectorSource } from "ol/source";
+import { fromLonLat } from "ol/proj";
+
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 
 const Contact: React.FC<{}> = (props) => {
+  useEffect(() => {
+    // Map initialization
+    const map = new Map({
+      target: "map-container",
+      layers: [
+        new TileLayer({
+          source: new OSM(),
+        }),
+      ],
+      view: new View({
+        center: fromLonLat([18.054974, 59.330268]),
+        zoom: 16,
+      }),
+    });
+
+    return () => {
+      // Clean up when the component unmounts
+      map.dispose();
+    };
+  }, []);
+
   return (
     <Card classes="container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4">
       <Header title="Kontakt" classes="text-4xl font-semibold mb-4" />
@@ -28,6 +55,7 @@ const Contact: React.FC<{}> = (props) => {
         intresserad av att samarbeta med Henrik. Johan ser fram emot att höra
         från dig och hjälper dig gärna vidare i processen!
       </p>
+      <div id="map-container" className="w-full h-96"></div>
     </Card>
   );
 };
