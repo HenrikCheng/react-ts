@@ -6,6 +6,7 @@ import { fromLonLat } from "ol/proj";
 
 import Card from "../../components/Card";
 import Header from "../../components/Header";
+import "./styles.css";
 
 const Contact: React.FC<{}> = (props) => {
   useEffect(() => {
@@ -41,8 +42,17 @@ const Contact: React.FC<{}> = (props) => {
       <p>
         Företag: <span className="font-semibold">Tretton37</span>
       </p>
-      <p className="font-semibold">
-        Telefon: <a href="tel:+46708908222">+46708908222</a>
+      <p>
+        Adress:
+        <span className="font-semibold">
+          The Waterfront Building, Klarabergsviadukten 63, 111 64 Stockholm
+        </span>
+      </p>
+      <p>
+        Telefon:
+        <a className="font-semibold" href="tel:+46708908222">
+          +46708908222
+        </a>
       </p>
       <p>
         E-post:
@@ -55,7 +65,7 @@ const Contact: React.FC<{}> = (props) => {
         intresserad av att samarbeta med Henrik. Johan ser fram emot att höra
         från dig och hjälper dig gärna vidare i processen!
       </p>
-      <div id="map-container" className="w-full h-96"></div>
+      <div id="map-container" className="w-full h-96 grayscale"></div>
     </Card>
   );
 };
