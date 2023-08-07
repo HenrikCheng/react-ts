@@ -4,6 +4,7 @@ import Card from "../../components/Card";
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 import Tretton37 from "../../images/tretton37.png";
+import Mirjaleipoo from "../../images/mirjaleipoo.png";
 
 type ItemProps = {
   href: string;
@@ -20,7 +21,7 @@ const Project = ({ href, imageSrc, imageAlt, githubLink }: ItemProps) => {
           <img
             src={imageSrc}
             alt={imageAlt || imageSrc}
-            className="max-h-96 max-w-96 hover:scale-105 transition duration-300 ease-in-out"
+            className="h-96 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover"
           />
           {githubLink && <a href="githubLink">{`Go to ${githubLink}`}</a>}
         </a>
@@ -37,12 +38,6 @@ const Demo: React.FC<{}> = (props) => {
       imageAlt: "Tretton37 website",
     },
     {
-      href: "https://henrikcheng.github.io/tic-tac-toe/",
-      imageSrc: TicTacToePic,
-      imageAlt: "click to go to tictactoe game",
-      githubLink: "",
-    },
-    {
       href: "https://henrikcheng.github.io/film-app/",
       imageSrc: FilmPic,
       imageAlt: "click to go to video app",
@@ -52,6 +47,13 @@ const Demo: React.FC<{}> = (props) => {
       href: "https://henrikcheng.github.io/tic-tac-toe/",
       imageSrc: TicTacToePic,
       imageAlt: "click to go to tictactoe game",
+      githubLink: "",
+    },
+    {
+      href: "https://henrikcheng.github.io/",
+      imageSrc: Mirjaleipoo,
+      imageAlt: "Website for a local bakery in Finland",
+      githubLink: "",
     },
   ];
 
