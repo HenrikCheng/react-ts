@@ -8,16 +8,15 @@ import Card from "../../components/Card";
 const Competences: React.FC<{}> = (props) => {
   const skillsArray = [
     ".NET Core",
-    "Accessible design",
-    "Agil Scrum",
-    "Agile Methods",
+    "Agile Scrum",
     "Axios",
     "Bootstrap",
-    "Cobol",
+    "COBOL",
     "Content Management Systems (CMS)",
     "CSS",
+    "Express.js",
     "Figma",
-    "GraphQL",
+    "GraphQL API",
     "Git",
     "Github",
     "HTML",
@@ -28,7 +27,8 @@ const Competences: React.FC<{}> = (props) => {
     "Kanban",
     "Legitimerad läkare",
     "Microsoft Azure",
-    "MongoDB",
+    "Material-UI",
+    "MongoDB Atlas",
     "NextJS",
     "Node.js",
     "Photoshop",
@@ -43,8 +43,8 @@ const Competences: React.FC<{}> = (props) => {
     "Scrum Master",
     "SCSS/SASS",
     "SQL",
+    "Styled-components",
     "Storybook",
-    "Structured Query Language",
     "SWR",
     "Tailwind CSS",
     "Take care",
@@ -54,6 +54,7 @@ const Competences: React.FC<{}> = (props) => {
     "Webflow",
     "Vue",
     "Version Control - GIT",
+    "Web Accessibility",
   ];
   const midIndex = Math.ceil(skillsArray.length / 2);
 
