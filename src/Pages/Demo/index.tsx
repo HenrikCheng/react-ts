@@ -5,6 +5,7 @@ import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 import Tretton37 from "../../images/tretton37.png";
 import Mirjaleipoo from "../../images/mirjaleipoo.png";
+import People from "../../images/1337-people.png";
 
 type ItemProps = {
   href: string;
@@ -21,9 +22,16 @@ const Project = ({ href, imageSrc, imageAlt, githubLink }: ItemProps) => {
           <img
             src={imageSrc}
             alt={imageAlt || imageSrc}
-            className="h-96 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover"
+            className="h-80 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover mb-2"
           />
-          {githubLink && <a href="githubLink">{`Go to ${githubLink}`}</a>}
+          {githubLink && (
+            <div>
+              <span>Code available: </span>
+              <a className="font-bold" href={githubLink}>
+                here
+              </a>
+            </div>
+          )}
         </a>
       </div>
     </div>
@@ -41,19 +49,25 @@ const Demo: React.FC<{}> = (props) => {
       href: "https://henrikcheng.github.io/film-app/",
       imageSrc: FilmPic,
       imageAlt: "click to go to video app",
-      githubLink: "",
+      githubLink: "https://github.com/HenrikCheng/film-app",
     },
     {
       href: "https://henrikcheng.github.io/tic-tac-toe/",
       imageSrc: TicTacToePic,
       imageAlt: "click to go to tictactoe game",
-      githubLink: "",
+      githubLink: "https://github.com/HenrikCheng/tic-tac-toe",
     },
     {
       href: "https://henrikcheng.github.io/",
       imageSrc: Mirjaleipoo,
       imageAlt: "Website for a local bakery in Finland",
-      githubLink: "",
+      githubLink: "https://github.com/HenrikCheng/MirjaPage",
+    },
+    {
+      href: "https://henrikcheng.github.io/1337-people",
+      imageSrc: People,
+      imageAlt: "Company employees of Tretton37",
+      githubLink: "https://github.com/HenrikCheng/1337-people",
     },
   ];
 
@@ -67,6 +81,7 @@ const Demo: React.FC<{}> = (props) => {
               href={project.href}
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
+              githubLink={project.githubLink}
             />
           ))}
         </div>

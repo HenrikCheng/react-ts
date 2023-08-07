@@ -1,7 +1,5 @@
-import React from "react";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import AboutImage from "../../images/AboutImage.jpeg";
 
 const Contact: React.FC<{}> = (props) => {
   return (
@@ -34,11 +32,6 @@ const Contact: React.FC<{}> = (props) => {
           från dig och hjälper dig gärna vidare i processen!
         </p>
       </div>
-      <img
-        className="w-1/3 object-scale-down pl-6"
-        src={AboutImage}
-        alt="Portrait of Henrik"
-      />
     </Card>
   );
 };
