@@ -1,11 +1,11 @@
-import React from "react";
-
 import Card from "../../components/Card";
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 import Tretton37 from "../../images/tretton37.png";
 import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
+import Header from "../../components/Header";
+import Text from "../../components/Text";
 
 type ItemProps = {
   href: string;
@@ -21,7 +21,7 @@ const Project = ({ href, imageSrc, imageAlt, githubLink }: ItemProps) => {
         <img
           src={imageSrc}
           alt={imageAlt || imageSrc}
-          className="h-80 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover mb-2"
+          className="h-80 w-96 hover:scale-105 transition duration-300 ease-in-out object-cover mb-2 hover:cursor-pointer"
         />
         {githubLink && (
           <div>
@@ -76,7 +76,9 @@ const Demo: React.FC<{}> = (props) => {
 
   return (
     <Card>
-      <div className="w-full overflow-x-scroll" id="Demo">
+      <Header title="Demoprojekt" classes="text-4xl font-semibold mb-4" />
+      <Text content="Vänligen rulla eller svep åt sidan för att fortsätta läsa." />
+      <div className="w-full overflow-x-scroll relative" id="Demo">
         <div className="flex space-x-6">
           {projects.map((project, index) => (
             <Project
