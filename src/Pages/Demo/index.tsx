@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 import Card from "../../components/Card";
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
@@ -6,6 +8,7 @@ import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
 import Header from "../../components/Header";
 import Text from "../../components/Text";
+import "./styles.css";
 
 type ItemProps = {
   href: string;
@@ -15,6 +18,7 @@ type ItemProps = {
   label?: string;
   description?: string;
   techStack?: Array<String>;
+  isDragging: any;
 };
 
 const Project = ({
@@ -25,18 +29,44 @@ const Project = ({
   label,
   description,
   techStack,
+  isDragging,
 }: ItemProps) => {
+  useEffect(() => {
+    console.log("🚀 ~ file: index.tsx:37 ~ isDragging:", isDragging);
+  }, [isDragging]);
+
   return (
-    <div className="w-96">
-      <div className="w-96 relative">
-        <a
-          href={href}
-          target="_blank"
-          rel="noreferrer"
-          className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 transition-opacity text-transparent font-semibold hover:text-black text-3xl flex items-center justify-center"
-        >
-          Öppna demo
-        </a>
+    <div>
+      {(githubLink || href) && (
+        <div className="w-full flex justify-around">
+          {href && (
+            <a
+              className="font-bold"
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Öppna demo
+            </a>
+          )}
+          {githubLink && (
+            <a
+              href={githubLink}
+              className="font-bold"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Källkod
+            </a>
+          )}
+        </div>
+      )}
+      <div className={`w-96 relative ${isDragging ? "no-pointer-events" : ""}`}>
+        {description && (
+          <span className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent hover:text-black flex items-center justify-center p-4 text-lg font-medium">
+            {description}
+          </span>
+        )}
         <img
           src={imageSrc}
           alt={imageAlt || imageSrc}
@@ -44,15 +74,6 @@ const Project = ({
         />
       </div>
 
-      {githubLink && (
-        <div>
-          <span>Läs vidare: </span>
-          <a className="font-bold" href={href} target="_blank" rel="noreferrer">
-            källkod
-          </a>
-        </div>
-      )}
-      {description && <div className="text-justify">{description}</div>}
       {techStack && (
         <div className="font-semibold">{techStack.join(" | ")}</div>
       )}
@@ -109,11 +130,40 @@ const Demo: React.FC<{}> = (props) => {
     },
   ];
 
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  const handleMouseDown = (e: React.MouseEvent<HTMLElement>) => {
+    setIsDragging(true);
+    setStartX(e.clientX - e.currentTarget.offsetLeft);
+    setScrollLeft(e.currentTarget.scrollLeft);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.clientX - e.currentTarget.offsetLeft;
+    const walk = x - startX * 1; // Adjust the multiplier for faster/slower scrolling
+    e.currentTarget.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
   return (
     <Card>
       <Header title="Demoprojekt" classes="text-4xl font-semibold mb-4" />
       <Text content="Vänligen rulla eller svep åt sidan för att fortsätta läsa." />
-      <div className="w-full overflow-x-scroll relative" id="Demo">
+      <div
+        className="w-full overflow-x-scroll relative"
+        id="Demo"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
         <div className="flex space-x-6">
           {projects.map((project, index) => (
             <Project
@@ -125,6 +175,7 @@ const Demo: React.FC<{}> = (props) => {
               label={project.label}
               description={project.description}
               techStack={project.techStack}
+              isDragging={isDragging}
             />
           ))}
         </div>

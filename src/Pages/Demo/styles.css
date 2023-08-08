@@ -1,0 +1,11 @@
+#Demo {
+  cursor: grab;
+}
+
+#Demo:active {
+  cursor: grabbing;
+}
+
+.no-pointer-events {
+  pointer-events: none;
+}

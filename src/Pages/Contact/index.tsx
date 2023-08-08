@@ -10,7 +10,6 @@ import { Style, Icon } from "ol/style";
 
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import Text from "../../components/Text";
 import "./styles.css";
 
 const Contact: React.FC<{}> = (props) => {
@@ -77,13 +76,13 @@ const Contact: React.FC<{}> = (props) => {
           <p>
             Företag: <span className="font-semibold">Tretton37</span>
           </p>
-          <p>
+          <div>
             Adress:
             <p className="font-semibold">The Waterfront Building</p>
             <p className="font-semibold">
               Klarabergsviadukten 63, 111 64 Stockholm
             </p>
-          </p>
+          </div>
           <p>
             Telefon:
             <a className="font-semibold" href="tel:+46708908222">
