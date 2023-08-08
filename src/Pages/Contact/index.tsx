@@ -18,6 +18,7 @@ const Contact: React.FC<{}> = (props) => {
     // Map initialization
     const map = new Map({
       target: "map-container",
+      // controls: [],
       layers: [
         new TileLayer({
           source: new OSM(),
@@ -65,23 +66,23 @@ const Contact: React.FC<{}> = (props) => {
   return (
     <Card classes="container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4">
       <Header title="Kontakt" classes="text-4xl font-semibold mb-4" />
+      <p className="text-xl font-semibold mb-4" id="Contact">
+        För att komma i kontakt med Henrik som konsult kan du ta kontakt med:
+      </p>
       <div className="flex flex-col md:flex-row md:space-x-6">
-        <div className="flex flex-col justify-center items-center w-full">
-          <p className="text-xl font-semibold mb-4" id="Contact">
-            För att komma i kontakt med Henrik som konsult kan du ta kontakt
-            med:
-          </p>
+        <div className="flex flex-col justify-center items-center w-full pb-4">
           <p>
-            Namn: <span className="font-semibold">Johan Lundborg</span>
+            <span className="font-semibold">Johan Lundborg</span>
           </p>
           <p>
             Företag: <span className="font-semibold">Tretton37</span>
           </p>
           <p>
             Adress:
-            <span className="font-semibold">
-              The Waterfront Building, Klarabergsviadukten 63, 111 64 Stockholm
-            </span>
+            <p className="font-semibold">The Waterfront Building</p>
+            <p className="font-semibold">
+              Klarabergsviadukten 63, 111 64 Stockholm
+            </p>
           </p>
           <p>
             Telefon:

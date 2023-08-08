@@ -14,9 +14,13 @@ const CV: React.FC<{}> = (props) => {
         <div className="text-start">
           <Header title="Staylive, Frontend-utvecklare Jan 2022 - Mar 2023" />
           <Text
-            classes="text-gray-700 text-base text-left mb-6"
+            classes="text-gray-700 text-base text-left mb-2"
             content="Skapade React-komponenter för ett CMS som möjliggjorde kunders egen
-          hantering av streaming-sidor. Använde teknologier som React.js, Redux,
+          hantering av streaming-sidor."
+          />
+          <Text
+            classes="text-gray-700 text-base text-left mb-2"
+            content=" Använde teknologier som React.js, Redux,
           CSS, HTML, REST API, Tailwind CSS, m.fl."
           />
         </div>

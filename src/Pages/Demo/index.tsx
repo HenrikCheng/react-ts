@@ -14,6 +14,7 @@ type ItemProps = {
   githubLink?: string;
   label?: string;
   description?: string;
+  techStack?: string;
 };
 
 const Project = ({
@@ -23,6 +24,7 @@ const Project = ({
   githubLink,
   label,
   description,
+  techStack,
 }: ItemProps) => {
   return (
     <div className="w-96">
@@ -78,6 +80,7 @@ const Demo: React.FC<{}> = (props) => {
       githubLink: "https://github.com/HenrikCheng/MirjaPage",
       label: "Mirja Leipoo bageri",
       description: "",
+      techStack: "",
     },
     {
       href: "https://henrikcheng.github.io/1337-people",
@@ -102,6 +105,7 @@ const Demo: React.FC<{}> = (props) => {
               githubLink={project.githubLink}
               label={project.label}
               description={project.description}
+              techStack={project.techStack}
             />
           ))}
         </div>
