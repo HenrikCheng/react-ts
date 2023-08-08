@@ -12,11 +12,20 @@ type ItemProps = {
   imageSrc: string;
   imageAlt?: string;
   githubLink?: string;
+  label?: string;
+  description?: string;
 };
 
-const Project = ({ href, imageSrc, imageAlt, githubLink }: ItemProps) => {
+const Project = ({
+  href,
+  imageSrc,
+  imageAlt,
+  githubLink,
+  label,
+  description,
+}: ItemProps) => {
   return (
-    <div className="h-96 w-96">
+    <div className="w-96">
       <div className="w-96">
         <a href={href} target="_blank" rel="noreferrer">
           <img
@@ -67,6 +76,8 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: Mirjaleipoo,
       imageAlt: "Website for a local bakery in Finland",
       githubLink: "https://github.com/HenrikCheng/MirjaPage",
+      label: "Mirja Leipoo bageri",
+      description: "",
     },
     {
       href: "https://henrikcheng.github.io/1337-people",
@@ -89,6 +100,8 @@ const Demo: React.FC<{}> = (props) => {
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
               githubLink={project.githubLink}
+              label={project.label}
+              description={project.description}
             />
           ))}
         </div>
