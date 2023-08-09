@@ -155,7 +155,10 @@ const Demo: React.FC<{}> = (props) => {
   return (
     <Card>
       <Header title="Demoprojekt" classes="text-4xl font-semibold mb-4" />
-      <Text content="Vänligen rulla eller svep åt sidan för att fortsätta läsa." />
+      <Text
+        content="Vänligen rulla eller svep åt sidan för att fortsätta läsa."
+        classes="text-gray-700 text-base text-left mb-6 mx-2 text-center"
+      />
       <div
         className="w-full overflow-x-scroll relative"
         id="Demo"
