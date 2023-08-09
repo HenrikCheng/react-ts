@@ -9,3 +9,9 @@
 .no-pointer-events {
   pointer-events: none;
 }
+
+.ol-attribution {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}

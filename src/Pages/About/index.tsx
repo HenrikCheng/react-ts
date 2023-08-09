@@ -6,6 +6,8 @@ import BikeImage from "../../images/BikeImage.jpg";
 import Card from "../../components/Card";
 
 const About: React.FC<{}> = (props) => {
+  const pillClasses =
+    "inline-block rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2";
   return (
     <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden">
       <div className="sm:px-4 xl:px-24 py-4 xl:order-2">
@@ -18,18 +20,12 @@ const About: React.FC<{}> = (props) => {
         </div>
 
         <div className="flex flex-row">
-          <span className="inline-block bg-blue-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Kreativ
-          </span>
-          <span className="inline-block bg-indigo-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Engagerad
-          </span>
-          <span className="inline-block bg-purple-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+          <span className={`${pillClasses}  bg-blue-500`}>Kreativ</span>
+          <span className={`${pillClasses} bg-slate-800`}>Engagerad</span>
+          <span className={`${pillClasses} bg-slate-200 text-black`}>
             Nyfiken
           </span>
-          <span className="inline-block bg-pink-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
-            Teamworking
-          </span>
+          <span className={`${pillClasses} bg-rose-700`}>Teamworking</span>
         </div>
       </div>
       <img
