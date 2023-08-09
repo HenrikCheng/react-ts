@@ -19,6 +19,7 @@ type ItemProps = {
   description?: string;
   techStack?: Array<String>;
   isDragging: any;
+  header?: string;
 };
 
 const Project = ({
@@ -26,7 +27,7 @@ const Project = ({
   imageSrc,
   imageAlt,
   githubLink,
-  label,
+  header,
   description,
   techStack,
   isDragging,
@@ -62,10 +63,11 @@ const Project = ({
         </div>
       )}
       <div className={`w-96 relative ${isDragging ? "no-pointer-events" : ""}`}>
-        {description && (
-          <span className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent hover:text-black flex items-center justify-center p-4 text-lg font-medium">
-            {description}
-          </span>
+        {(header || description) && (
+          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
+            <h5 className="font-bold">{header}</h5>
+            <p>{description}</p>
+          </div>
         )}
         <img
           src={imageSrc}
@@ -92,6 +94,25 @@ const Demo: React.FC<{}> = (props) => {
       techStack: ["Webflow", "HTML", "JS", "CSS", "Kanban", "Figma"],
     },
     {
+      href: "https://henrikcheng.github.io/1337-people",
+      imageSrc: People,
+      imageAlt: "Company employees of Tretton37",
+      githubLink: "https://github.com/HenrikCheng/1337-people",
+      description:
+        "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
+      techStack: ["React", "Query params", "Debounce", "Tailwind", "REST API"],
+    },
+    {
+      href: "https://henrikcheng.github.io/",
+      imageSrc: Mirjaleipoo,
+      imageAlt: "Website for a local bakery in Finland",
+      githubLink: "https://github.com/HenrikCheng/MirjaPage",
+      label: "Mirja Leipoo bageri",
+      description:
+        "Mirja Leipoo är ett väletablerat, lokalt familjeägt företag som omfattar ett bageri, bed & breakfast samt cateringtjänster, och det har sin bas i Finland. Företaget ville etablera en online-närvaro att utöka sin kundkrets. Under sin studietid, hjälpte Henrik företaget och samtidigt kunde han applicera sina nya kunskaper.",
+      techStack: ["JS", "HTML", "CSS", "jQuery", "Bootstrap"],
+    },
+    {
       href: "https://henrikcheng.github.io/film-app/",
       imageSrc: FilmPic,
       imageAlt: "click to go to video app",
@@ -110,23 +131,14 @@ const Demo: React.FC<{}> = (props) => {
       techStack: ["Typescript", "HTML", "CSS", "Tailwind", "React"],
     },
     {
-      href: "https://henrikcheng.github.io/",
-      imageSrc: Mirjaleipoo,
-      imageAlt: "Website for a local bakery in Finland",
-      githubLink: "https://github.com/HenrikCheng/MirjaPage",
-      label: "Mirja Leipoo bageri",
+      href: "https://henrikcheng.github.io/weather-guru",
+      imageSrc: "https://picsum.photos/1280/768",
+      imageAlt: "Find out the weather at your location",
+      githubLink: "https://github.com/HenrikCheng/weather-guru",
+      header: "A no-nonsense weather-app",
+      techStack: ["React", "REST-API"],
       description:
-        "Mirja Leipoo är ett väletablerat, lokalt familjeägt företag som omfattar ett bageri, bed & breakfast samt cateringtjänster, och det har sin bas i Finland. Företaget ville etablera en online-närvaro att utöka sin kundkrets. Under sin studietid, hjälpte Henrik företaget och samtidigt kunde han applicera sina nya kunskaper.",
-      techStack: ["JS", "HTML", "CSS", "jQuery", "Bootstrap"],
-    },
-    {
-      href: "https://henrikcheng.github.io/1337-people",
-      imageSrc: People,
-      imageAlt: "Company employees of Tretton37",
-      githubLink: "https://github.com/HenrikCheng/1337-people",
-      description:
-        "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
-      techStack: ["React", "Query params", "Debounce", "Tailwind"],
+        "During my shifts as a doctor in the ER, I often found it challenging to stay updated on the weather without access to windows. Many weather apps I tried were filled with distracting commercials. This app provides a simple solution to that problem.",
     },
   ];
 
@@ -170,6 +182,7 @@ const Demo: React.FC<{}> = (props) => {
         <div className="flex space-x-6">
           {projects.map((project, index) => (
             <Project
+              header={project.header}
               key={index}
               href={project.href}
               imageSrc={project.imageSrc}
