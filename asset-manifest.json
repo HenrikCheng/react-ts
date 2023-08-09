@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-ts/static/css/main.75b425cb.css",
-    "main.js": "/react-ts/static/js/main.a66aafb0.js",
+    "main.css": "/react-ts/static/css/main.a7ec5bc2.css",
+    "main.js": "/react-ts/static/js/main.d19bc986.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
     "static/media/mirjaleipoo.png": "/react-ts/static/media/mirjaleipoo.32c8636aeaada34d15cb.png",
     "static/media/tretton37.png": "/react-ts/static/media/tretton37.23a6534dbb702f4abcdc.png",
@@ -11,12 +11,12 @@
     "static/media/tictactoe.png": "/react-ts/static/media/tictactoe.4ea5f841276d093cc4f7.png",
     "static/media/AboutImage.jpeg": "/react-ts/static/media/AboutImage.be7a906eb43fc5633c88.jpeg",
     "index.html": "/react-ts/index.html",
-    "main.75b425cb.css.map": "/react-ts/static/css/main.75b425cb.css.map",
-    "main.a66aafb0.js.map": "/react-ts/static/js/main.a66aafb0.js.map",
+    "main.a7ec5bc2.css.map": "/react-ts/static/css/main.a7ec5bc2.css.map",
+    "main.d19bc986.js.map": "/react-ts/static/js/main.d19bc986.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75b425cb.css",
-    "static/js/main.a66aafb0.js"
+    "static/css/main.a7ec5bc2.css",
+    "static/js/main.d19bc986.js"
   ]
 }
