@@ -1,27 +1,21 @@
 import { useEffect, useState } from "react";
 import { IntlProvider } from "react-intl";
 
+import { useAppSelector } from "./app/hooks";
+import { selectedLang } from "./components/LangSelect/langSlice";
 import Home from "./Pages/Home";
 import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages";
 import "./App.css";
 
 function App() {
-  const locale = LOCALES.ENGLISH;
+  const currentLang = useAppSelector(selectedLang);
+  const [currentLocale, setCurrentLocale] = useState(currentLang);
 
-  const [currentLocale, setCurrentLocale] = useState(locale);
-
+  // Update app lang whenever it changes in Redux
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentLocale((prevLocale) =>
-        prevLocale === LOCALES.ENGLISH ? LOCALES.JAPANESE : LOCALES.ENGLISH
-      );
-    }, 60000);
-
-    return () => {
-      clearInterval(intervalId);
-    };
-  }, []);
+    setCurrentLocale(currentLang);
+  }, [currentLang]);
 
   return (
     <IntlProvider
