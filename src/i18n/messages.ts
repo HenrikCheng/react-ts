@@ -24,8 +24,8 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "Innovative",
     competences_title: "Competences",
     competences_linkText: "Explore more",
-    contact_title: "Contact",
     demo_title: "Demo projects",
+    cv_title: "Résumé",
     cv_title_1: "Staylive, Frontend Developer Jan 2022 - Mar 2023",
     cv_text_1:
       "Created React components for a CMS that enabled customers to manage streaming pages on their own.",
@@ -48,6 +48,15 @@ export const messages: LocalizedMessages = {
       "Developed valuable qualities such as teamwork, leadership, and interaction with people.",
     cv_techstack: "Techstack: ",
     cv_more_info: "More information",
+    contact_title: "Contact",
+    contact_subtitle:
+      "To get in touch with Henrik as a consultant, you can reach out to:",
+    contact_company: "Company: ",
+    contact_address: "Address: ",
+    contact_phone: "Phone: ",
+    contact_email: "Email: ",
+    contact_text:
+      "Feel free to reach out if you have any questions or if you're interested in collaborating with Henrik. Johan looks forward to hearing from you and will be happy to assist you in the process!",
   },
   [LOCALES.SWEDISH]: {
     home_title: "Hem",
@@ -70,8 +79,8 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "Innovativ",
     competences_title: "Kompentenser",
     competences_linkText: "Utforska fler",
-    contact_title: "Kontakt",
     demo_title: "Demoprojekt",
+    cv_title: "CV",
     cv_title_1: "Staylive, Frontend-utvecklare Jan 2022 - Mar 2023",
     cv_text_1:
       "Skapade React-komponenter för ett CMS som möjliggjorde kunders egen hantering av streaming-sidor.",
@@ -94,6 +103,15 @@ export const messages: LocalizedMessages = {
       "Utvecklade värdefulla egenskaper som teamarbete, ledarskap och mötet med människor.",
     cv_techstack: "Använde tekniker som: ",
     cv_more_info: "Mer information",
+    contact_title: "Kontakt",
+    contact_subtitle:
+      "För att komma i kontakt med Henrik som konsult kan du ta kontakt med:",
+    contact_company: "Företag: ",
+    contact_adress: "Adress: ",
+    contact_phone: "Telefon: ",
+    contact_email: "E-post: ",
+    contact_text:
+      "Tveka inte att höra av dig om du har några frågor eller om du är intresserad av att samarbeta med Henrik. Johan ser fram emot att höra från dig och hjälper dig gärna vidare i processen..!",
   },
 };
 // export const testMessages = {

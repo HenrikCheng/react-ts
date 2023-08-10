@@ -10,7 +10,9 @@ const CV: React.FC<{}> = (props) => {
   return (
     <Card classes="flex flex-col container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4 px-4 md:px-8">
       <div id="CV">
-        <Header title="CV" classes="text-4xl font-semibold mb-4" />
+        <Header classes="text-4xl font-semibold mb-4">
+          <FormattedMessage id="cv_title" />
+        </Header>
         <div className="text-start pb-4">
           <Header>
             <FormattedMessage id="cv_title_1" />

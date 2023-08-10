@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
+import { FormattedMessage } from "react-intl";
 
 import { Map, View } from "ol";
 import { Tile as TileLayer, Vector as VectorLayer } from "ol/layer";
@@ -64,9 +65,11 @@ const Contact: React.FC<{}> = (props) => {
 
   return (
     <Card classes="container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4">
-      <Header title="Kontakt" classes="text-4xl font-semibold mb-4" />
+      <Header classes="text-4xl font-semibold mb-4">
+        <FormattedMessage id="contact_title" />
+      </Header>
       <p className="text-xl font-semibold mb-4" id="Contact">
-        För att komma i kontakt med Henrik som konsult kan du ta kontakt med:
+        <FormattedMessage id="contact_subtitle" />
       </p>
       <div className="flex flex-col md:flex-row md:space-x-6">
         <div className="flex flex-col justify-center items-center w-full pb-4">
@@ -74,23 +77,24 @@ const Contact: React.FC<{}> = (props) => {
             <span className="font-semibold">Johan Lundborg</span>
           </p>
           <p>
-            Företag: <span className="font-semibold">Tretton37</span>
+            <FormattedMessage id="contact_company" />
+            <span className="font-semibold">Tretton37</span>
           </p>
           <div>
-            Adress:
+            <FormattedMessage id="contact_adress" />
             <p className="font-semibold">The Waterfront Building</p>
             <p className="font-semibold">
               Klarabergsviadukten 63, 111 64 Stockholm
             </p>
           </div>
           <p>
-            Telefon:
+            <FormattedMessage id="contact_phone" />
             <a className="font-semibold" href="tel:+46708908222">
               +46708908222
             </a>
           </p>
           <p>
-            E-post:
+            <FormattedMessage id="contact_email" />
             <a
               href="mailto:johan.lundborg@tretton37.com"
               className="font-semibold"
@@ -99,9 +103,7 @@ const Contact: React.FC<{}> = (props) => {
             </a>
           </p>
           <p className="mt-4">
-            Tveka inte att höra av dig om du har några frågor eller om du är
-            intresserad av att samarbeta med Henrik. Johan ser fram emot att
-            höra från dig och hjälper dig gärna vidare i processen!
+            <FormattedMessage id="contact_text" />
           </p>
         </div>
         <div id="map-container" className="w-full h-96 grayscale"></div>
