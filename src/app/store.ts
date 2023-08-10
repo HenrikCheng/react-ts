@@ -1,13 +1,15 @@
 import { configureStore, ThunkAction, Action } from "@reduxjs/toolkit";
 import counterReducer from "../features/counter/counterSlice";
 import modalReducer from "../Pages/Modal/modalSlice";
-import mouseYColorReducer from "../Pages/Hero/colorSlice";
+import coloursReducer from "../Pages/Hero/colorSlice";
+import langReducer from "../components/LangSelect/langSlice";
 
 export const store = configureStore({
   reducer: {
     counter: counterReducer,
     modal: modalReducer,
-    mouseYColor: mouseYColorReducer,
+    colours: coloursReducer,
+    selectedLang: langReducer,
     // scrollAnchor: scrollAnchorReducer,
   },
 });

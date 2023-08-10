@@ -1,12 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
 
-export interface CounterState {
+export interface ModalState {
   showModal: boolean;
   status: "idle" | "loading" | "failed";
 }
 
-const initialState: CounterState = {
+const initialState: ModalState = {
   showModal: false,
   status: "idle",
 };

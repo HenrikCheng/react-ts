@@ -9,7 +9,7 @@ export interface colorSlice {
 
 const initialState: colorSlice = {
   bgColor: "bg-slate-200",
-  textColor: "text-black",
+  textColor: "text-slate-900",
   status: "idle",
 };
 
@@ -28,8 +28,7 @@ export const ColorSlice = createSlice({
 
 export const { updateBgColor, updateTextColor } = ColorSlice.actions;
 
-export const selectBgColor = (state: RootState) => state.mouseYColor.bgColor;
-export const selectTextColor = (state: RootState) =>
-  state.mouseYColor.textColor;
+export const selectBgColor = (state: RootState) => state.colours.bgColor;
+export const selectTextColor = (state: RootState) => state.colours.textColor;
 
 export default ColorSlice.reducer;
