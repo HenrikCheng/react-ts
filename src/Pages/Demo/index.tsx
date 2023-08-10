@@ -32,10 +32,6 @@ const Project = ({
   techStack,
   isDragging,
 }: ItemProps) => {
-  useEffect(() => {
-    console.log("🚀 ~ file: index.tsx:37 ~ isDragging:", isDragging);
-  }, [isDragging]);
-
   return (
     <div>
       {(githubLink || href) && (
@@ -85,6 +81,15 @@ const Project = ({
 
 const Demo: React.FC<{}> = (props) => {
   const projects = [
+    {
+      href: "https://henrikcheng.github.io/react-ts",
+      imageSrc: "https://picsum.photos/1280/768",
+      imageAlt: "Henriks portfolio page",
+      header: "Henriks portfolio",
+      description:
+        "Ett digitalt CV för att presentera mig närmare som en potentiell kollega.",
+      techStack: ["Typescript", "React", "React-Intl", "OpenLayers maps"],
+    },
     {
       href: "https://www.tretton37.com/",
       imageSrc: Tretton37,

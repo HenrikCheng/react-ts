@@ -4,6 +4,7 @@ import { selectBgColor, selectTextColor } from "../Hero/colorSlice";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhone, faBars } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import LangSelect from "../../components/LangSelect";
 
 const Navbar = () => {
   const dispatch = useAppDispatch();
@@ -51,48 +52,51 @@ const Navbar = () => {
             Henrik Cheng
           </span>
         </div>
-        <button
-          onClick={() => dispatch(toggleModal())}
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="md:hidden"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <FontAwesomeIcon
-            icon={faBars}
-            className={`${textColor} fa-xl lg:fa-2x `}
-          />
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
-            <li>
-              <a href="#Home" className={linkStyles}>
-                Hem
-              </a>
-            </li>
-            <li>
-              <a href="#AboutMe" className={linkStyles}>
-                Om mig
-              </a>
-            </li>
-            <li>
-              <a href="#CV" className={linkStyles}>
-                CV
-              </a>
-            </li>
-            <li>
-              <a href="#Contact" className={linkStyles}>
-                Kontakt
-              </a>
-            </li>
-            <li>
-              <a href="#Demo" className={linkStyles}>
-                Demoprojekt
-              </a>
-            </li>
-          </ul>
+        <div className="flex">
+          <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+            <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
+              <li>
+                <a href="#Home" className={linkStyles}>
+                  Hem
+                </a>
+              </li>
+              <li>
+                <a href="#AboutMe" className={linkStyles}>
+                  Om mig
+                </a>
+              </li>
+              <li>
+                <a href="#CV" className={linkStyles}>
+                  CV
+                </a>
+              </li>
+              <li>
+                <a href="#Contact" className={linkStyles}>
+                  Kontakt
+                </a>
+              </li>
+              <li>
+                <a href="#Demo" className={linkStyles}>
+                  Demoprojekt
+                </a>
+              </li>
+            </ul>
+          </div>
+          <LangSelect linkStyles={linkStyles} />
+          <button
+            onClick={() => dispatch(toggleModal())}
+            data-collapse-toggle="navbar-default"
+            type="button"
+            className="md:hidden"
+            aria-controls="navbar-default"
+            aria-expanded="false"
+          >
+            <span className="sr-only">Open main menu</span>
+            <FontAwesomeIcon
+              icon={faBars}
+              className={`${textColor} fa-xl lg:fa-2x ml-2`}
+            />
+          </button>
         </div>
       </div>
     </nav>

@@ -19,7 +19,7 @@ const About: React.FC<{}> = (props) => {
           <Text content="Sammanfattningsvis är jag en person som älskar design och problemlösning, samtidigt som jag värderar samarbete och utveckling. Min nyfikenhet på omvärlden driver mig mot spännande äventyr, och min vilja att stödja viktiga ändamål gör mitt liv meningsfullt och givande." />
         </div>
 
-        <div className="flex flex-row">
+        <div className="flex flex-row justify-center">
           <span className={`${pillClasses}  bg-blue-500`}>Kreativ</span>
           <span className={`${pillClasses} bg-slate-800`}>Engagerad</span>
           <span className={`${pillClasses} bg-slate-200 text-black`}>
