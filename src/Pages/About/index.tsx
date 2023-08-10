@@ -33,14 +33,17 @@ const About: React.FC<{}> = (props) => {
           <span className={`${pillClasses}  bg-blue-500`}>
             <FormattedMessage id="about_keyword_1" />
           </span>
-          <span className={`${pillClasses} bg-slate-500`}>
+          <span className={`${pillClasses} bg-slate-800`}>
             <FormattedMessage id="about_keyword_2" />
           </span>
-          <span className={`${pillClasses} bg-slate-200 text-slate-900`}>
+          <span className={`${pillClasses} bg-slate-500`}>
             <FormattedMessage id="about_keyword_3" />
           </span>
-          <span className={`${pillClasses} bg-rose-500`}>
+          <span className={`${pillClasses} bg-slate-200 text-slate-900`}>
             <FormattedMessage id="about_keyword_4" />
+          </span>
+          <span className={`${pillClasses} bg-rose-500`}>
+            <FormattedMessage id="about_keyword_5" />
           </span>
         </div>
       </div>
