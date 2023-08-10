@@ -1,4 +1,3 @@
-import React from "react";
 import { FormattedMessage } from "react-intl";
 import Header from "../../components/Header";
 import Text from "../../components/Text";

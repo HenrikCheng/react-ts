@@ -74,7 +74,7 @@ const Hero = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
             onClick={executeScroll}
           >
-            <FormattedMessage id="hero_readmore" />
+            <FormattedMessage id="hero_linkText" />
           </button>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React from "react";
+import { FormattedMessage } from "react-intl";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
@@ -67,7 +67,9 @@ const Competences: React.FC<{}> = (props) => {
       id="Competences"
     >
       <div>
-        <Header title="Kompetenser" classes="text-4xl font-semibold mb-4" />
+        <Header classes="text-4xl font-semibold mb-4">
+          <FormattedMessage id="competences_header" />
+        </Header>
         <div className="flex flex-col overflow-hidden tracking-widest font-mono text-lg">
           <div className="animate-leftRight-infinite whitespace-nowrap">
             {topString}
@@ -84,10 +86,9 @@ const Competences: React.FC<{}> = (props) => {
             href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
-            className="space-x-2"
           >
-            <span>Utforska fler</span>
-            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+            <FormattedMessage id="competences_linkText" />
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
         </button>
       </div>
