@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import { FormattedMessage } from "react-intl";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { toggleModal, selectModal } from "./modalSlice";
+import LangSelect from "../../components/LangSelect";
 
 const Modal = () => {
   const showModal = useAppSelector(selectModal);
@@ -63,7 +65,7 @@ const Modal = () => {
                   }}
                   className={linkStyles}
                 >
-                  Hem
+                  <FormattedMessage id="home_title" />
                 </button>
               </li>
               <li>
@@ -74,7 +76,7 @@ const Modal = () => {
                   }}
                 >
                   <a href="#AboutMe" className={linkStyles}>
-                    Om mig
+                    <FormattedMessage id="about" />
                   </a>
                 </button>
               </li>
@@ -86,7 +88,7 @@ const Modal = () => {
                   }}
                 >
                   <a href="#Competences" className={linkStyles}>
-                    Kompetenser
+                    <FormattedMessage id="competences_title" />
                   </a>
                 </button>
               </li>
@@ -110,7 +112,7 @@ const Modal = () => {
                   }}
                 >
                   <a href="#Contact" className={linkStyles}>
-                    Kontakt
+                    <FormattedMessage id="contact_title" />
                   </a>
                 </button>
               </li>
@@ -122,9 +124,12 @@ const Modal = () => {
                   }}
                 >
                   <a href="#Demo" className={linkStyles}>
-                    Demoprojekt
+                    <FormattedMessage id="demo_title" />
                   </a>
                 </button>
+              </li>
+              <li className={linkStyles}>
+                <LangSelect />
               </li>
             </ul>
           </div>
