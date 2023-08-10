@@ -5,7 +5,12 @@ import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { LOCALES } from "../../i18n/locales";
 import { updateLang, selectedLang } from "./langSlice";
 
-const LangSelect: React.FC = () => {
+type LangSelectProps = {
+  textColor?: string;
+};
+
+const LangSelect: React.FC<LangSelectProps> = ({ textColor }) => {
+  console.log("🚀 ~ file: index.tsx:13 ~ textColor:", textColor);
   const dispatch = useAppDispatch();
   const currentLang = useAppSelector(selectedLang);
 
@@ -21,7 +26,7 @@ const LangSelect: React.FC = () => {
     <div className="flex items-center space-x-1">
       <FontAwesomeIcon
         icon={faLanguage}
-        className="text-slate-100 block pr-1 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2 fa-xl"
+        className={`${textColor} block pr-1 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2 fa-xl`}
       />
       <div>
         <select

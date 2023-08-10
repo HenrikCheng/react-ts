@@ -82,7 +82,7 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <LangSelect />
+          <LangSelect textColor={textColor} />
           <button
             onClick={() => dispatch(toggleModal())}
             data-collapse-toggle="navbar-default"
