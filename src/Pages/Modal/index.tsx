@@ -43,95 +43,99 @@ const Modal = () => {
     return (
       <div className="relative">
         <div className="fixed top-0 bottom-0 left-0 right-0 bg-gray-800 text-white z-50 flex flex-col px-4 pt-5">
-          <button
-            className="self-end"
-            type="button"
-            onClick={() => dispatch(toggleModal())}
-          >
-            <FontAwesomeIcon icon={faX} className="fa-xl" />
-          </button>
-          <div className="">
-            <h4 className="text-3xl font-thin tracking-widest">HENRIK CHENG</h4>
-            <h5 className="text-2xl font-thin tracking-widest">
-              FRONTEND DEVELOPER
-            </h5>
-            <ul className="flex flex-col items-center p-4 mt-4 border-double border-4 border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                    window.scrollTo({ top: 0, left: 0 });
-                  }}
-                  className={linkStyles}
-                >
-                  <FormattedMessage id="home_title" />
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                  }}
-                >
-                  <a href="#AboutMe" className={linkStyles}>
-                    <FormattedMessage id="about" />
-                  </a>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                  }}
-                >
-                  <a href="#Competences" className={linkStyles}>
-                    <FormattedMessage id="competences_title" />
-                  </a>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                  }}
-                >
-                  <a href="#CV" className={linkStyles}>
-                    CV
-                  </a>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                  }}
-                >
-                  <a href="#Contact" className={linkStyles}>
-                    <FormattedMessage id="contact_title" />
-                  </a>
-                </button>
-              </li>
-              <li>
-                <button
-                  type="button"
-                  onClick={() => {
-                    dispatch(toggleModal());
-                  }}
-                >
-                  <a href="#Demo" className={linkStyles}>
-                    <FormattedMessage id="demo_title" />
-                  </a>
-                </button>
-              </li>
-              <li className={linkStyles}>
-                <LangSelect />
-              </li>
-            </ul>
+          <div className="container">
+            <button
+              className="flex flex-row-reverse w-full"
+              type="button"
+              onClick={() => dispatch(toggleModal())}
+            >
+              <FontAwesomeIcon icon={faX} className="fa-xl" />
+            </button>
+            <div className="">
+              <h4 className="text-3xl font-thin tracking-widest">
+                HENRIK CHENG
+              </h4>
+              <h5 className="text-2xl font-thin tracking-widest">
+                FRONTEND DEVELOPER
+              </h5>
+              <ul className="flex flex-col items-center p-4 mt-4 border-double border-4 border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                      window.scrollTo({ top: 0, left: 0 });
+                    }}
+                    className={linkStyles}
+                  >
+                    <FormattedMessage id="home_title" />
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                    }}
+                  >
+                    <a href="#AboutMe" className={linkStyles}>
+                      <FormattedMessage id="about" />
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                    }}
+                  >
+                    <a href="#Competences" className={linkStyles}>
+                      <FormattedMessage id="competences_title" />
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                    }}
+                  >
+                    <a href="#CV" className={linkStyles}>
+                      CV
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                    }}
+                  >
+                    <a href="#Contact" className={linkStyles}>
+                      <FormattedMessage id="contact_title" />
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      dispatch(toggleModal());
+                    }}
+                  >
+                    <a href="#Demo" className={linkStyles}>
+                      <FormattedMessage id="demo_title" />
+                    </a>
+                  </button>
+                </li>
+                <li className={linkStyles}>
+                  <LangSelect />
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
