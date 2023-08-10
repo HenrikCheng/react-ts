@@ -1,15 +1,18 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage } from "@fortawesome/free-solid-svg-icons";
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
 
 import { LOCALES } from "../../i18n/locales";
-import { updateLang } from "./langSlice";
+import { updateLang, selectedLang } from "./langSlice";
 
 type LangSelectProps = {
   linkStyles?: string;
 };
 
 const LangSelect: React.FC<LangSelectProps> = ({ linkStyles }) => {
+  const dispatch = useAppDispatch();
+  const currentLang = useAppSelector(selectedLang);
+
   const languages = [
     { name: "English", code: LOCALES.ENGLISH },
     { name: "Swedish", code: LOCALES.SWEDISH },
@@ -17,7 +20,6 @@ const LangSelect: React.FC<LangSelectProps> = ({ linkStyles }) => {
     // { name: "Français", code: LOCALES.FRENCH },
     // { name: "Deutsche", code: LOCALES.GERMAN },
   ];
-  const dispatch = useAppDispatch();
 
   return (
     <div className="flex items-center space-x-1">
@@ -26,7 +28,10 @@ const LangSelect: React.FC<LangSelectProps> = ({ linkStyles }) => {
         <select
           onChange={(e) => {
             dispatch(updateLang(e.target.value));
+            // storing locale in the localstorage
+            localStorage.setItem("locale", e.target.value);
           }}
+          defaultValue={currentLang}
         >
           {languages.map(({ name, code }) => (
             <option key={code} value={code}>

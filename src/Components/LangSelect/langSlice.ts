@@ -5,8 +5,9 @@ export interface CounterState {
   selectedLang: string;
 }
 
+const savedLocale = localStorage.getItem("locale");
 const initialState: CounterState = {
-  selectedLang: "en-US",
+  selectedLang: savedLocale || "en-US",
 };
 
 export const langSlice = createSlice({

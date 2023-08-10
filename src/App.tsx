@@ -11,6 +11,7 @@ import "./App.css";
 function App() {
   const currentLang = useAppSelector(selectedLang);
   const [currentLocale, setCurrentLocale] = useState(currentLang);
+  console.log("🚀 ~ file: App.tsx:14 ~ App ~ currentLocale:", currentLocale);
 
   // Update app lang whenever it changes in Redux
   useEffect(() => {
