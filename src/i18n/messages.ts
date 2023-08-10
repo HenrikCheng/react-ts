@@ -7,6 +7,7 @@ export const messages: LocalizedMessages = {
     home_title: "Home",
     hero_role: "FRONTEND DEVELOPER",
     hero_linkText: "Read more",
+    about: "About",
     about_title: "About me",
     about_text1:
       "I have a great interest in design and problem-solving. My background as a doctor has shaped me into an efficient worker and given me valuable skills to collaborate in teams to achieve the best for our clients. I love learning new things and always strive to develop in my role.",
@@ -29,6 +30,7 @@ export const messages: LocalizedMessages = {
     home_title: "Hem",
     hero_role: "FRONTENDUTVECKLARE",
     hero_linkText: "Läs mer",
+    about: "Om mig",
     about_title: "Om mig",
     about_text1:
       "Jag har ett stort intresse för design och problemlösning. Min bakgrund som läkare har format mig till en effektiv arbetare och gett mig värdefulla färdigheter att samarbeta i team för att uppnå det bästa för våra kunder. Jag älskar att lära mig nya saker och strävar alltid efter att utvecklas i min roll.",

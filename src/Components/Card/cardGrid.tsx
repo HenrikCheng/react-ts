@@ -5,7 +5,9 @@ interface CardContainerProps {
 }
 
 const CardGrid = ({ children }: CardContainerProps) => (
-  <div className="flex flex-col w-full items-center space-y-4">{children}</div>
+  <div className="flex flex-col w-full items-center space-y-4 z-10">
+    {children}
+  </div>
 );
 
 export default CardGrid;

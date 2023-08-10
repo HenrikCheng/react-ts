@@ -64,7 +64,7 @@ const Navbar = () => {
               </li>
               <li>
                 <a href="#AboutMe" className={linkStyles}>
-                  <FormattedMessage id="about_title" />
+                  <FormattedMessage id="about" />
                 </a>
               </li>
               <li>
