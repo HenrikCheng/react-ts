@@ -1,4 +1,5 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import Header from "../../components/Header";
 import Text from "../../components/Text";
 import AboutImage from "../../images/AboutImage.jpeg";
@@ -12,20 +13,36 @@ const About: React.FC<{}> = (props) => {
     <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden">
       <div className="sm:px-4 xl:px-24 py-4 xl:order-2">
         <div id="AboutMe">
-          <Header title="Om mig" classes="text-4xl font-semibold mb-4" />
-          <Text content="Jag har ett stort intresse för design och problemlösning. Min bakgrund som läkare har format mig till en effektiv arbetare och gett mig värdefulla färdigheter att samarbeta i team för att uppnå det bästa för våra kunder. Jag älskar att lära mig nya saker och strävar alltid efter att utvecklas i min roll." />
-          <Text content="När jag inte är engagerad i mitt arbete, spenderar jag gärna tid med mina vänner och familj. Vi njuter av att spela brädspel och padel tillsammans. Jag är väldigt nyfiken på omvärlden och älskar äventyr, så investeringar har blivit ett av mina intressen." />
-          <Text content="Ett av de modigaste och roligaste äventyren jag har upplevt var när jag cyklade från Sverige till Paris för att samla in pengar till Barncancerfonden. Det var en minnesvärd resa som visade på mitt engagemang för att hjälpa andra." />
-          <Text content="Sammanfattningsvis är jag en person som älskar design och problemlösning, samtidigt som jag värderar samarbete och utveckling. Min nyfikenhet på omvärlden driver mig mot spännande äventyr, och min vilja att stödja viktiga ändamål gör mitt liv meningsfullt och givande." />
+          <Header classes="text-4xl font-semibold mb-4">
+            <FormattedMessage id="about_title" />
+          </Header>
+          <Text>
+            <FormattedMessage id="about_text1" />
+          </Text>
+          <Text>
+            <FormattedMessage id="about_text2" />
+          </Text>
+          <Text>
+            <FormattedMessage id="about_text3" />
+          </Text>
+          <Text>
+            <FormattedMessage id="about_text4" />
+          </Text>
         </div>
 
         <div className="flex flex-row justify-center">
-          <span className={`${pillClasses}  bg-blue-500`}>Kreativ</span>
-          <span className={`${pillClasses} bg-slate-800`}>Engagerad</span>
-          <span className={`${pillClasses} bg-slate-200 text-black`}>
-            Nyfiken
+          <span className={`${pillClasses}  bg-blue-500`}>
+            <FormattedMessage id="about_keyword1" />
           </span>
-          <span className={`${pillClasses} bg-rose-700`}>Teamworking</span>
+          <span className={`${pillClasses} bg-slate-500`}>
+            <FormattedMessage id="about_keyword2" />
+          </span>
+          <span className={`${pillClasses} bg-slate-200 text-slate-900`}>
+            <FormattedMessage id="about_keyword3" />
+          </span>
+          <span className={`${pillClasses} bg-rose-500`}>
+            <FormattedMessage id="about_keyword4" />
+          </span>
         </div>
       </div>
       <img
