@@ -12,9 +12,10 @@ type LangSelectProps = {
 const LangSelect: React.FC<LangSelectProps> = ({ linkStyles }) => {
   const languages = [
     { name: "English", code: LOCALES.ENGLISH },
-    { name: "日本語", code: LOCALES.JAPANESE },
-    { name: "Français", code: LOCALES.FRENCH },
-    { name: "Deutsche", code: LOCALES.GERMAN },
+    { name: "Swedish", code: LOCALES.SWEDISH },
+    // { name: "日本語", code: LOCALES.JAPANESE },
+    // { name: "Français", code: LOCALES.FRENCH },
+    // { name: "Deutsche", code: LOCALES.GERMAN },
   ];
   const dispatch = useAppDispatch();
 

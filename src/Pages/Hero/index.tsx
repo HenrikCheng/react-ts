@@ -1,4 +1,5 @@
 import { useState, useRef, MutableRefObject, useEffect } from "react";
+import { FormattedMessage } from "react-intl";
 
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { selectTextColor } from "../Hero/colorSlice";
@@ -62,7 +63,7 @@ const Hero = () => {
           <h3
             className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl tracking-widest font-mono`}
           >
-            FRONTEND DEVELOPER
+            <FormattedMessage id="hero_role" />
           </h3>
           <h5
             className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 font-mono font-thin`}
@@ -73,7 +74,7 @@ const Hero = () => {
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
             onClick={executeScroll}
           >
-            Läs mer
+            <FormattedMessage id="hero_readmore" />
           </button>
         </div>
       </div>
