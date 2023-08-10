@@ -1,6 +1,8 @@
 import { LOCALES } from "./locales";
 
-export const messages = {
+type LocalizedMessages = Record<LOCALES, Record<string, string>>;
+
+export const messages: LocalizedMessages = {
   [LOCALES.ENGLISH]: {
     hero_role: "FRONTEND DEVELOPER",
     hero_readmore: "Read more",
@@ -10,7 +12,6 @@ export const messages = {
     hero_readmore: "Läs mer",
   },
 };
-
 // export const messages1 = {
 //   [LOCALES.ENGLISH]: {
 //     learn_to: "Hello, let's learn how to use React-Intl",
