@@ -4,14 +4,12 @@ import { IntlProvider } from "react-intl";
 import { useAppSelector } from "./app/hooks";
 import { selectedLang } from "./components/LangSelect/langSlice";
 import Home from "./Pages/Home";
-import { LOCALES } from "./i18n/locales";
 import { messages } from "./i18n/messages";
 import "./App.css";
 
 function App() {
   const currentLang = useAppSelector(selectedLang);
   const [currentLocale, setCurrentLocale] = useState(currentLang);
-  console.log("🚀 ~ file: App.tsx:14 ~ App ~ currentLocale:", currentLocale);
 
   // Update app lang whenever it changes in Redux
   useEffect(() => {
@@ -22,7 +20,7 @@ function App() {
     <IntlProvider
       messages={messages[currentLocale]}
       locale={currentLocale}
-      defaultLocale={LOCALES.ENGLISH}
+      defaultLocale={currentLocale}
     >
       <div className="App">
         <Home />

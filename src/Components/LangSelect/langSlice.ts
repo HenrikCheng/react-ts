@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../../app/store";
+import { LOCALES } from "../../i18n/locales";
 
 export interface CounterState {
   selectedLang: string;
@@ -7,7 +8,7 @@ export interface CounterState {
 
 const savedLocale = localStorage.getItem("locale");
 const initialState: CounterState = {
-  selectedLang: savedLocale || "en-US",
+  selectedLang: savedLocale || LOCALES.ENGLISH,
 };
 
 export const langSlice = createSlice({
