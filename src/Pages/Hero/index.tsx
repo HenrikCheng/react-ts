@@ -1,6 +1,7 @@
 import { useState, useRef, MutableRefObject, useEffect } from "react";
 
-import { useAppDispatch } from "../../app/hooks";
+import { useAppDispatch, useAppSelector } from "../../app/hooks";
+import { selectTextColor } from "../Hero/colorSlice";
 import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {
@@ -13,11 +14,12 @@ const Hero = () => {
     heroBottomAnchor.current.scrollIntoView();
   };
 
+  const textColor = useAppSelector(selectTextColor);
   const handleTextColorChange = () => {
-    if (window.scrollY > 350) {
-      dispatch(updateTextColor("text-gray-100"));
-    } else {
-      dispatch(updateTextColor("text-gray-900"));
+    if (window.scrollY > 350 && textColor === "text-slate-900") {
+      dispatch(updateTextColor("text-slate-100"));
+    } else if (window.scrollY < 350 && textColor === "text-slate-100") {
+      dispatch(updateTextColor("text-slate-900"));
     }
   };
 
