@@ -25,7 +25,7 @@ const LangSelect: React.FC<LangSelectProps> = ({ textColor }) => {
         icon={faLanguage}
         className={`${textColor} block pr-1 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2 fa-xl`}
       />
-      <div>
+      <div className="text-slate-100 py-2 rounded md:p-0 text-xl xl:text-2xl font-semibold whitespace-nowrap">
         <select
           onChange={(e) => {
             dispatch(updateLang(e.target.value));
