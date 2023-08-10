@@ -16,31 +16,31 @@ const About: React.FC<{}> = (props) => {
             <FormattedMessage id="about_title" />
           </Header>
           <Text>
-            <FormattedMessage id="about_text1" />
+            <FormattedMessage id="about_text_1" />
           </Text>
           <Text>
-            <FormattedMessage id="about_text2" />
+            <FormattedMessage id="about_text_2" />
           </Text>
           <Text>
-            <FormattedMessage id="about_text3" />
+            <FormattedMessage id="about_text_3" />
           </Text>
           <Text>
-            <FormattedMessage id="about_text4" />
+            <FormattedMessage id="about_text_4" />
           </Text>
         </div>
 
         <div className="flex flex-row justify-center">
           <span className={`${pillClasses}  bg-blue-500`}>
-            <FormattedMessage id="about_keyword1" />
+            <FormattedMessage id="about_keyword_1" />
           </span>
           <span className={`${pillClasses} bg-slate-500`}>
-            <FormattedMessage id="about_keyword2" />
+            <FormattedMessage id="about_keyword_2" />
           </span>
           <span className={`${pillClasses} bg-slate-200 text-slate-900`}>
-            <FormattedMessage id="about_keyword3" />
+            <FormattedMessage id="about_keyword_3" />
           </span>
           <span className={`${pillClasses} bg-rose-500`}>
-            <FormattedMessage id="about_keyword4" />
+            <FormattedMessage id="about_keyword_4" />
           </span>
         </div>
       </div>
