@@ -16,6 +16,7 @@ const LangSelect: React.FC<LangSelectProps> = ({ textColor }) => {
   const languages = [
     { name: "English", code: LOCALES.ENGLISH },
     { name: "Swedish", code: LOCALES.SWEDISH },
+    { name: "中文", code: LOCALES.MANDARIN },
   ];
 
   return (
