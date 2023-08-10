@@ -4,6 +4,7 @@ type LocalizedMessages = Record<LOCALES, Record<string, string>>;
 
 export const messages: LocalizedMessages = {
   [LOCALES.ENGLISH]: {
+    home_title: "Home",
     hero_role: "FRONTEND DEVELOPER",
     hero_linkText: "Read more",
     about_title: "About me",
@@ -19,10 +20,13 @@ export const messages: LocalizedMessages = {
     about_keyword2: "Versatile",
     about_keyword3: "Curious",
     about_keyword4: "Collaborative",
-    competences_header: "Competences",
+    competences_title: "Competences",
     competences_linkText: "Explore more",
+    contact_title: "Contact",
+    demo_title: "Demo projects",
   },
   [LOCALES.SWEDISH]: {
+    home_title: "Hem",
     hero_role: "FRONTENDUTVECKLARE",
     hero_linkText: "Läs mer",
     about_title: "Om mig",
@@ -38,7 +42,10 @@ export const messages: LocalizedMessages = {
     about_keyword2: "Engagerad",
     about_keyword3: "Nyfiken",
     about_keyword4: "Teamworking",
+    competences_title: "Kompentenser",
     competences_linkText: "Utforska fler",
+    contact_title: "Kontakt",
+    demo_title: "Demoprojekt",
   },
 };
 // export const messages1 = {

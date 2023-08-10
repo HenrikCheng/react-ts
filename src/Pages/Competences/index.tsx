@@ -68,7 +68,7 @@ const Competences: React.FC<{}> = (props) => {
     >
       <div>
         <Header classes="text-4xl font-semibold mb-4">
-          <FormattedMessage id="competences_header" />
+          <FormattedMessage id="competences_title" />
         </Header>
         <div className="flex flex-col overflow-hidden tracking-widest font-mono text-lg">
           <div className="animate-leftRight-infinite whitespace-nowrap">

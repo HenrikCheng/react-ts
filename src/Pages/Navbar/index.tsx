@@ -1,3 +1,5 @@
+import { FormattedMessage } from "react-intl";
+
 import { useAppDispatch, useAppSelector } from "../../app/hooks";
 import { toggleModal } from "../Modal/modalSlice";
 import { selectBgColor, selectTextColor } from "../Hero/colorSlice";
@@ -11,7 +13,7 @@ const Navbar = () => {
   const menuColor = useAppSelector(selectBgColor);
   const textColor = useAppSelector(selectTextColor);
 
-  const linkStyles = `${textColor} block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2`;
+  const linkStyles = `${textColor} block py-2 pl-3 pr-4 rounded md:hover:bg-transparent md:border-0 md:p-0 text-xl xl:text-2xl font-semibold hover:drop-shadow-lg hover:underline underline-offset-2 whitespace-nowrap`;
 
   return (
     <nav
@@ -57,12 +59,12 @@ const Navbar = () => {
             <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
               <li>
                 <a href="#Home" className={linkStyles}>
-                  Hem
+                  <FormattedMessage id="home_title" />
                 </a>
               </li>
               <li>
                 <a href="#AboutMe" className={linkStyles}>
-                  Om mig
+                  <FormattedMessage id="about_title" />
                 </a>
               </li>
               <li>
@@ -72,12 +74,12 @@ const Navbar = () => {
               </li>
               <li>
                 <a href="#Contact" className={linkStyles}>
-                  Kontakt
+                  <FormattedMessage id="contact_title" />
                 </a>
               </li>
               <li>
                 <a href="#Demo" className={linkStyles}>
-                  Demoprojekt
+                  <FormattedMessage id="demo_title" />
                 </a>
               </li>
             </ul>

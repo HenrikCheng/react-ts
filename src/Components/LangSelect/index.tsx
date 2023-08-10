@@ -10,16 +10,12 @@ type LangSelectProps = {
 };
 
 const LangSelect: React.FC<LangSelectProps> = ({ textColor }) => {
-  console.log("🚀 ~ file: index.tsx:13 ~ textColor:", textColor);
   const dispatch = useAppDispatch();
   const currentLang = useAppSelector(selectedLang);
 
   const languages = [
     { name: "English", code: LOCALES.ENGLISH },
     { name: "Swedish", code: LOCALES.SWEDISH },
-    // { name: "日本語", code: LOCALES.JAPANESE },
-    // { name: "Français", code: LOCALES.FRENCH },
-    // { name: "Deutsche", code: LOCALES.GERMAN },
   ];
 
   return (
