@@ -35,10 +35,10 @@ const Project = ({
   return (
     <div>
       {(githubLink || href) && (
-        <div className="w-full flex justify-around">
+        <div className="w-full flex justify-around mb-1">
           {href && (
             <a
-              className="font-bold"
+              className="font-bold hover:underline underline-offset-2"
               href={href}
               target="_blank"
               rel="noreferrer"
@@ -49,7 +49,7 @@ const Project = ({
           {githubLink && (
             <a
               href={githubLink}
-              className="font-bold"
+              className="font-bold hover:underline underline-offset-2"
               target="_blank"
               rel="noreferrer"
             >
