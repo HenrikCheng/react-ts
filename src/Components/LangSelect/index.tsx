@@ -33,6 +33,7 @@ const LangSelect: React.FC<LangSelectProps> = ({ textColor }) => {
             localStorage.setItem("locale", e.target.value);
           }}
           defaultValue={currentLang}
+          value={currentLang}
           className={`${textColor} bg-transparent`}
         >
           {languages.map(({ name, code }) => (
