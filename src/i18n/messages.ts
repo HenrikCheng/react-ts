@@ -24,7 +24,6 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "Innovative",
     competences_title: "Competences",
     competences_linkText: "Explore more",
-    demo_title: "Demo projects",
     cv_title: "Résumé",
     cv_title_1: "Staylive, Frontend Developer Jan 2022 - Mar 2023",
     cv_text_1:
@@ -52,11 +51,31 @@ export const messages: LocalizedMessages = {
     contact_subtitle:
       "To get in touch with Henrik as a consultant, you can reach out to:",
     contact_company: "Company: ",
-    contact_address: "Address: ",
+    contact_adress: "Address: ",
     contact_phone: "Phone: ",
     contact_email: "Email: ",
     contact_text:
       "Feel free to reach out if you have any questions or if you're interested in collaborating with Henrik. Johan looks forward to hearing from you and will be happy to assist you in the process!",
+    demo_title: "Demo projects",
+    demo_subtitle: "Please scroll or swipe sideways to continue reading.",
+    demo_open: "Open demo",
+    demo_sourcecode: "Source code",
+    demo_1_title: "Henrik's Portfolio",
+    demo_1_description:
+      "Tretton37 is a consultancy company where IT talents work. The company aimed to redefine its online presence to communicate its message more clearly, and that's when Henrik stepped in as one of the three developers. With a passionate attitude and strong commitment, he learned low-code programming while creating components with pixel-perfect precision.",
+    demo_2_description:
+      "Henrik created a web app that consumes an internal API to learn more about slightly more advanced React techniques. Recently, Henrik has also become interested in backend development, which led him to create APIs with CRUD functionality and databases for data storage.",
+    demo_3_description:
+      "Henrik created a web app that consumes an internal API to learn more about slightly more advanced React techniques. Recently, Henrik has also become interested in backend development, which led him to create APIs with CRUD functionality and databases for data storage.",
+    demo_4_description:
+      "Mirja Leipoo is a well-established, locally-owned family business that includes a bakery, bed & breakfast, and catering services, based in Finland. The company wanted to establish an online presence to expand its customer base. During his study period, Henrik helped the company and applied his new knowledge.",
+    demo_5_description:
+      "At the beginning of my career, I created this project to learn React and engage in a practical project related to something I was interested in.",
+    demo_6_description:
+      "After working with React and Javascript for a few years, I wanted to learn more and understand the basics of TypeScript. Since there were no opportunities through work, I chose to create a tic-tac-toe game in TypeScript to learn.",
+    demo_7_title: "A no-nonsense weather-app",
+    demo_7_description:
+      "During my shifts as a doctor in the ER, I often found it challenging to stay updated on the weather without access to windows. Many weather apps I tried were filled with distracting commercials. This app provides a simple solution to that problem.",
   },
   [LOCALES.SWEDISH]: {
     home_title: "Hem",
@@ -79,7 +98,6 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "Innovativ",
     competences_title: "Kompentenser",
     competences_linkText: "Utforska fler",
-    demo_title: "Demoprojekt",
     cv_title: "CV",
     cv_title_1: "Staylive, Frontend-utvecklare Jan 2022 - Mar 2023",
     cv_text_1:
@@ -112,6 +130,26 @@ export const messages: LocalizedMessages = {
     contact_email: "E-post: ",
     contact_text:
       "Tveka inte att höra av dig om du har några frågor eller om du är intresserad av att samarbeta med Henrik. Johan ser fram emot att höra från dig och hjälper dig gärna vidare i processen..!",
+    demo_title: "Demoprojekt",
+    demo_subtitle: "Vänligen rulla eller svep åt sidan för att fortsätta läsa.",
+    demo_open: "Öppna demo",
+    demo_sourcecode: "Källkod",
+    demo_1_title: "Henriks portfolio",
+    demo_1_description:
+      "Tretton37 är ett konsultföretag där IT-talanger arbetar. Företaget strävade efter att omdefiniera sin online-närvaro för att tydligare kommunicera sitt budskap, och det var då Henrik trädde in som en av de tre utvecklare. Med en passionerad inställning och starkt engagemang lärde han sig low-code programmering samtidigt som han skapade fram komponenter med pixel-perfekt precision.",
+    demo_2_description:
+      "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
+    demo_3_description:
+      "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
+    demo_4_description:
+      "Mirja Leipoo är ett väletablerat, lokalt familjeägt företag som omfattar ett bageri, bed & breakfast samt cateringtjänster, och det har sin bas i Finland. Företaget ville etablera en online-närvaro att utöka sin kundkrets. Under sin studietid, hjälpte Henrik företaget och samtidigt kunde han applicera sina nya kunskaper.",
+    demo_5_description:
+      "I början av karriären så skapade jag denna för att lära sig React, och göra ett praktiskt projekt inom något jag var intresserad av.",
+    demo_6_description:
+      "Efter att ha jobbat några år med React och Javascript tänkte jag att jag ville lära mig mer och lära mig grunderna i typescript. Det fanns ingen möjlighet via jobbet, så jag valde att göra en luffarschack-spel i typescript för att lära mig.",
+    demo_7_title: "En enkel och praktisk väder-app",
+    demo_7_description:
+      "Utan tillgång till fönster, så var det svårt att hålla sig a jour med vädret efter arbetspassen på akuten i min gamla karriär som läkare. Den här appen läser problemet på ett smidigt sätt",
   },
 };
 // export const testMessages = {

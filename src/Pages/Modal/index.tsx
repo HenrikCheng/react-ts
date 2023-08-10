@@ -56,7 +56,7 @@ const Modal = () => {
                 HENRIK CHENG
               </h4>
               <h5 className="text-2xl font-thin tracking-widest">
-                FRONTEND DEVELOPER
+                <FormattedMessage id="hero_role" />
               </h5>
               <ul className="flex flex-col items-center p-4 mt-4 border-double border-4 border-gray-100 rounded-lg bg-gray-800 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-transparent">
                 <li>
