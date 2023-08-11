@@ -106,15 +106,15 @@ const Demo: React.FC<{}> = (props) => {
       href: "https://henrikcheng.github.io/react-ts",
       imageSrc: PortfolioPic,
       imageAlt: "Henriks portfolio page",
-      header: "demo_1_title",
-      description: "demo_1_description",
+      header: "demo_portfolio_title",
+      description: "demo_portfolio_title",
       techStack: ["Typescript", "React", "React-Intl", "OpenLayers maps"],
     },
     {
       href: "https://www.tretton37.com/",
       imageSrc: Tretton37,
       imageAlt: "Tretton37 website",
-      description: "demo_2_description",
+      description: "demo_tretton_description",
       techStack: ["Webflow", "HTML", "JS", "CSS", "Kanban", "Figma"],
     },
     {
@@ -122,7 +122,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: People,
       imageAlt: "Company employees of Tretton37",
       githubLink: "https://github.com/HenrikCheng/1337-people",
-      description: "demo_3_description",
+      description: "demo_leetpeople_description",
       techStack: ["React", "Query params", "Debounce", "Tailwind", "REST API"],
     },
     {
@@ -131,7 +131,7 @@ const Demo: React.FC<{}> = (props) => {
       imageAlt: "Website for a local bakery in Finland",
       githubLink: "https://github.com/HenrikCheng/MirjaPage",
       label: "Mirja Leipoo bageri",
-      description: "demo_4_description",
+      description: "demo_mirjaleipoo_description",
       techStack: ["JS", "HTML", "CSS", "jQuery", "Bootstrap"],
     },
     {
@@ -139,7 +139,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: FilmPic,
       imageAlt: "click to go to video app",
       githubLink: "https://github.com/HenrikCheng/film-app",
-      description: "demo_5_description",
+      description: "demo_filmapp_description",
       techStack: ["React", "JS", "HTML", "CSS", "Local storage", "Bootstrap"],
     },
     {
@@ -147,7 +147,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: TicTacToePic,
       imageAlt: "click to go to tictactoe game",
       githubLink: "https://github.com/HenrikCheng/tic-tac-toe",
-      description: "demo_6_description",
+      description: "demo_tictactoe_description",
       techStack: ["Typescript", "HTML", "CSS", "Tailwind", "React"],
     },
     {
@@ -155,9 +155,9 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: "https://picsum.photos/1280/768",
       imageAlt: "Find out the weather at your location",
       githubLink: "https://github.com/HenrikCheng/weather-guru",
-      header: "demo_7_title",
+      header: "demo_weatherguru_title",
       techStack: ["React", "REST-API"],
-      description: "demo_7_description",
+      description: "demo_weatherguru_description",
     },
   ];
 

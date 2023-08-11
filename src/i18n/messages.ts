@@ -64,20 +64,20 @@ export const messages: LocalizedMessages = {
     demo_subtitle: "Please scroll or swipe sideways to continue reading.",
     demo_open: "Open demo",
     demo_sourcecode: "Source code",
-    demo_1_title: "Henrik's Portfolio",
-    demo_1_description: "My digital portfolio and resumé",
-    demo_2_description:
+    demo_portfolio_title: "Henrik's Portfolio",
+    demo_portfolio_description: "My digital portfolio and resumé",
+    demo_tretton_description:
       "Tretton37 is a consultancy company where IT talents work. The company aimed to redefine its online presence to communicate its message more clearly, and that's when Henrik stepped in as one of the three developers. With a passionate attitude and strong commitment, he learned low-code programming while creating components with pixel-perfect precision.",
-    demo_3_description:
+    demo_leetpeople_description:
       "Henrik created a web app that consumes an internal API to learn more about slightly more advanced React techniques. Recently, Henrik has also become interested in backend development, which led him to create APIs with CRUD functionality and databases for data storage.",
-    demo_4_description:
+    demo_mirjaleipoo_description:
       "Mirja Leipoo is a well-established, locally-owned family business that includes a bakery, bed & breakfast, and catering services, based in Finland. The company wanted to establish an online presence to expand its customer base. During his study period, Henrik helped the company and applied his new knowledge.",
-    demo_5_description:
+    demo_filmapp_description:
       "At the beginning of my career, I created this project to learn React and engage in a practical project related to something I was interested in.",
-    demo_6_description:
+    demo_tictactoe_description:
       "After working with React and Javascript for a few years, I wanted to learn more and understand the basics of TypeScript. Since there were no opportunities through work, I chose to create a tic-tac-toe game in TypeScript to learn.",
-    demo_7_title: "A no-nonsense weather-app",
-    demo_7_description:
+    demo_weatherguru_title: "A no-nonsense weather-app",
+    demo_weatherguru_description:
       "During my shifts as a doctor in the ER, I often found it challenging to stay updated on the weather without access to windows. Many weather apps I tried were filled with distracting commercials. This app provides a simple solution to that problem.",
   },
   [LOCALES.SWEDISH]: {
@@ -136,20 +136,20 @@ export const messages: LocalizedMessages = {
     demo_subtitle: "Vänligen rulla eller svep åt sidan för att fortsätta läsa.",
     demo_open: "Öppna demo",
     demo_sourcecode: "Källkod",
-    demo_1_title: "Henriks portfolio",
-    demo_1_description: "Mitt digitala portfolio och CV",
-    demo_2_description:
+    demo_portfolio_title: "Henriks portfolio",
+    demo_portfolio_description: "Mitt digitala portfolio och CV",
+    demo_tretton_description:
       "Tretton37 är ett konsultföretag där IT-talanger arbetar. Företaget strävade efter att omdefiniera sin online-närvaro för att tydligare kommunicera sitt budskap, och det var då Henrik trädde in som en av de tre utvecklare. Med en passionerad inställning och starkt engagemang lärde han sig low-code programmering samtidigt som han skapade fram komponenter med pixel-perfekt precision.",
-    demo_3_description:
+    demo_leetpeople_description:
       "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
-    demo_4_description:
+    demo_mirjaleipoo_description:
       "Mirja Leipoo är ett väletablerat, lokalt familjeägt företag som omfattar ett bageri, bed & breakfast samt cateringtjänster, och det har sin bas i Finland. Företaget ville etablera en online-närvaro att utöka sin kundkrets. Under sin studietid, hjälpte Henrik företaget och samtidigt kunde han applicera sina nya kunskaper.",
-    demo_5_description:
+    demo_filmapp_description:
       "I början av karriären så skapade jag denna för att lära sig React, och göra ett praktiskt projekt inom något jag var intresserad av.",
-    demo_6_description:
+    demo_tictactoe_description:
       "Efter att ha jobbat några år med React och Javascript tänkte jag att jag ville lära mig mer och lära mig grunderna i typescript. Det fanns ingen möjlighet via jobbet, så jag valde att göra en luffarschack-spel i typescript för att lära mig.",
-    demo_7_title: "En enkel och praktisk väder-app",
-    demo_7_description:
+    demo_weatherguru_title: "En enkel och praktisk väder-app",
+    demo_weatherguru_description:
       "Utan tillgång till fönster, så var det svårt att hålla sig a jour med vädret efter arbetspassen på akuten i min gamla karriär som läkare. Den här appen löser problemet på ett smidigt sätt",
   },
   [LOCALES.MANDARIN]: {
@@ -212,20 +212,20 @@ export const messages: LocalizedMessages = {
     demo_subtitle: "请滚动或侧滑以继续阅读。",
     demo_open: "打开演示",
     demo_sourcecode: "源代码",
-    demo_1_title: "亨利克的作品集",
-    demo_1_description: "我的数字作品集和简历",
-    demo_2_description:
+    demo_portfolio_title: "亨利克的作品集",
+    demo_portfolio_description: "我的数字作品集和简历",
+    demo_tretton_description:
       "Tretton37是一家咨询公司，IT人才在此工作。该公司旨在重新定义其在线存在，以更清晰地传达其信息，亨利克作为其中三名开发人员之一加入其中。他充满激情的态度和强烈的投入感，学习了低代码编程，同时以像素完美的精度创建了组件。",
-    demo_3_description:
+    demo_leetpeople_description:
       "亨利克创建了一个Web应用程序，消耗了内部API，以了解更多稍微高级的React技术。最近，亨利克还对后端开发产生了兴趣，这导致他创建了具有CRUD功能和数据库存储的API。",
-    demo_4_description:
+    demo_mirjaleipoo_description:
       "Mirja Leipoo是一家知名的本地家族企业，包括面包店、床位&早餐以及餐饮服务，总部位于芬兰。该公司希望建立在线存在，以扩大其客户群。在学习期间，亨利克帮助了该公司并应用了他的新知识。",
-    demo_5_description:
+    demo_filmapp_description:
       "在我的职业生涯初期，我创建了这个项目，以学习React，并参与与我感兴趣的内容相关的实际项目。",
-    demo_6_description:
+    demo_tictactoe_description:
       "在使用React和Javascript工作了几年后，我想学到更多，并了解TypeScript的基础知识。由于工作中没有机会，我选择创建了一个TypeScript的井字棋游戏来学习。",
-    demo_7_title: "简洁实用的天气应用",
-    demo_7_description:
+    demo_weatherguru_title: "简洁实用的天气应用",
+    demo_weatherguru_description:
       "在急诊室当医生的时候，我常常发现没有窗户让我难以及时了解天气情况。我尝试了许多天气应用，但其中很多都充斥着令人分心的广告。这个应用为这个问题提供了一个简单的解决方案。",
   },
 };
