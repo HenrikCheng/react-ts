@@ -53,7 +53,7 @@ const Hero = () => {
       >
         <div
           id="TextContainer"
-          className="transition ease-in-out delay-150 group-hover:scale-110 duration-300"
+          className="transition ease-in-out delay-150 group-hover:scale-110 duration-300 space-y-2"
         >
           <h1
             className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
