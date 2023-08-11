@@ -5,6 +5,12 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Card from "../../components/Card";
 import Header from "../../components/Header";
 import Text from "../../components/Text";
+import Slider from "../../components/Slider";
+
+import Nore from "../../logotypes/Nore.png";
+import Dalarna from "../../logotypes/Dalarna.png";
+import Aspia from "../../logotypes/aspia-logo.webp";
+import Staylive from "../../logotypes/Staylive.png";
 
 const CV: React.FC<{}> = (props) => {
   return (
@@ -13,7 +19,86 @@ const CV: React.FC<{}> = (props) => {
         <Header classes="text-4xl font-semibold mb-4">
           <FormattedMessage id="cv_title" />
         </Header>
-        <div className="text-start pb-4">
+
+        <Slider
+          dimension={"500px"}
+          slides={[
+            {
+              imageSrc: Staylive,
+              header: "Awesome App",
+              description:
+                "A cutting-edge application to revolutionize your experience.",
+              techStack: ["Redux", "CSS", "HTML", "REST API", "Tailwind CSS"],
+            },
+            {
+              imageSrc: Staylive,
+              header: "Innovative Website",
+              description: "An interactive website that will amaze users.",
+              techStack: ["React.js", "Redux", "CSS", "HTML", "Tailwind CSS"],
+            },
+            {
+              imageSrc: Staylive,
+              header: "Cool Project",
+              description:
+                "A showcase of advanced features and functionalities.",
+              techStack: [
+                "React.js",
+                "Redux",
+                "CSS",
+                "HTML",
+                "REST API",
+                "Tailwind CSS",
+              ],
+            },
+            {
+              imageSrc: Aspia,
+              header: "Next-gen Platform",
+              description: "Bringing the future to your fingertips.",
+              techStack: [
+                "React.js",
+                "Redux",
+                "TypeScript",
+                "SCSS",
+                "SASS",
+                "Jest",
+                "Microsoft Azure",
+              ],
+            },
+            {
+              imageSrc: Nore,
+              header: "Epic Mobile App",
+              description:
+                "Unleash the power of mobile technology with this stunning app.",
+              techStack: [
+                ".NET Core",
+                "JavaScript",
+                "CSS",
+                "HTML",
+                "jQuery",
+                "Git",
+              ],
+              backgroundColor: "bg-blue-800 px-10",
+            },
+            {
+              imageSrc: Dalarna,
+              header: "Epic Mobile App",
+              description:
+                "Unleash the power of mobile technology with this stunning app.",
+            },
+          ]}
+        />
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+          <a
+            href="https://www.linkedin.com/in/henrik-cheng/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FormattedMessage id="cv_more_info" />
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
+          </a>
+        </button>
+
+        {/* <div className="text-start pb-4">
           <Header>
             <FormattedMessage id="cv_title_1" />
           </Header>
@@ -105,7 +190,7 @@ const CV: React.FC<{}> = (props) => {
             <FormattedMessage id="cv_more_info" />
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
-        </button>
+        </button> */}
       </div>
     </Card>
   );

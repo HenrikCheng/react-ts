@@ -7,7 +7,7 @@ import Card from "../../components/Card";
 
 const About: React.FC<{}> = (props) => {
   const pillClasses =
-    "inline-block rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2";
+    "inline-block rounded-full px-3 py-1 text-sm font-semibold text-white mr-2 mb-2 whitespace-nowrap";
   return (
     <Card classes="flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden">
       <div className="sm:px-4 xl:px-24 py-4 xl:order-2">
@@ -30,7 +30,7 @@ const About: React.FC<{}> = (props) => {
         </div>
 
         <div className="flex flex-row justify-center">
-          <span className={`${pillClasses}  bg-blue-500`}>
+          <span className={`${pillClasses} bg-blue-500`}>
             <FormattedMessage id="about_keyword_1" />
           </span>
           <span className={`${pillClasses} bg-slate-800`}>

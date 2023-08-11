@@ -66,7 +66,7 @@ const Project = ({
       )}
       <div className={`w-96 relative ${isDragging ? "no-pointer-events" : ""}`}>
         {(header || description) && (
-          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
+          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
             {header && (
               <h5 className="font-bold">
                 <FormattedMessage id={header} />
