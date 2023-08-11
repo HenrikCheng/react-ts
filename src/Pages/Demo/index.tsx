@@ -209,11 +209,6 @@ const Demo: React.FC<{}> = (props) => {
     };
   }, []);
 
-  useEffect(() => {
-    console.log("🚀 ~ file: index.tsx:205 ~ isStart:", isStart);
-    console.log("🚀 ~ file: index.tsx:205 ~ isEnd:", isEnd);
-  }, [isStart, isEnd]);
-
   return (
     <Card>
       <Header classes="text-4xl font-semibold mb-4">
