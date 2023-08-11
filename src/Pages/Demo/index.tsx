@@ -5,6 +5,7 @@ import Card from "../../components/Card";
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 import Tretton37 from "../../images/tretton37.png";
+import PortfolioPic from "../../images/portfolio.png";
 import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
 import Header from "../../components/Header";
@@ -94,7 +95,7 @@ const Demo: React.FC<{}> = (props) => {
   const projects = [
     {
       href: "https://henrikcheng.github.io/react-ts",
-      imageSrc: "https://picsum.photos/1280/768",
+      imageSrc: PortfolioPic,
       imageAlt: "Henriks portfolio page",
       header: "demo_1_title",
       description: "demo_1_description",
