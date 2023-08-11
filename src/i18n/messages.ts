@@ -150,7 +150,7 @@ export const messages: LocalizedMessages = {
       "Efter att ha jobbat några år med React och Javascript tänkte jag att jag ville lära mig mer och lära mig grunderna i typescript. Det fanns ingen möjlighet via jobbet, så jag valde att göra en luffarschack-spel i typescript för att lära mig.",
     demo_7_title: "En enkel och praktisk väder-app",
     demo_7_description:
-      "Utan tillgång till fönster, så var det svårt att hålla sig a jour med vädret efter arbetspassen på akuten i min gamla karriär som läkare. Den här appen läser problemet på ett smidigt sätt",
+      "Utan tillgång till fönster, så var det svårt att hålla sig a jour med vädret efter arbetspassen på akuten i min gamla karriär som läkare. Den här appen löser problemet på ett smidigt sätt",
   },
   [LOCALES.MANDARIN]: {
     home_title: "主页",
@@ -226,7 +226,7 @@ export const messages: LocalizedMessages = {
       "在使用React和Javascript工作了几年后，我想学到更多，并了解TypeScript的基础知识。由于工作中没有机会，我选择创建了一个TypeScript的井字棋游戏来学习。",
     demo_7_title: "简洁实用的天气应用",
     demo_7_description:
-      "在急诊室当医生时，我经常发现没有窗户的情况下难以及时了解天气情况。我尝试过的许多天气应用程序都充斥着令人分心的广告。这个应用程序提供了一个简单的解决方案。",
+      "在急诊室当医生的时候，我常常发现没有窗户让我难以及时了解天气情况。我尝试了许多天气应用，但其中很多都充斥着令人分心的广告。这个应用为这个问题提供了一个简单的解决方案。",
   },
 };
 // export const testMessages = {

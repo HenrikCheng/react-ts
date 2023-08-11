@@ -93,7 +93,7 @@ const Project = ({
 
       {isEnd && index === length - 1 && (
         <div
-          className={`bg-gradient-to-l from-slate-400 to-slate-200 absolute top-0 bottom-0 right-0 w-6 opacity-50`}
+          className={`bg-gradient-to-l from-slate-200 absolute top-0 bottom-0 right-0 w-36 opacity-50`}
         />
       )}
     </div>
@@ -233,7 +233,7 @@ const Demo: React.FC<{}> = (props) => {
         <div className="flex w-full">
           {isStart && (
             <div
-              className={`bg-gradient-to-r from-slate-400 to-slate-200 absolute top-0 bottom-0 left-0 w-6 opacity-50`}
+              className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
             ></div>
           )}
 
