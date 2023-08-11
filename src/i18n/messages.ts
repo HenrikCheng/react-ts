@@ -67,7 +67,7 @@ export const messages: LocalizedMessages = {
     demo_portfolio_title: "Henrik's Portfolio",
     demo_portfolio_description: "My digital portfolio and resumé",
     demo_tretton_description:
-      "Tretton37 is a consultancy company where IT talents work. The company aimed to redefine its online presence to communicate its message more clearly, and that's when Henrik stepped in as one of the three developers. With a passionate attitude and strong commitment, he learned low-code programming while creating components with pixel-perfect precision.",
+      "tretton37 is a consultancy company where IT talents work. The company aimed to redefine its online presence to communicate its message more clearly, and that's when Henrik stepped in as one of the three developers. With a passionate attitude and strong commitment, he learned low-code programming while creating components with pixel-perfect precision.",
     demo_leetpeople_description:
       "Henrik created a web app that consumes an internal API to learn more about slightly more advanced React techniques. Recently, Henrik has also become interested in backend development, which led him to create APIs with CRUD functionality and databases for data storage.",
     demo_mirjaleipoo_description:
@@ -139,7 +139,7 @@ export const messages: LocalizedMessages = {
     demo_portfolio_title: "Henriks portfolio",
     demo_portfolio_description: "Mitt digitala portfolio och CV",
     demo_tretton_description:
-      "Tretton37 är ett konsultföretag där IT-talanger arbetar. Företaget strävade efter att omdefiniera sin online-närvaro för att tydligare kommunicera sitt budskap, och det var då Henrik trädde in som en av de tre utvecklare. Med en passionerad inställning och starkt engagemang lärde han sig low-code programmering samtidigt som han skapade fram komponenter med pixel-perfekt precision.",
+      "tretton37 är ett konsultföretag där IT-talanger arbetar. Företaget strävade efter att omdefiniera sin online-närvaro för att tydligare kommunicera sitt budskap, och det var då Henrik trädde in som en av de tre utvecklare. Med en passionerad inställning och starkt engagemang lärde han sig low-code programmering samtidigt som han skapade fram komponenter med pixel-perfekt precision.",
     demo_leetpeople_description:
       "Henrik gjorde en webapp som konsumerar ett internt API för att lära sig mer om lite mer avancerade React-tekniker. Under sista tiden har Henrik även intresserat sig för backend, något som gjort att han även skapat API:er med CRUD-funktionalitet och databas där data lagras.",
     demo_mirjaleipoo_description:
@@ -215,7 +215,7 @@ export const messages: LocalizedMessages = {
     demo_portfolio_title: "亨利克的作品集",
     demo_portfolio_description: "我的数字作品集和简历",
     demo_tretton_description:
-      "Tretton37是一家咨询公司，IT人才在此工作。该公司旨在重新定义其在线存在，以更清晰地传达其信息，亨利克作为其中三名开发人员之一加入其中。他充满激情的态度和强烈的投入感，学习了低代码编程，同时以像素完美的精度创建了组件。",
+      "tretton37是一家咨询公司，IT人才在此工作。该公司旨在重新定义其在线存在，以更清晰地传达其信息，亨利克作为其中三名开发人员之一加入其中。他充满激情的态度和强烈的投入感，学习了低代码编程，同时以像素完美的精度创建了组件。",
     demo_leetpeople_description:
       "亨利克创建了一个Web应用程序，消耗了内部API，以了解更多稍微高级的React技术。最近，亨利克还对后端开发产生了兴趣，这导致他创建了具有CRUD功能和数据库存储的API。",
     demo_mirjaleipoo_description:

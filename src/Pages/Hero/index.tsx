@@ -68,7 +68,7 @@ const Hero = () => {
           <h5
             className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 font-mono font-thin`}
           >
-            @Tretton37
+            @tretton37
           </h5>
           <button
             className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"

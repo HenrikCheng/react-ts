@@ -4,7 +4,7 @@ import { FormattedMessage } from "react-intl";
 import Card from "../../components/Card";
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
-import Tretton37 from "../../images/tretton37.png";
+import tretton37 from "../../images/tretton37.png";
 import PortfolioPic from "../../images/portfolio.png";
 import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
@@ -112,15 +112,15 @@ const Demo: React.FC<{}> = (props) => {
     },
     {
       href: "https://www.tretton37.com/",
-      imageSrc: Tretton37,
-      imageAlt: "Tretton37 website",
+      imageSrc: tretton37,
+      imageAlt: "tretton37 website",
       description: "demo_tretton_description",
       techStack: ["Webflow", "HTML", "JS", "CSS", "Kanban", "Figma"],
     },
     {
       href: "https://henrikcheng.github.io/1337-people",
       imageSrc: People,
-      imageAlt: "Company employees of Tretton37",
+      imageAlt: "Company employees of tretton37",
       githubLink: "https://github.com/HenrikCheng/1337-people",
       description: "demo_leetpeople_description",
       techStack: ["React", "Query params", "Debounce", "Tailwind", "REST API"],
