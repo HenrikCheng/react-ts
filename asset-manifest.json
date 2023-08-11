@@ -1,22 +1,23 @@
 {
   "files": {
     "main.css": "/react-ts/static/css/main.372fba56.css",
-    "main.js": "/react-ts/static/js/main.f19c5885.js",
+    "main.js": "/react-ts/static/js/main.648dea74.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
     "static/media/mirjaleipoo.png": "/react-ts/static/media/mirjaleipoo.32c8636aeaada34d15cb.png",
     "static/media/tretton37.png": "/react-ts/static/media/tretton37.23a6534dbb702f4abcdc.png",
     "static/media/FilmApp.png": "/react-ts/static/media/FilmApp.297e4129a8be74ba770a.png",
     "static/media/1337-people.png": "/react-ts/static/media/1337-people.34056de03cc87dc4c984.png",
     "static/media/BikeImage.jpg": "/react-ts/static/media/BikeImage.bc33c592620ce8d6c4cb.jpg",
+    "static/media/portfolio.png": "/react-ts/static/media/portfolio.16aeaf8bfde32b2c57a6.png",
     "static/media/tictactoe.png": "/react-ts/static/media/tictactoe.4ea5f841276d093cc4f7.png",
     "static/media/AboutImage.jpeg": "/react-ts/static/media/AboutImage.be7a906eb43fc5633c88.jpeg",
     "index.html": "/react-ts/index.html",
     "main.372fba56.css.map": "/react-ts/static/css/main.372fba56.css.map",
-    "main.f19c5885.js.map": "/react-ts/static/js/main.f19c5885.js.map",
+    "main.648dea74.js.map": "/react-ts/static/js/main.648dea74.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.372fba56.css",
-    "static/js/main.f19c5885.js"
+    "static/js/main.648dea74.js"
   ]
 }
