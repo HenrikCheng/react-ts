@@ -74,7 +74,7 @@ const Contact: React.FC<{}> = (props) => {
       <div className="flex flex-col md:flex-row md:space-x-6">
         <div className="flex flex-col justify-center items-center w-full pb-4">
           <p>
-            <span className="font-semibold">Johan Lundborg</span>
+            <span className="font-semibold">Henrik Cheng</span>
           </p>
           <p>
             <FormattedMessage id="contact_company" />
@@ -90,7 +90,7 @@ const Contact: React.FC<{}> = (props) => {
           <p>
             <FormattedMessage id="contact_phone" />
             <a className="font-semibold" href="tel:+46708908222">
-              +46708908222
+              +46725133704
             </a>
           </p>
           <p>
@@ -99,7 +99,7 @@ const Contact: React.FC<{}> = (props) => {
               href="mailto:johan.lundborg@Tretton37.com"
               className="font-semibold"
             >
-              johan.lundborg@Tretton37.com
+              henrik.cheng@Tretton37.com
             </a>
           </p>
           <p className="mt-4">
