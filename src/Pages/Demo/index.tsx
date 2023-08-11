@@ -16,7 +16,6 @@ type ItemProps = {
   imageSrc: string;
   imageAlt?: string;
   githubLink?: string;
-  label?: string;
   description?: string;
   techStack?: Array<String>;
   isDragging: any;
@@ -70,12 +69,12 @@ const Project = ({
           <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
             {header && (
               <h5 className="font-bold">
-                <FormattedMessage id={`demo_${index + 1}_title`} />
+                <FormattedMessage id={header} />
               </h5>
             )}
             {description && (
               <p>
-                <FormattedMessage id={`demo_${index + 1}_description`} />
+                <FormattedMessage id={description} />
               </p>
             )}
           </div>
@@ -107,7 +106,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: PortfolioPic,
       imageAlt: "Henriks portfolio page",
       header: "demo_portfolio_title",
-      description: "demo_portfolio_title",
+      description: "demo_portfolio_description",
       techStack: ["Typescript", "React", "React-Intl", "OpenLayers maps"],
     },
     {
@@ -130,7 +129,6 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: Mirjaleipoo,
       imageAlt: "Website for a local bakery in Finland",
       githubLink: "https://github.com/HenrikCheng/MirjaPage",
-      label: "Mirja Leipoo bageri",
       description: "demo_mirjaleipoo_description",
       techStack: ["JS", "HTML", "CSS", "jQuery", "Bootstrap"],
     },
@@ -240,7 +238,6 @@ const Demo: React.FC<{}> = (props) => {
               imageSrc={project.imageSrc}
               imageAlt={project.imageAlt}
               githubLink={project.githubLink}
-              label={project.label}
               description={project.description}
               techStack={project.techStack}
               isDragging={isDragging}
