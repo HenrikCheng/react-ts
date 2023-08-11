@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/react-ts/static/css/main.805552c6.css",
-    "main.js": "/react-ts/static/js/main.b8034f7b.js",
+    "main.css": "/react-ts/static/css/main.b5f343ec.css",
+    "main.js": "/react-ts/static/js/main.61e5cd83.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
     "static/media/mirjaleipoo.png": "/react-ts/static/media/mirjaleipoo.32c8636aeaada34d15cb.png",
+    "static/media/Staylive.png": "/react-ts/static/media/Staylive.1e724d9ccd75ee52fce5.png",
     "static/media/tretton37.png": "/react-ts/static/media/tretton37.23a6534dbb702f4abcdc.png",
     "static/media/FilmApp.png": "/react-ts/static/media/FilmApp.297e4129a8be74ba770a.png",
     "static/media/1337-people.png": "/react-ts/static/media/1337-people.34056de03cc87dc4c984.png",
@@ -11,13 +12,15 @@
     "static/media/portfolio.png": "/react-ts/static/media/portfolio.16aeaf8bfde32b2c57a6.png",
     "static/media/tictactoe.png": "/react-ts/static/media/tictactoe.4ea5f841276d093cc4f7.png",
     "static/media/AboutImage.jpeg": "/react-ts/static/media/AboutImage.be7a906eb43fc5633c88.jpeg",
+    "static/media/Nore.png": "/react-ts/static/media/Nore.35e2f6e74bac65e21f2e.png",
+    "static/media/aspia-logo.webp": "/react-ts/static/media/aspia-logo.22f83982e421c536da4b.webp",
     "index.html": "/react-ts/index.html",
-    "main.805552c6.css.map": "/react-ts/static/css/main.805552c6.css.map",
-    "main.b8034f7b.js.map": "/react-ts/static/js/main.b8034f7b.js.map",
+    "main.b5f343ec.css.map": "/react-ts/static/css/main.b5f343ec.css.map",
+    "main.61e5cd83.js.map": "/react-ts/static/js/main.61e5cd83.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.805552c6.css",
-    "static/js/main.b8034f7b.js"
+    "static/css/main.b5f343ec.css",
+    "static/js/main.61e5cd83.js"
   ]
 }
