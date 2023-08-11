@@ -10,7 +10,6 @@ import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
 import Header from "../../components/Header";
 import Text from "../../components/Text";
-import "./styles.css";
 
 type ItemProps = {
   href: string;
@@ -64,7 +63,7 @@ const Project = ({
       )}
       <div className={`w-96 relative ${isDragging ? "no-pointer-events" : ""}`}>
         {(header || description) && (
-          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
+          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-slate-200 opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
             {header && (
               <h5 className="font-bold">
                 <FormattedMessage id={`demo_${index + 1}_title`} />
@@ -183,7 +182,7 @@ const Demo: React.FC<{}> = (props) => {
         <FormattedMessage id="demo_subtitle" />
       </Text>
       <div
-        className="w-full overflow-x-scroll relative"
+        className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
         id="Demo"
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
