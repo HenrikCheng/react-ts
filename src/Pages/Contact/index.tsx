@@ -96,10 +96,10 @@ const Contact: React.FC<{}> = (props) => {
           <p>
             <FormattedMessage id="contact_email" />
             <a
-              href="mailto:johan.lundborg@tretton37.com"
+              href="mailto:johan.lundborg@Tretton37.com"
               className="font-semibold"
             >
-              johan.lundborg@tretton37.com
+              johan.lundborg@Tretton37.com
             </a>
           </p>
           <p className="mt-4">

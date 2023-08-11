@@ -27,24 +27,29 @@ export const messages: LocalizedMessages = {
     cv_title: "Résumé",
     cv_title_1: "Staylive, Frontend Developer Jan 2022 - Mar 2023",
     cv_text_1:
-      "Created React components for a CMS that enabled customers to manage streaming pages on their own.",
+      "Staylive is a small company working with livestreaming. The company had around 20 employees, including about 9 developers. Henrik was part of a team of 6 developers who created a content management system (CMS) that allowed customers to create, make changes, and even create their own streaming pages. This saved time for the developers, enabling them to focus more on developing new features.",
+
     cv_title_2: "Staylive, Frontend Developer Sep 2021 - Dec 2021",
     cv_text_2:
-      "Developed frontend parts for a microservice that handled the upload of movies and images via an API.",
+      "Henrik implemented a new feature handling the uploading of videos and images through an API. This saved time for customer service employees who previously had to upload files manually, allowing them to focus on other tasks.",
+
     cv_title_3: "Staylive, Frontend Developer Apr 2021 - Aug 2021",
     cv_text_3:
-      "Produced new components for the company's most used products to enhance development capabilities.",
+      "Part of the company's library of React components had become outdated, difficult to style, and upgrade with new features. As part of improving future development opportunities, Henrik created new React components that were easier to maintain and customize.",
+
     cv_title_4: "Aspia, Frontend Developer Mar 2020 - Mar 2021",
     cv_text_4:
-      "Worked on rewriting and improving the company's product MyBusiness with a focus on React and microservices.",
+      "Aspia is a large accounting company that assists businesses throughout Sweden in focusing on their core operations. Much of the accounting can be managed through the company's app, MyBusiness. The company was in a phase of rewriting significant portions of its codebase. The purpose was, among other things, to transition to React and divide the product into microservices, which facilitates further development and CI/CD deployments. Henrik worked with around 20 other developers, testers, UI/UX designers, and business analysts. Working in a larger company is different from working in a smaller one, and Henrik enjoys both work styles and is grateful for the experiences.",
+
     cv_title_5:
       "Nore Technology, System Developer and SCRUM Master May 2019 - Feb 2020",
     cv_text_5:
-      "Implemented new steps in the advisory process and improved documentation for financial advice.",
+      "Nore Technology is a subsidiary of Söderberg & Partners that works with tools for financial advice and pension consultancy used in-house, as well as equivalent products for external clients. Henrik assisted in implementing new steps in the advisory process, developing documentation, improving interfaces, and reformatting old code. Relevant technologies included Javascript, CSS, HTML, jQuery, version control was managed through Git, and the work methodology was in Scrum.",
+
     cv_title_6:
-      "Medical Doctor Sep 2013 - Feb 2019 Worked as an intern, resident, and specialist doctor in Region Stockholm and Region Dalarna.",
+      "Physician Sep 2013 - Feb 2019 Worked as a junior doctor, resident, and specialist trainee in Region Stockholm and Region Dalarna.",
     cv_text_6:
-      "Developed valuable qualities such as teamwork, leadership, and interaction with people.",
+      "Henrik worked first as a junior doctor, then as a resident and specialist trainee, and also as a licensed physician. He gained valuable skills in how to interact with people, work effectively in teams, and leadership.",
     cv_techstack: "Techstack: ",
     cv_more_info: "More information",
     contact_title: "Contact",
@@ -100,24 +105,24 @@ export const messages: LocalizedMessages = {
     cv_title: "CV",
     cv_title_1: "Staylive, Frontend-utvecklare Jan 2022 - Mar 2023",
     cv_text_1:
-      "Skapade React-komponenter för ett CMS som möjliggjorde kunders egen hantering av streaming-sidor.",
+      "Staylive är ett litet företag som jobbar med livestreaming. Företaget hade ca 20 anställda varav ca 9 utvecklare. Henrik var en del av teamet bestående av 6 utvecklare som tog fram ett content management system (CMS) som möjliggjorde för kunder att själva skapa samt göra ändringar och t.o.m. skapa egna streaming-sidor. Detta frigjorde tid för utvecklarna som då kunde fokusera mer på att ta fram nya features.",
     cv_title_2: "Staylive, Frontend-utvecklare Sep 2021 - Dec 2021",
     cv_text_2:
-      "Skapade frontend-delar för en mikrotjänst som hanterade uppladdning av filmer och bilder via ett API.",
+      "Henrik skapade en ny feature som hanterar uppladdning av filmer och bilder via ett API. Detta sparade tid åt kundtjänst-medarbetare som tidigare manuellt behövde ladda upp filer men som nu kunde fokusera på annat.",
     cv_title_3: "Staylive, Frontend-utvecklare Apr 2021 - Aug 2021",
     cv_text_3:
-      "Producerade nya komponenter för företagets mest använda produkter för att förbättra utvecklingsmöjligheterna. ",
+      "En del av företagets bibliotek av React-komponenter hade börjat bli gamla, de var svåra att styla och uppgradera med nya features. Som ett led i att förbättra framtida utvecklingsmöjligheter så gjorde Henrik nya React-komponenter som var lättare att underhålla och skräddarsy.",
     cv_title_4: "Aspia, Frontend-utvecklare Mar 2020 - Mar 2021",
     cv_text_4:
-      "Arbetade med att skriva om och förbättra företagets produkt MyBusiness med fokus på React och mikrotjänster.",
+      "Aspia är ett stort bokföringsföretag som hjälper företagare runtom i Sverige med att fokusera på sin kärnverksamhet, mycket av bokföringen kan skötas via företagets app MyBusiness. Företaget var i en fas där man skrev om stora delar av kodbasen. Syftet var bl.a. att gå över till React, dela upp produkten i mikrotjänster, vilket underlättar vidareutveckling och CI/CD deployments. Henrik arbetade med ca 20 andra utvecklare, testare, UI/UX-designers och kravanalytiker. Att arbeta i större företag skiljer sig från arbetet i mindre företag, och Henrik trivs med båda arbetsstilarna och är tacksam för de erfarenheterna.",
     cv_title_5:
       "Nore Technology, Systemutvecklare och SCRUM-master Maj 2019 - Feb 2020",
     cv_text_5:
-      "Implementerade nya steg i rådgivningsprocessen och förbättrade dokumentationen för finansiell rådgivning. ",
+      "Nore Technology är ett dotterbolag till Söderberg & Partners som dels arbetar med ett verktyg för finansiell rådgivning och pensionsrådgivning som används in-house, samt motsvarande produkter för externa kunder.  Henrik med att implementera nya steg i rådgivningsprocessen, utveckla dokumentationen, förbättra gränssnitt och reformattering av gammal kod. Relevanta tekniker inkluderar Javascript, CSS, HTML, jQuery, versionshantering sköttes via Git och arbetssättet var i Scrum.",
     cv_title_6:
       "Läkare Sep 2013 - Feb 2019 Arbetade som underläkare, AT- och ST-läkare i Region Stockholm och Region Dalarna.",
     cv_text_6:
-      "Utvecklade värdefulla egenskaper som teamarbete, ledarskap och mötet med människor.",
+      "Henrik har arbetat först som underläkare, sedan AT- och ST-läkare, samt även legitimerad läkare. Han lärde sig värdefulla egenskaper om hur man möter människor, hur man arbetar bäst i team och ledarskap.",
     cv_techstack: "Använde tekniker som: ",
     cv_more_info: "Mer information",
     contact_title: "Kontakt",
@@ -170,23 +175,31 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "创新",
     competences_title: "能力",
     competences_linkText: "了解更多",
-    cv_title: "简历",
-    cv_title_1: "Staylive，前端开发人员，2022年1月 - 2023年3月",
-    cv_text_1: "为一个CMS创建React组件，使客户能够自行管理流媒体页面。",
-    cv_title_2: "Staylive，前端开发人员，2021年9月 - 2021年12月",
+    cv_title_1: "Staylive 前端开发工程师 2022年1月 - 2023年3月",
+    cv_text_1:
+      "Staylive 是一家从事直播技术的小公司。该公司约有20名员工，其中包括大约9名开发人员。Henrik 是一个由6名开发人员组成的团队的一员，他们开发了一个内容管理系统（CMS），使客户能够自行创建、进行更改，甚至创建自己的直播页面。这为开发人员节省了时间，使他们能够更多地专注于开发新功能。",
+
+    cv_title_2: "Staylive 前端开发工程师 2021年9月 - 2021年12月",
     cv_text_2:
-      "为一个微服务开发前端部分，该微服务通过API处理电影和图片的上传。",
-    cv_title_3: "Staylive，前端开发人员，2021年4月 - 2021年8月",
-    cv_text_3: "为公司最常使用的产品制作新的组件，以增强开发能力。",
-    cv_title_4: "Aspia，前端开发人员，2020年3月 - 2021年3月",
+      "Henrik 实现了一个处理通过API上传视频和图像的新功能。这为客户服务人员节省了时间，他们以前需要手动上传文件，现在可以将注意力集中在其他任务上。",
+
+    cv_title_3: "Staylive 前端开发工程师 2021年4月 - 2021年8月",
+    cv_text_3:
+      "公司的一部分 React 组件已经过时，难以进行样式设置并升级到新功能。作为改进未来开发机会的一部分，Henrik 创建了新的 React 组件，更易于维护和定制。",
+
+    cv_title_4: "Aspia 前端开发工程师 2020年3月 - 2021年3月",
     cv_text_4:
-      "致力于重写和改进公司的产品MyBusiness，重点放在了React和微服务上。",
+      "Aspia 是一家大型会计公司，协助瑞典各地的企业专注于其核心业务。很多会计工作可以通过公司的 MyBusiness 应用程序进行管理。公司正在重写其代码库的重要部分。目的包括过渡到 React 并将产品分成微服务，这有助于进一步的开发和持续集成/持续部署。Henrik 与其他大约20名开发人员、测试人员、UI/UX 设计师和业务分析师共同工作。在大公司工作与在小公司工作不同，Henrik 既喜欢这两种工作风格，也为这些经历感到感激。",
+
     cv_title_5:
-      "Nore Technology，系统开发人员和SCRUM Master，2019年5月 - 2020年2月",
-    cv_text_5: "在咨询流程中实施新步骤，改进了财务咨询的文档。",
+      "Nore Technology 系统开发工程师和 SCRUM 主管 2019年5月 - 2020年2月",
+    cv_text_5:
+      "Nore Technology 是 Söderberg & Partners 的子公司，主要从事财务咨询和养老金咨询工具的开发，既用于内部，也为外部客户提供类似产品。Henrik 协助实施咨询流程中的新步骤，开发文档，改进界面，并重新格式化旧代码。相关技术包括 Javascript、CSS、HTML、jQuery，版本控制通过 Git 进行管理，工作方法采用 Scrum。",
+
     cv_title_6:
-      "医学博士，2013年9月 - 2019年2月，曾在斯德哥尔摩地区和达拉纳地区担任实习生、住院医生和专科医生。",
-    cv_text_6: "培养了团队合作、领导力和与人互动等宝贵品质。",
+      "医生 2013年9月 - 2019年2月 曾在斯德哥尔摩地区和达拉纳地区担任初级医生、住院医生和专科培训医生。",
+    cv_text_6:
+      "Henrik 首先作为初级医生，然后是住院医生和专科培训医生，还担任过注册医生。他掌握了与人交往、在团队中有效工作以及领导力方面的宝贵技能。",
     cv_techstack: "技术栈：",
     cv_more_info: "更多信息",
     contact_title: "联系方式",
