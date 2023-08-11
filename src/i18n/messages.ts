@@ -173,6 +173,7 @@ export const messages: LocalizedMessages = {
     about_keyword_5: "创新",
     competences_title: "能力",
     competences_linkText: "了解更多",
+    cv_title: "CV",
     cv_title_1: "Staylive 前端开发工程师 2022年1月 - 2023年3月",
     cv_text_1:
       "Staylive 是一家从事直播技术的小公司。该公司约有20名员工，其中包括大约9名开发人员。Henrik 是一个由6名开发人员组成的团队的一员，他们开发了一个内容管理系统（CMS），使客户能够自行创建、进行更改，甚至创建自己的直播页面。这为开发人员节省了时间，使他们能够更多地专注于开发新功能。",

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
 
 import Card from "../../components/Card";
@@ -22,6 +22,8 @@ type ItemProps = {
   isDragging: any;
   header?: string;
   index: number;
+  isEnd?: boolean;
+  length: number;
 };
 
 const Project = ({
@@ -34,9 +36,11 @@ const Project = ({
   techStack,
   isDragging,
   index,
+  isEnd,
+  length,
 }: ItemProps) => {
   return (
-    <div>
+    <div className="ml-6 last:pr-6 relative">
       {(githubLink || href) && (
         <div className="w-full flex justify-around mb-1">
           {href && (
@@ -85,6 +89,12 @@ const Project = ({
 
       {techStack && (
         <div className="font-semibold">{techStack.join(" | ")}</div>
+      )}
+
+      {isEnd && index === length - 1 && (
+        <div
+          className={`bg-gradient-to-l from-slate-400 to-slate-200 absolute top-0 bottom-0 right-0 w-6 opacity-50`}
+        />
       )}
     </div>
   );
@@ -154,6 +164,8 @@ const Demo: React.FC<{}> = (props) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isStart, setIsStart] = useState(false);
+  const [isEnd, setIsEnd] = useState(false);
 
   const handleMouseDown = (e: React.MouseEvent<HTMLElement>) => {
     setIsDragging(true);
@@ -173,6 +185,35 @@ const Demo: React.FC<{}> = (props) => {
     setIsDragging(false);
   };
 
+  useEffect(() => {
+    const demoContainer = document.getElementById("Demo");
+
+    const handleScroll = () => {
+      if (demoContainer) {
+        setIsStart(demoContainer.scrollLeft === 0);
+        setIsEnd(
+          demoContainer.scrollLeft ===
+            demoContainer.scrollWidth - demoContainer.clientWidth
+        );
+      }
+    };
+
+    if (demoContainer) {
+      demoContainer.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (demoContainer) {
+        demoContainer.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("🚀 ~ file: index.tsx:205 ~ isStart:", isStart);
+    console.log("🚀 ~ file: index.tsx:205 ~ isEnd:", isEnd);
+  }, [isStart, isEnd]);
+
   return (
     <Card>
       <Header classes="text-4xl font-semibold mb-4">
@@ -189,7 +230,13 @@ const Demo: React.FC<{}> = (props) => {
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseUp}
       >
-        <div className="flex space-x-6">
+        <div className="flex w-full">
+          {isStart && (
+            <div
+              className={`bg-gradient-to-r from-slate-400 to-slate-200 absolute top-0 bottom-0 left-0 w-6 opacity-50`}
+            ></div>
+          )}
+
           {projects.map((project, index) => (
             <Project
               header={project.header}
@@ -203,6 +250,8 @@ const Demo: React.FC<{}> = (props) => {
               techStack={project.techStack}
               isDragging={isDragging}
               index={index}
+              isEnd={isEnd}
+              length={projects.length}
             />
           ))}
         </div>
