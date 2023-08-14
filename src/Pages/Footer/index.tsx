@@ -11,8 +11,36 @@ const Footer: React.FC<{}> = (props) => {
   const currentYear = new Date().getFullYear();
   // const intl = useIntl();
   return (
-    <div className="w-full fixed bottom-0 -z-10 bg-slate-200 pt-20 pb-4">
-      &copy; {currentYear} Henrik Cheng. All rights reserved.
+    <footer className="w-full fixed bottom-0 -z-10 bg-slate-200 pt-20 pb-4 text-lg font-semibold space-y-1">
+      <div className="space-x-4 flex justify-center w-full">
+        <a
+          href="https://www.linkedin.com/in/henrik-cheng/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline underline-offset-2"
+        >
+          LinkedIn
+        </a>
+        <div>|</div>
+        <a
+          href="https://www.tretton37.com/"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline underline-offset-2"
+        >
+          tretton37
+        </a>
+        <div>|</div>
+        <a
+          href="https://www.tretton37.com/specialists/henrik-cheng"
+          target="_blank"
+          rel="noreferrer"
+          className="hover:underline underline-offset-2"
+        >
+          Profile
+        </a>
+      </div>
+      <div>&copy; {currentYear} Henrik Cheng. All rights reserved.</div>
       {/* <p>
         <FormattedMessage id="learn_to" />
       </p>
@@ -32,7 +60,7 @@ const Footer: React.FC<{}> = (props) => {
       <FormattedNumber value={2000} />*
       <FormattedPlural value={5} one="1 click" other="5 clicks" />
       <input placeholder={intl.formatDate(Date.now())} /> */}
-    </div>
+    </footer>
   );
 };
 

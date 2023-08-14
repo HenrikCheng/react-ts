@@ -25,11 +25,10 @@ const Slide = ({
   index,
   isEnd,
   length,
-  height = "600px",
+  height = "350px",
   width = "350px",
   backgroundColor,
 }: ItemProps) => {
-  // console.log("🚀 ~ file: slide.tsx:30 ~ dimension:", dimension);
   return (
     <div className="ml-6 last:pr-6 relative">
       {href && (
