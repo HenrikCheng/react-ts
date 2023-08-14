@@ -11,7 +11,7 @@ const Card = ({ children, classes, id }: CardProps) => (
     id={id}
     className={
       classes ||
-      `flex flex-col container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4`
+      "flex flex-col xl:flex-row container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden z-10"
     }
   >
     {children}

@@ -25,7 +25,7 @@ const Home = () => {
   }, [pixelsFromTop]);
 
   return (
-    <main className="bg-slate-200 relative mb-24" id="Home">
+    <main className="bg-slate-200 relative mb-24 z-10" id="Home">
       <Modal />
       <Navbar />
       <Hero />
@@ -33,8 +33,8 @@ const Home = () => {
         <About />
         <Competences />
         <CV />
-        <Contact />
         <Demo />
+        <Contact />
       </CardGrid>
       <Footer />
     </main>

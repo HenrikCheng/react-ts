@@ -17,10 +17,12 @@ const CV: React.FC<{}> = (props) => {
     {
       imageSrc: Staylive,
       techStack: ["Redux", "CSS", "HTML", "REST API", "Tailwind CSS"],
+      backgroundColor: "bg-emerald-200 px-10",
     },
     {
       imageSrc: Staylive,
       techStack: ["React.js", "Redux", "CSS", "HTML", "Tailwind CSS"],
+      backgroundColor: "bg-emerald-200 px-10",
     },
     {
       imageSrc: Staylive,
@@ -32,6 +34,7 @@ const CV: React.FC<{}> = (props) => {
         "REST API",
         "Tailwind CSS",
       ],
+      backgroundColor: "bg-emerald-200 px-10",
     },
     {
       imageSrc: Aspia,
@@ -44,6 +47,7 @@ const CV: React.FC<{}> = (props) => {
         "Jest",
         "Microsoft Azure",
       ],
+      backgroundColor: "bg-gray-200 px-10",
     },
     {
       imageSrc: Nore,
@@ -63,7 +67,7 @@ const CV: React.FC<{}> = (props) => {
   }));
 
   return (
-    <Card classes="flex flex-col container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4 px-4 md:px-8">
+    <Card>
       <div id="CV">
         <Header classes="text-4xl font-semibold mb-4">
           <FormattedMessage id="cv_title" />

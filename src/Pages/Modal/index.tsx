@@ -114,8 +114,8 @@ const Modal = () => {
                       dispatch(toggleModal());
                     }}
                   >
-                    <a href="#Contact" className={linkStyles}>
-                      <FormattedMessage id="contact_title" />
+                    <a href="#Demo" className={linkStyles}>
+                      <FormattedMessage id="demo_title" />
                     </a>
                   </button>
                 </li>
@@ -126,8 +126,8 @@ const Modal = () => {
                       dispatch(toggleModal());
                     }}
                   >
-                    <a href="#Demo" className={linkStyles}>
-                      <FormattedMessage id="demo_title" />
+                    <a href="#Contact" className={linkStyles}>
+                      <FormattedMessage id="contact_title" />
                     </a>
                   </button>
                 </li>

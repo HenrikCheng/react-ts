@@ -64,7 +64,7 @@ const Competences: React.FC<{}> = (props) => {
 
   return (
     <Card
-      classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none"
+      classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none z-10"
       id="Competences"
     >
       <div>

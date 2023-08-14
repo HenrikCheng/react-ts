@@ -208,7 +208,7 @@ const Demo: React.FC<{}> = (props) => {
   }, []);
 
   return (
-    <Card>
+    <Card classes="flex flex-col container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden z-10 py-6">
       <Header classes="text-4xl font-semibold mb-4">
         <FormattedMessage id="demo_title" />
       </Header>

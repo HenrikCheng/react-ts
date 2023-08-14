@@ -47,33 +47,35 @@ const Hero = () => {
   }, [dispatch, bgColor]);
 
   return (
-    <div className="h-screen flex flex-col sm:mb-8">
+    <div className="h-screen flex flex-col">
       <div
-        className={`${bgColor} grow flex justify-center items-center flex-col group select-none w-full`}
+        className={`${bgColor} grow flex justify-center items-center flex-col group select-none w-full relative`}
       >
-        <h1
-          className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
-        >
-          HENRIK CHENG
-        </h1>
-        <h3
-          className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl tracking-widest font-mono`}
-        >
-          <FormattedMessage id="hero_role" />
-        </h3>
-        <h5
-          className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 font-mono font-thin`}
-        >
-          @tretton37
-        </h5>
-        <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
-          onClick={executeScroll}
-        >
-          <FormattedMessage id="hero_linkText" />
-        </button>
+        <div className="fixed">
+          <h1
+            className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
+          >
+            HENRIK CHENG
+          </h1>
+          <h3
+            className={`text-xl sm:text-3xl md:text-4xl lg:text-6xl tracking-widest font-mono`}
+          >
+            <FormattedMessage id="hero_role" />
+          </h3>
+          <h5
+            className={`text-lg sm:text-xl md:text-2xl lg:text-4xl mb-5 font-mono font-thin`}
+          >
+            @tretton37
+          </h5>
+          <button
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mb-3"
+            onClick={executeScroll}
+          >
+            <FormattedMessage id="hero_linkText" />
+          </button>
+        </div>
       </div>
-      <div ref={heroBottomAnchor} />
+      <div ref={heroBottomAnchor} className="h-8 z-10 bg-slate-200" />
     </div>
   );
 };

@@ -64,13 +64,13 @@ const Slide = ({
         <img
           src={imageSrc}
           alt={`representation of ${imageSrc}`}
-          className={`hover:translate-y-1 transition duration-300 ease-in-out mb-2 hover:cursor-pointer object-contain ${backgroundColor}`}
+          className={`hover:translate-y-1 transition duration-300 ease-in-out hover:cursor-pointer object-contain rounded-lg ${backgroundColor}`}
           style={{ height, width }}
         />
       </div>
 
       {techStack && (
-        <div className="font-semibold">{techStack.join(" | ")}</div>
+        <div className="font-semibold mt-2">{techStack.join(" | ")}</div>
       )}
 
       {isEnd && index === length - 1 && (

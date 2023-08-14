@@ -64,7 +64,7 @@ const Contact: React.FC<{}> = (props) => {
   }, []);
 
   return (
-    <Card classes="container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4">
+    <Card classes="flex flex-col container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden z-10 py-6 px-6">
       <Header classes="text-4xl font-semibold mb-4">
         <FormattedMessage id="contact_title" />
       </Header>
@@ -72,7 +72,10 @@ const Contact: React.FC<{}> = (props) => {
         <FormattedMessage id="contact_subtitle" />
       </p>
       <div className="flex flex-col md:flex-row md:space-x-6">
-        <div className="flex flex-col justify-center items-center w-full pb-4">
+        <div
+          className="flex flex-col justify-center items-center pb-4 border-4 border-double border-slate-300 p-4 rounded-lg"
+          style={{ flexGrow: "1" }}
+        >
           <p>
             <span className="font-semibold">Henrik Cheng</span>
           </p>
@@ -106,7 +109,47 @@ const Contact: React.FC<{}> = (props) => {
             <FormattedMessage id="contact_text" />
           </p>
         </div>
-        <div id="map-container" className="w-full h-96 grayscale"></div>
+        <div
+          id="map-container"
+          className="w-full h-96 grayscale"
+          style={{ flexGrow: "2" }}
+        />
+        <div
+          className="flex flex-col justify-center items-center pb-4 border-4 border-double border-slate-300 p-4 rounded-lg"
+          style={{ flexGrow: "1" }}
+        >
+          <p className="font-semibold">Konsultchef</p>
+          <p className="font-semibold">Johan Lundborg</p>
+          <p>
+            <FormattedMessage id="contact_company" />
+            <span className="font-semibold">tretton37</span>
+          </p>
+          <div>
+            <FormattedMessage id="contact_adress" />
+            <p className="font-semibold">The Waterfront Building</p>
+            <p className="font-semibold">
+              Klarabergsviadukten 63, 111 64 Stockholm
+            </p>
+          </div>
+          <p>
+            <FormattedMessage id="contact_phone" />
+            <a className="font-semibold" href="tel:+46708908222">
+              +46708908222
+            </a>
+          </p>
+          <p>
+            <FormattedMessage id="contact_email" />
+            <a
+              href="mailto:johan.lundborg@tretton37.com"
+              className="font-semibold"
+            >
+              johan.lundborg@tretton37.com
+            </a>
+          </p>
+          <p className="mt-4">
+            <FormattedMessage id="contact_text" />
+          </p>
+        </div>
       </div>
     </Card>
   );

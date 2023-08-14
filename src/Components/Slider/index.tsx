@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 
 import Slide from "./Slide";
+import Card from "../Card";
 
 type SingleSlide = {
   href?: string;
@@ -66,40 +67,42 @@ const Slider = ({ slides, height, width }: SliderProps) => {
   }, []);
 
   return (
-    <div
-      className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
-      id="Demo"
-      onMouseDown={handleMouseDown}
-      onMouseMove={handleMouseMove}
-      onMouseUp={handleMouseUp}
-      onMouseLeave={handleMouseUp}
-    >
-      <div className="flex w-full">
-        {isStart && (
-          <div
-            className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
-          ></div>
-        )}
+    <Card classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none z-10 px-0">
+      <div
+        className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
+        id="Demo"
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUp}
+        onMouseLeave={handleMouseUp}
+      >
+        <div className="flex w-full">
+          {isStart && (
+            <div
+              className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
+            ></div>
+          )}
 
-        {slides.map((project, index) => (
-          <Slide
-            href={project.href}
-            imageSrc={project.imageSrc}
-            header={project.header}
-            description={project.description}
-            techStack={project.techStack}
-            isDragging={isDragging}
-            index={index}
-            isEnd={isEnd}
-            length={slides.length}
-            key={index}
-            height={height}
-            width={width}
-            backgroundColor={project.backgroundColor}
-          />
-        ))}
+          {slides.map((project, index) => (
+            <Slide
+              href={project.href}
+              imageSrc={project.imageSrc}
+              header={project.header}
+              description={project.description}
+              techStack={project.techStack}
+              isDragging={isDragging}
+              index={index}
+              isEnd={isEnd}
+              length={slides.length}
+              key={index}
+              height={height}
+              width={width}
+              backgroundColor={project.backgroundColor}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </Card>
   );
 };
 
