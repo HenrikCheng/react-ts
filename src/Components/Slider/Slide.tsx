@@ -52,12 +52,12 @@ const Slide = ({
           <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
             {header && (
               <h5 className="font-bold">
-                <FormattedMessage id={`cv_title_${index + 1}`} />
+                <FormattedMessage id={header} />
               </h5>
             )}
             {description && (
               <p>
-                <FormattedMessage id={`cv_text_${index + 1}`} />
+                <FormattedMessage id={description} />
               </p>
             )}
           </div>
@@ -76,7 +76,7 @@ const Slide = ({
 
       {isEnd && index === length - 1 && (
         <div
-          className={`bg-gradient-to-l from-slate-200 absolute top-0 bottom-0 right-0 w-36 opacity-50`}
+          className={`bg-gradient-to-l from-slate-400 absolute top-0 bottom-0 right-0 w-36 opacity-50`}
         />
       )}
     </div>

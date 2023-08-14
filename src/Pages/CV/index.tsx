@@ -13,6 +13,55 @@ import Aspia from "../../logotypes/aspia-logo.webp";
 import Staylive from "../../logotypes/Staylive.png";
 
 const CV: React.FC<{}> = (props) => {
+  const slidesData = [
+    {
+      imageSrc: Staylive,
+      techStack: ["Redux", "CSS", "HTML", "REST API", "Tailwind CSS"],
+    },
+    {
+      imageSrc: Staylive,
+      techStack: ["React.js", "Redux", "CSS", "HTML", "Tailwind CSS"],
+    },
+    {
+      imageSrc: Staylive,
+      techStack: [
+        "React.js",
+        "Redux",
+        "CSS",
+        "HTML",
+        "REST API",
+        "Tailwind CSS",
+      ],
+    },
+    {
+      imageSrc: Aspia,
+      techStack: [
+        "React.js",
+        "Redux",
+        "TypeScript",
+        "SCSS",
+        "SASS",
+        "Jest",
+        "Microsoft Azure",
+      ],
+    },
+    {
+      imageSrc: Nore,
+      techStack: [".NET Core", "JavaScript", "CSS", "HTML", "jQuery", "Git"],
+      backgroundColor: "bg-blue-800 px-10",
+    },
+    {
+      imageSrc: Dalarna,
+      backgroundColor: "bg-red-600 px-10",
+    },
+  ];
+
+  const slidesWithText = slidesData.map((slide, index) => ({
+    ...slide,
+    header: `cv_title_${index + 1}`,
+    description: `cv_text_${index + 1}`,
+  }));
+
   return (
     <Card classes="flex flex-col container bg-white shadow rounded-xl lg:px-4 2xl:px-24 py-4 px-4 md:px-8">
       <div id="CV">
@@ -20,59 +69,7 @@ const CV: React.FC<{}> = (props) => {
           <FormattedMessage id="cv_title" />
         </Header>
 
-        <Slider
-          height={"600px"}
-          width={"350px"}
-          slides={[
-            {
-              imageSrc: Staylive,
-              techStack: ["Redux", "CSS", "HTML", "REST API", "Tailwind CSS"],
-            },
-            {
-              imageSrc: Staylive,
-              techStack: ["React.js", "Redux", "CSS", "HTML", "Tailwind CSS"],
-            },
-            {
-              imageSrc: Staylive,
-              techStack: [
-                "React.js",
-                "Redux",
-                "CSS",
-                "HTML",
-                "REST API",
-                "Tailwind CSS",
-              ],
-            },
-            {
-              imageSrc: Aspia,
-              techStack: [
-                "React.js",
-                "Redux",
-                "TypeScript",
-                "SCSS",
-                "SASS",
-                "Jest",
-                "Microsoft Azure",
-              ],
-            },
-            {
-              imageSrc: Nore,
-              techStack: [
-                ".NET Core",
-                "JavaScript",
-                "CSS",
-                "HTML",
-                "jQuery",
-                "Git",
-              ],
-              backgroundColor: "bg-blue-800 px-10",
-            },
-            {
-              imageSrc: Dalarna,
-              backgroundColor: "bg-red-600 px-10",
-            },
-          ]}
-        />
+        <Slider height={"600px"} width={"350px"} slides={slidesWithText} />
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
           <a
             href="https://www.linkedin.com/in/henrik-cheng/"
