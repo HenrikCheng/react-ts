@@ -43,14 +43,13 @@ const Slide = ({
           </a>
         </div>
       )}
+
       <div
-        className={`relative overflow-y-scroll ${
-          isDragging ? "no-pointer-events" : ""
-        }`}
+        className="relative overflow-y-scrol drop-shadow-2xl"
         style={{ height, width }}
       >
         {(header || description) && (
-          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black p-6 text-lg font-medium flex-col">
+          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black p-6 text-lg font-medium flex-col overflow-y-auto">
             {header && (
               <h5 className="font-bold">
                 <FormattedMessage id={header} />
@@ -66,13 +65,15 @@ const Slide = ({
         <img
           src={imageSrc}
           alt={`representation of ${imageSrc}`}
-          className={`hover:translate-y-1 transition duration-300 ease-in-out hover:cursor-pointer object-contain rounded-lg ${backgroundColor}`}
+          className={`hover:cursor-pointer object-contain rounded-lg ${backgroundColor}`}
           style={{ height, width }}
         />
       </div>
 
       {techStack && (
-        <div className="font-semibold mt-2">{techStack.join(" | ")}</div>
+        <div className="font-bold font-mono tracking-widest mt-2">
+          {techStack.join(" | ")}
+        </div>
       )}
 
       {isEnd && index === length - 1 && (

@@ -1,5 +1,3 @@
-import { useState, useEffect } from "react";
-
 import Navbar from "../Navbar";
 import Hero from "../Hero";
 import Modal from "../Modal";
@@ -8,34 +6,22 @@ import About from "../About";
 import Demo from "../Demo";
 import Contact from "../Contact";
 import "../../App.css";
-import CardGrid from "../../components/Card/cardGrid";
 import Competences from "../Competences";
 import Footer from "../Footer";
 
 const Home = () => {
-  const [pixelsFromTop, setPixelsFromTop] = useState<number>(0);
-
-  const onScroll = (e: any) => {
-    setPixelsFromTop(e.target.documentElement.scrollTop);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [pixelsFromTop]);
-
   return (
     <main className="bg-slate-200 relative mb-24 z-10" id="Home">
       <Modal />
       <Navbar />
       <Hero />
-      <CardGrid>
+      <div className="flex flex-col w-full items-center z-20 space-y-4">
         <About />
         <Competences />
         <CV />
         <Demo />
         <Contact />
-      </CardGrid>
+      </div>
       <Footer />
     </main>
   );

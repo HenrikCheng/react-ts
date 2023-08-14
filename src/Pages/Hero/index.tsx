@@ -7,6 +7,7 @@ import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {
   const [bgColor, setBgColor] = useState<string | null>();
+  const [showText, setShowText] = useState<boolean>(true);
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
@@ -25,22 +26,43 @@ const Hero = () => {
   };
 
   useEffect(() => {
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  const handleScroll = () => {
+    // Call the functions to handle text color and background color changes
     handleTextColorChange();
-    if (window.scrollY > 900) {
+
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > 900) {
       setBgColor("bg-slate-800");
-    } else if (window.scrollY > 750) {
+    } else if (scrollPosition > 750) {
       setBgColor("bg-slate-700");
-    } else if (window.scrollY > 600) {
+      setShowText(false);
+    } else if (scrollPosition > 600) {
       setBgColor("bg-slate-600");
-    } else if (window.scrollY > 450) {
+      setShowText(true);
+    } else if (scrollPosition > 450) {
       setBgColor("bg-slate-500");
-    } else if (window.scrollY > 300) {
+      setShowText(true);
+    } else if (scrollPosition > 300) {
       setBgColor("bg-slate-400");
-    } else if (window.scrollY > 150) {
+      setShowText(true);
+    } else if (scrollPosition > 150) {
       setBgColor("bg-slate-300");
-    } else setBgColor("bg-slate-200");
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [window.scrollY]);
+      setShowText(true);
+    } else {
+      setBgColor("bg-slate-200");
+      setShowText(true);
+    }
+  };
 
   useEffect(() => {
     dispatch(updateBgColor(bgColor));
@@ -51,7 +73,7 @@ const Hero = () => {
       <div
         className={`${bgColor} grow flex justify-center items-center flex-col group select-none w-full relative`}
       >
-        <div className="fixed">
+        <div className={`${showText ? "fixed" : "hidden"}`}>
           <h1
             className={`text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-thin tracking-widest`}
           >
