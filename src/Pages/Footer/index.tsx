@@ -1,4 +1,7 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+
 // import {
 //   FormattedDate,
 //   FormattedNumber,
@@ -11,7 +14,7 @@ const Footer: React.FC<{}> = (props) => {
   const currentYear = new Date().getFullYear();
   // const intl = useIntl();
   return (
-    <footer className="w-full fixed bottom-0 -z-10 bg-slate-200 pt-20 pb-4 text-lg font-semibold space-y-1">
+    <footer className="w-full fixed bottom-0 -z-10 bg-slate-200 pt-20 pb-4 text-lg font-semibold">
       <div className="space-x-4 flex justify-center w-full">
         <a
           href="https://www.linkedin.com/in/henrik-cheng/"
@@ -20,6 +23,10 @@ const Footer: React.FC<{}> = (props) => {
           className="hover:underline underline-offset-2"
         >
           LinkedIn
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="ml-1 fa-xs"
+          />
         </a>
         <div>|</div>
         <a
@@ -29,6 +36,10 @@ const Footer: React.FC<{}> = (props) => {
           className="hover:underline underline-offset-2"
         >
           tretton37
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="ml-1 fa-xs"
+          />
         </a>
         <div>|</div>
         <a
@@ -38,6 +49,10 @@ const Footer: React.FC<{}> = (props) => {
           className="hover:underline underline-offset-2"
         >
           Profile
+          <FontAwesomeIcon
+            icon={faArrowUpRightFromSquare}
+            className="ml-1 fa-xs"
+          />
         </a>
       </div>
       <div>&copy; {currentYear} Henrik Cheng. All rights reserved.</div>
