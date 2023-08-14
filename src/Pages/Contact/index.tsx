@@ -105,9 +105,6 @@ const Contact: React.FC<{}> = (props) => {
               henrik.cheng@tretton37.com
             </a>
           </p>
-          <p className="mt-4">
-            <FormattedMessage id="contact_text" />
-          </p>
         </div>
         <div
           id="map-container"
@@ -118,7 +115,10 @@ const Contact: React.FC<{}> = (props) => {
           className="flex flex-col justify-center items-center pb-4 border-4 border-double border-slate-300 p-4 rounded-lg"
           style={{ flexGrow: "1" }}
         >
-          <p className="font-semibold">Konsultchef</p>
+          <p className="font-semibold">
+            {" "}
+            <FormattedMessage id="cm_title" />
+          </p>
           <p className="font-semibold">Johan Lundborg</p>
           <p>
             <FormattedMessage id="contact_company" />
@@ -146,11 +146,11 @@ const Contact: React.FC<{}> = (props) => {
               johan.lundborg@tretton37.com
             </a>
           </p>
-          <p className="mt-4">
-            <FormattedMessage id="contact_text" />
-          </p>
         </div>
       </div>
+      <p className="mt-4">
+        <FormattedMessage id="contact_text" />
+      </p>
     </Card>
   );
 };

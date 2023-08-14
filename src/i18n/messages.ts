@@ -79,6 +79,7 @@ export const messages: LocalizedMessages = {
     demo_weatherguru_title: "A no-nonsense weather-app",
     demo_weatherguru_description:
       "During my shifts as a doctor in the ER, I often found it challenging to stay updated on the weather without access to windows. Many weather apps I tried were filled with distracting commercials. This app provides a simple solution to that problem.",
+    cm_title: "Consultant manager",
   },
   [LOCALES.SWEDISH]: {
     home_title: "Hem",
@@ -151,6 +152,7 @@ export const messages: LocalizedMessages = {
     demo_weatherguru_title: "En enkel och praktisk väder-app",
     demo_weatherguru_description:
       "Utan tillgång till fönster, så var det svårt att hålla sig a jour med vädret efter arbetspassen på akuten i min gamla karriär som läkare. Den här appen löser problemet på ett smidigt sätt",
+    cm_title: "Konsultchef",
   },
   [LOCALES.MANDARIN]: {
     home_title: "主页",
@@ -227,6 +229,7 @@ export const messages: LocalizedMessages = {
     demo_weatherguru_title: "简洁实用的天气应用",
     demo_weatherguru_description:
       "在急诊室当医生的时候，我常常发现没有窗户让我难以及时了解天气情况。我尝试了许多天气应用，但其中很多都充斥着令人分心的广告。这个应用为这个问题提供了一个简单的解决方案。",
+    cm_title: "顾问经理",
   },
 };
 // export const testMessages = {
