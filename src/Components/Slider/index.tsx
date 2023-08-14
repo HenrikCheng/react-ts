@@ -12,10 +12,11 @@ type SingleSlide = {
 };
 
 type SliderProps = {
-  dimension?: number;
+  height?: string;
+  width?: string;
   slides: SingleSlide[];
 };
-const Slider = ({ slides, dimension }: SliderProps) => {
+const Slider = ({ slides, height, width }: SliderProps) => {
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -92,7 +93,8 @@ const Slider = ({ slides, dimension }: SliderProps) => {
             isEnd={isEnd}
             length={slides.length}
             key={index}
-            dimension={dimension}
+            height={height}
+            width={width}
             backgroundColor={project.backgroundColor}
           />
         ))}
