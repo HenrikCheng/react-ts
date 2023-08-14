@@ -9,6 +9,10 @@ const Hero = () => {
   const [bgColor, setBgColor] = useState<string | null>();
   const [showText, setShowText] = useState<boolean>(true);
 
+  useEffect(() => {
+    console.log("🚀 ~ file: index.tsx:13 ~ Hero ~ showText:", showText);
+  }, [showText]);
+
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
 
@@ -43,6 +47,7 @@ const Hero = () => {
 
     if (scrollPosition > 900) {
       setBgColor("bg-slate-800");
+      setShowText(false);
     } else if (scrollPosition > 750) {
       setBgColor("bg-slate-700");
       setShowText(false);

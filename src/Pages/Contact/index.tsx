@@ -84,7 +84,7 @@ const Contact: React.FC<{}> = (props) => {
             <span className="font-semibold">tretton37</span>
           </p>
           <div>
-            <FormattedMessage id="contact_adress" />
+            <FormattedMessage id="contact_address" />
             <p className="font-semibold">The Waterfront Building</p>
             <p className="font-semibold">
               Klarabergsviadukten 63, 111 64 Stockholm
@@ -125,7 +125,7 @@ const Contact: React.FC<{}> = (props) => {
             <span className="font-semibold">tretton37</span>
           </p>
           <div>
-            <FormattedMessage id="contact_adress" />
+            <FormattedMessage id="contact_address" />
             <p className="font-semibold">The Waterfront Building</p>
             <p className="font-semibold">
               Klarabergsviadukten 63, 111 64 Stockholm
