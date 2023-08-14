@@ -20,7 +20,7 @@ const Hero = () => {
   const handleTextColorChange = () => {
     if (window.scrollY > 350 && textColor === "text-slate-900") {
       dispatch(updateTextColor("text-slate-100"));
-    } else if (window.scrollY < 350 && textColor === "text-slate-100") {
+    } else if (window.scrollY <= 350) {
       dispatch(updateTextColor("text-slate-900"));
     }
   };
