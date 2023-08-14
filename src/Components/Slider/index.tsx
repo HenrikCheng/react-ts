@@ -67,7 +67,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
   }, []);
 
   return (
-    <Card classes="flex flex-col container bg-white shadow rounded-xl py-4 select-none z-10 px-0">
+    <div className="container">
       <div
         className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
         id="Demo"
@@ -102,7 +102,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
           ))}
         </div>
       </div>
-    </Card>
+    </div>
   );
 };
 
