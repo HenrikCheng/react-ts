@@ -21,7 +21,7 @@ const CV: React.FC<{}> = (props) => {
         </Header>
 
         <Slider
-          dimension={"500px"}
+          dimension={400}
           slides={[
             {
               imageSrc: Staylive,

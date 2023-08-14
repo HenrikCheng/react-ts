@@ -29,7 +29,7 @@ const About: React.FC<{}> = (props) => {
           </Text>
         </div>
 
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center flex-wrap">
           <span className={`${pillClasses} bg-blue-500`}>
             <FormattedMessage id="about_keyword_1" />
           </span>

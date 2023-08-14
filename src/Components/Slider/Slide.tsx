@@ -10,7 +10,7 @@ type ItemProps = {
   index: number;
   isEnd?: boolean;
   length: number;
-  dimension?: string;
+  dimension?: number;
   backgroundColor?: string;
 };
 
@@ -24,9 +24,10 @@ const Slide = ({
   index,
   isEnd,
   length,
-  dimension = "300px",
+  dimension = 500,
   backgroundColor,
 }: ItemProps) => {
+  // console.log("🚀 ~ file: slide.tsx:30 ~ dimension:", dimension);
   return (
     <div className="ml-6 last:pr-6 relative">
       {href && (
@@ -42,9 +43,10 @@ const Slide = ({
         </div>
       )}
       <div
-        className={`w-[${dimension}] h-[${dimension + 50}] relative ${
+        className={`w-[${dimension}px] h-[${dimension}px] relative ${
           isDragging ? "no-pointer-events" : ""
         }`}
+        style={{ height: "600px", width: "350px" }}
       >
         {(header || description) && (
           <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
@@ -63,7 +65,8 @@ const Slide = ({
         <img
           src={imageSrc}
           alt={`representation of ${imageSrc}`}
-          className={`w-[${dimension}] h-[${dimension}] hover:translate-y-1 transition duration-300 ease-in-out mb-2 hover:cursor-pointer object-contain ${backgroundColor}`}
+          className={`w-[${dimension}px] h-[${dimension}px] hover:translate-y-1 transition duration-300 ease-in-out mb-2 hover:cursor-pointer object-contain ${backgroundColor}`}
+          style={{ height: "600px", width: "350px" }}
         />
       </div>
 

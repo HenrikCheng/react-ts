@@ -12,7 +12,7 @@ type SingleSlide = {
 };
 
 type SliderProps = {
-  dimension?: string;
+  dimension?: number;
   slides: SingleSlide[];
 };
 const Slider = ({ slides, dimension }: SliderProps) => {
