@@ -5,8 +5,8 @@ import Slide from "./Slide";
 type SingleSlide = {
   href?: string;
   imageSrc: string;
-  header: string;
-  description: string;
+  header?: string;
+  description?: string;
   techStack?: string[];
   backgroundColor?: string;
 };

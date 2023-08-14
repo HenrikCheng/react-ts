@@ -26,22 +26,14 @@ const CV: React.FC<{}> = (props) => {
           slides={[
             {
               imageSrc: Staylive,
-              header: "Awesome App",
-              description:
-                "A cutting-edge application to revolutionize your experience.",
               techStack: ["Redux", "CSS", "HTML", "REST API", "Tailwind CSS"],
             },
             {
               imageSrc: Staylive,
-              header: "Innovative Website",
-              description: "An interactive website that will amaze users.",
               techStack: ["React.js", "Redux", "CSS", "HTML", "Tailwind CSS"],
             },
             {
               imageSrc: Staylive,
-              header: "Cool Project",
-              description:
-                "A showcase of advanced features and functionalities.",
               techStack: [
                 "React.js",
                 "Redux",
@@ -53,8 +45,6 @@ const CV: React.FC<{}> = (props) => {
             },
             {
               imageSrc: Aspia,
-              header: "Next-gen Platform",
-              description: "Bringing the future to your fingertips.",
               techStack: [
                 "React.js",
                 "Redux",
@@ -67,9 +57,6 @@ const CV: React.FC<{}> = (props) => {
             },
             {
               imageSrc: Nore,
-              header: "Epic Mobile App",
-              description:
-                "Unleash the power of mobile technology with this stunning app.",
               techStack: [
                 ".NET Core",
                 "JavaScript",
@@ -82,9 +69,7 @@ const CV: React.FC<{}> = (props) => {
             },
             {
               imageSrc: Dalarna,
-              header: "Epic Mobile App",
-              description:
-                "Unleash the power of mobile technology with this stunning app.",
+              backgroundColor: "bg-red-600 px-10",
             },
           ]}
         />
