@@ -7,11 +7,6 @@ import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {
   const [bgColor, setBgColor] = useState<string | null>();
-  const [showText, setShowText] = useState<boolean>(true);
-
-  useEffect(() => {
-    console.log("🚀 ~ file: index.tsx:13 ~ Hero ~ showText:", showText);
-  }, [showText]);
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
