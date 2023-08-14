@@ -7,6 +7,7 @@ import { updateBgColor, updateTextColor } from "./colorSlice";
 
 const Hero = () => {
   const [bgColor, setBgColor] = useState<string | null>();
+  const [showText, setShowText] = useState<boolean>(true);
 
   const heroBottomAnchor = useRef() as MutableRefObject<HTMLDivElement>;
   const dispatch = useAppDispatch();
