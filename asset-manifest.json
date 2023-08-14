@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-ts/static/css/main.b5f343ec.css",
-    "main.js": "/react-ts/static/js/main.61e5cd83.js",
+    "main.css": "/react-ts/static/css/main.b61b3e13.css",
+    "main.js": "/react-ts/static/js/main.3fec80dc.js",
     "static/js/787.a763b153.chunk.js": "/react-ts/static/js/787.a763b153.chunk.js",
     "static/media/mirjaleipoo.png": "/react-ts/static/media/mirjaleipoo.32c8636aeaada34d15cb.png",
     "static/media/Staylive.png": "/react-ts/static/media/Staylive.1e724d9ccd75ee52fce5.png",
@@ -15,12 +15,12 @@
     "static/media/Nore.png": "/react-ts/static/media/Nore.35e2f6e74bac65e21f2e.png",
     "static/media/aspia-logo.webp": "/react-ts/static/media/aspia-logo.22f83982e421c536da4b.webp",
     "index.html": "/react-ts/index.html",
-    "main.b5f343ec.css.map": "/react-ts/static/css/main.b5f343ec.css.map",
-    "main.61e5cd83.js.map": "/react-ts/static/js/main.61e5cd83.js.map",
+    "main.b61b3e13.css.map": "/react-ts/static/css/main.b61b3e13.css.map",
+    "main.3fec80dc.js.map": "/react-ts/static/js/main.3fec80dc.js.map",
     "787.a763b153.chunk.js.map": "/react-ts/static/js/787.a763b153.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b5f343ec.css",
-    "static/js/main.61e5cd83.js"
+    "static/css/main.b61b3e13.css",
+    "static/js/main.3fec80dc.js"
   ]
 }
