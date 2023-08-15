@@ -4,8 +4,8 @@ import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../../components/Card";
 import Header from "../../components/Header";
-import Text from "../../components/Text";
 import Slider from "../../components/Slider";
+import Text from "../../components/Text";
 
 import Nore from "../../logotypes/Nore.png";
 import Dalarna from "../../logotypes/Dalarna.png";
@@ -72,6 +72,9 @@ const CV: React.FC<{}> = (props) => {
         <Header classes="text-4xl font-semibold mb-4">
           <FormattedMessage id="cv_title" />
         </Header>
+        <Text classes="text-gray-700 text-base text-left mb-6 mx-2 text-center">
+          <FormattedMessage id="demo_subtitle" />
+        </Text>
 
         <Slider height={"300px"} width={"350px"} slides={slidesWithText} />
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">

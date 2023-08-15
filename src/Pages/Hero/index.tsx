@@ -70,7 +70,7 @@ const Hero = () => {
   }, [dispatch, bgColor]);
 
   return (
-    <div className="h-screen flex flex-col">
+    <div className="h-screen flex flex-col shadow-inner">
       <div
         className={`${bgColor} grow flex justify-center items-center flex-col group select-none w-full relative`}
       >

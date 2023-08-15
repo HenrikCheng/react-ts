@@ -227,7 +227,7 @@ const Demo: React.FC<{}> = (props) => {
           {isStart && (
             <div
               className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
-            ></div>
+            />
           )}
 
           {projects.map((project, index) => (

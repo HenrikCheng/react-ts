@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 import Slide from "./Slide";
-import Card from "../Card";
 
 type SingleSlide = {
   href?: string;
@@ -38,6 +39,28 @@ const Slider = ({ slides, height, width }: SliderProps) => {
     e.currentTarget.scrollLeft = scrollLeft - walk;
   };
 
+  const handleClickLeft = () => {
+    const demoContainer = document.getElementById("Demo");
+    if (demoContainer) {
+      demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
+      demoContainer.scrollLeft -= 400;
+      setTimeout(() => {
+        demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
+      }, 300);
+    }
+  };
+
+  const handleClickRight = () => {
+    const demoContainer = document.getElementById("Demo");
+    if (demoContainer) {
+      demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
+      demoContainer.scrollLeft += 400;
+      setTimeout(() => {
+        demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
+      }, 300);
+    }
+  };
+
   const handleMouseUp = () => {
     setIsDragging(false);
   };
@@ -67,7 +90,30 @@ const Slider = ({ slides, height, width }: SliderProps) => {
   }, []);
 
   return (
-    <div className="container">
+    <div className="container relative flex items-center">
+      <button
+        className="absolute left-4 z-20 disabled:opacity-25"
+        type="button"
+        onClick={handleClickLeft}
+        disabled={isStart} // Disable if at the start
+      >
+        <FontAwesomeIcon
+          icon={faArrowLeft}
+          className="fa-2xl bg-slate-800 text-white p-3 rounded-full drop-shadow-lg"
+        />
+      </button>
+      <button
+        className="absolute right-4 z-20 disabled:opacity-25"
+        type="button"
+        onClick={handleClickRight}
+        disabled={isEnd} // Disable if at the start
+      >
+        <FontAwesomeIcon
+          icon={faArrowRight}
+          className="fa-2xl  bg-slate-800 text-white p-3 rounded-full drop-shadow-lg"
+        />
+      </button>
+
       <div
         className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
         id="Demo"
@@ -80,7 +126,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
           {isStart && (
             <div
               className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
-            ></div>
+            />
           )}
 
           {slides.map((project, index) => (
