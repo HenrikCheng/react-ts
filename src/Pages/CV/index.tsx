@@ -82,16 +82,17 @@ const CV: React.FC<{}> = (props) => {
           slides={slidesWithText}
           componentId="CV"
         />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+        <div className="mt-6 mb-3">
           <a
             href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl "
           >
             <FormattedMessage id="cv_more_info" />
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
-        </button>
+        </div>
       </div>
     </Card>
   );

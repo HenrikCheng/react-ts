@@ -89,17 +89,18 @@ const Demo: React.FC<{}> = (props) => {
           <FormattedMessage id="demo_subtitle" />
         </Text>
 
-        <Slider height={300} width={350} slides={projects} componentId="Demo" />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+        <Slider height={350} width={400} slides={projects} componentId="Demo" />
+        <div className="mt-6 mb-3">
           <a
             href="https://www.linkedin.com/in/henrik-cheng/"
             target="_blank"
             rel="noreferrer"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl "
           >
             <FormattedMessage id="cv_more_info" />
             <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
           </a>
-        </button>
+        </div>
       </div>
     </Card>
   );
