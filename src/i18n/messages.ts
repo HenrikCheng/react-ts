@@ -128,7 +128,7 @@ export const messages: LocalizedMessages = {
     contact_title: "Kontakt",
     contact_subtitle: "För att komma i kontakt med mig som konsult:",
     contact_company: "Företag: ",
-    contact_adress: "Address: ",
+    contact_address: "Address: ",
     contact_phone: "Telefon: ",
     contact_email: "E-post: ",
     contact_text:
