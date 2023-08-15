@@ -76,7 +76,12 @@ const CV: React.FC<{}> = (props) => {
           <FormattedMessage id="demo_subtitle" />
         </Text>
 
-        <Slider height={"300px"} width={"350px"} slides={slidesWithText} />
+        <Slider
+          height={350}
+          width={400}
+          slides={slidesWithText}
+          componentId="CV"
+        />
         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
           <a
             href="https://www.linkedin.com/in/henrik-cheng/"

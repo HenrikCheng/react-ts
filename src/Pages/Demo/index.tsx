@@ -1,103 +1,18 @@
-import { useState, useEffect } from "react";
 import { FormattedMessage } from "react-intl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 
 import Card from "../../components/Card";
+import Header from "../../components/Header";
+import Slider from "../../components/Slider";
+import Text from "../../components/Text";
+
 import FilmPic from "../../images/FilmApp.png";
 import TicTacToePic from "../../images/tictactoe.png";
 import tretton37 from "../../images/tretton37.png";
 import PortfolioPic from "../../images/portfolio.png";
 import Mirjaleipoo from "../../images/mirjaleipoo.png";
 import People from "../../images/1337-people.png";
-import Header from "../../components/Header";
-import Text from "../../components/Text";
-
-type ItemProps = {
-  href: string;
-  imageSrc: string;
-  imageAlt?: string;
-  githubLink?: string;
-  description?: string;
-  techStack?: Array<String>;
-  isDragging: any;
-  header?: string;
-  index: number;
-  isEnd?: boolean;
-  length: number;
-};
-
-const Project = ({
-  href,
-  imageSrc,
-  imageAlt,
-  githubLink,
-  header,
-  description,
-  techStack,
-  isDragging,
-  index,
-  isEnd,
-  length,
-}: ItemProps) => {
-  return (
-    <div className="ml-6 last:pr-6 relative">
-      {(githubLink || href) && (
-        <div className="w-full flex justify-around mb-1">
-          {href && (
-            <a
-              className="font-bold hover:underline underline-offset-2"
-              href={href}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FormattedMessage id="demo_open" />
-            </a>
-          )}
-          {githubLink && (
-            <a
-              href={githubLink}
-              className="font-bold hover:underline underline-offset-2"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FormattedMessage id="demo_sourcecode" />
-            </a>
-          )}
-        </div>
-      )}
-      <div className={`w-96 relative ${isDragging ? "no-pointer-events" : ""}`}>
-        {(header || description) && (
-          <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black flex items-center justify-center p-4 text-lg font-medium flex-col">
-            {header && (
-              <h5 className="font-bold">
-                <FormattedMessage id={header} />
-              </h5>
-            )}
-            {description && (
-              <p>
-                <FormattedMessage id={description} />
-              </p>
-            )}
-          </div>
-        )}
-        <img
-          src={imageSrc}
-          alt={imageAlt || imageSrc}
-          className="h-80 w-96 hover:translate-y-1 transition duration-300 ease-in-out object-cover mb-2 hover:cursor-pointer"
-        />
-      </div>
-
-      {techStack && (
-        <div className="font-semibold">{techStack.join(" | ")}</div>
-      )}
-
-      {isEnd && index === length - 1 && (
-        <div
-          className={`bg-gradient-to-l from-slate-200 absolute top-0 bottom-0 right-0 w-36 opacity-50`}
-        />
-      )}
-    </div>
-  );
-};
 
 const Demo: React.FC<{}> = (props) => {
   const projects = [
@@ -113,6 +28,7 @@ const Demo: React.FC<{}> = (props) => {
       href: "https://www.tretton37.com/",
       imageSrc: tretton37,
       imageAlt: "tretton37 website",
+      header: "demo_portfolio_title",
       description: "demo_tretton_description",
       techStack: ["Webflow", "HTML", "JS", "CSS", "Kanban", "Figma"],
     },
@@ -121,6 +37,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: People,
       imageAlt: "Company employees of tretton37",
       githubLink: "https://github.com/HenrikCheng/1337-people",
+      header: "demo_portfolio_title",
       description: "demo_leetpeople_description",
       techStack: ["React", "Query params", "Debounce", "Tailwind", "REST API"],
     },
@@ -129,6 +46,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: Mirjaleipoo,
       imageAlt: "Website for a local bakery in Finland",
       githubLink: "https://github.com/HenrikCheng/MirjaPage",
+      header: "demo_portfolio_title",
       description: "demo_mirjaleipoo_description",
       techStack: ["JS", "HTML", "CSS", "jQuery", "Bootstrap"],
     },
@@ -137,6 +55,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: FilmPic,
       imageAlt: "click to go to video app",
       githubLink: "https://github.com/HenrikCheng/film-app",
+      header: "demo_portfolio_title",
       description: "demo_filmapp_description",
       techStack: ["React", "JS", "HTML", "CSS", "Local storage", "Bootstrap"],
     },
@@ -145,6 +64,7 @@ const Demo: React.FC<{}> = (props) => {
       imageSrc: TicTacToePic,
       imageAlt: "click to go to tictactoe game",
       githubLink: "https://github.com/HenrikCheng/tic-tac-toe",
+      header: "demo_portfolio_title",
       description: "demo_tictactoe_description",
       techStack: ["Typescript", "HTML", "CSS", "Tailwind", "React"],
     },
@@ -159,94 +79,27 @@ const Demo: React.FC<{}> = (props) => {
     },
   ];
 
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
-  const [isStart, setIsStart] = useState(false);
-  const [isEnd, setIsEnd] = useState(false);
-
-  const handleMouseDown = (e: React.MouseEvent<HTMLElement>) => {
-    setIsDragging(true);
-    setStartX(e.clientX - e.currentTarget.offsetLeft);
-    setScrollLeft(e.currentTarget.scrollLeft);
-  };
-
-  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    const x = e.clientX - e.currentTarget.offsetLeft;
-    const walk = x - startX * 1; // Adjust the multiplier for faster/slower scrolling
-    e.currentTarget.scrollLeft = scrollLeft - walk;
-  };
-
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
-
-  useEffect(() => {
-    const demoContainer = document.getElementById("Demo");
-
-    const handleScroll = () => {
-      if (demoContainer) {
-        setIsStart(demoContainer.scrollLeft === 0);
-        setIsEnd(
-          demoContainer.scrollLeft ===
-            demoContainer.scrollWidth - demoContainer.clientWidth
-        );
-      }
-    };
-
-    if (demoContainer) {
-      demoContainer.addEventListener("scroll", handleScroll);
-    }
-
-    return () => {
-      if (demoContainer) {
-        demoContainer.removeEventListener("scroll", handleScroll);
-      }
-    };
-  }, []);
-
   return (
-    <Card classes="flex flex-col container xl:justify-center relative bg-white shadow rounded-xl overflow-hidden py-6">
-      <Header classes="text-4xl font-semibold mb-4">
-        <FormattedMessage id="demo_title" />
-      </Header>
-      <Text classes="text-gray-700 text-base text-left mb-6 mx-2 text-center">
-        <FormattedMessage id="demo_subtitle" />
-      </Text>
-      <div
-        className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
-        id="Demo"
-        onMouseDown={handleMouseDown}
-        onMouseMove={handleMouseMove}
-        onMouseUp={handleMouseUp}
-        onMouseLeave={handleMouseUp}
-      >
-        <div className="flex w-full">
-          {isStart && (
-            <div
-              className={`bg-gradient-to-r from-slate-200 absolute top-0 bottom-0 left-0 w-40 opacity-50`}
-            />
-          )}
+    <Card>
+      <div id="Demo">
+        <Header classes="text-4xl font-semibold mb-4">
+          <FormattedMessage id="demo_title" />
+        </Header>
+        <Text classes="text-gray-700 text-base text-left mb-6 mx-2 text-center">
+          <FormattedMessage id="demo_subtitle" />
+        </Text>
 
-          {projects.map((project, index) => (
-            <Project
-              header={project.header}
-              key={index}
-              href={project.href}
-              imageSrc={project.imageSrc}
-              imageAlt={project.imageAlt}
-              githubLink={project.githubLink}
-              description={project.description}
-              techStack={project.techStack}
-              isDragging={isDragging}
-              index={index}
-              isEnd={isEnd}
-              length={projects.length}
-            />
-          ))}
-        </div>
+        <Slider height={300} width={350} slides={projects} componentId="Demo" />
+        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-xl mt-3">
+          <a
+            href="https://www.linkedin.com/in/henrik-cheng/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FormattedMessage id="cv_more_info" />
+            <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
+          </a>
+        </button>
       </div>
     </Card>
   );

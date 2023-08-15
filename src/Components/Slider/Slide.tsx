@@ -6,13 +6,13 @@ type ItemProps = {
   header?: string;
   description?: string;
   techStack?: Array<String>;
-  isDragging: any;
   index: number;
   isEnd?: boolean;
   length: number;
-  height?: string;
-  width?: string;
+  height?: number;
+  width?: number;
   backgroundColor?: string;
+  githubLink?: string;
 };
 
 const Slide = ({
@@ -21,32 +21,44 @@ const Slide = ({
   header,
   description,
   techStack,
-  isDragging,
   index,
   isEnd,
   length,
-  height = "350px",
-  width = "350px",
+  height,
+  width,
   backgroundColor,
+  githubLink,
 }: ItemProps) => {
   return (
     <div className="ml-6 last:pr-6 relative">
-      {href && (
+      {(href || githubLink) && (
         <div className="w-full flex justify-around mb-1">
-          <a
-            className="font-bold hover:underline underline-offset-2"
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-          >
-            <FormattedMessage id="demo_open" />
-          </a>
+          {href && (
+            <a
+              className="font-bold hover:underline underline-offset-2"
+              href={href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FormattedMessage id="demo_open" />
+            </a>
+          )}
+          {githubLink && (
+            <a
+              className="font-bold hover:underline underline-offset-2"
+              href={githubLink}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FormattedMessage id="demo_sourcecode" />
+            </a>
+          )}
         </div>
       )}
 
       <div
         className="relative overflow-y-scrol drop-shadow-2xl"
-        style={{ height, width }}
+        style={{ height: `${height}px`, width: `${width}px` }}
       >
         {(header || description) && (
           <div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black p-6 text-lg font-medium flex-col overflow-y-auto">

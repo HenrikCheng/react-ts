@@ -1,4 +1,5 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
@@ -11,14 +12,22 @@ type SingleSlide = {
   description?: string;
   techStack?: string[];
   backgroundColor?: string;
+  githubLink?: string;
 };
 
 type SliderProps = {
-  height?: string;
-  width?: string;
+  height?: number;
+  width?: number;
   slides: SingleSlide[];
+  componentId: string;
 };
-const Slider = ({ slides, height, width }: SliderProps) => {
+const Slider = ({
+  componentId,
+  slides,
+  height = 300,
+  width = 350,
+}: SliderProps) => {
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
@@ -39,24 +48,28 @@ const Slider = ({ slides, height, width }: SliderProps) => {
     e.currentTarget.scrollLeft = scrollLeft - walk;
   };
 
+  const container = document.getElementById(componentId);
+
   const handleClickLeft = () => {
-    const demoContainer = document.getElementById("Demo");
-    if (demoContainer) {
-      demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
-      demoContainer.scrollLeft -= 375;
+    if (containerRef.current) {
+      containerRef.current.style.scrollBehavior = "smooth";
+      containerRef.current.scrollLeft -= 375;
       setTimeout(() => {
-        demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
+        if (containerRef.current) {
+          containerRef.current.style.scrollBehavior = "auto";
+        }
       }, 300);
     }
   };
 
   const handleClickRight = () => {
-    const demoContainer = document.getElementById("Demo");
-    if (demoContainer) {
-      demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
-      demoContainer.scrollLeft += 375;
+    if (containerRef.current) {
+      containerRef.current.style.scrollBehavior = "smooth";
+      containerRef.current.scrollLeft += 375;
       setTimeout(() => {
-        demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
+        if (containerRef.current) {
+          containerRef.current.style.scrollBehavior = "auto";
+        }
       }, 300);
     }
   };
@@ -66,25 +79,22 @@ const Slider = ({ slides, height, width }: SliderProps) => {
   };
 
   useEffect(() => {
-    const demoContainer = document.getElementById("Demo");
-
     const handleScroll = () => {
-      if (demoContainer) {
-        setIsStart(demoContainer.scrollLeft === 0);
+      if (container) {
+        setIsStart(container.scrollLeft === 0);
         setIsEnd(
-          demoContainer.scrollLeft ===
-            demoContainer.scrollWidth - demoContainer.clientWidth
+          container.scrollLeft === container.scrollWidth - container.clientWidth
         );
       }
     };
 
-    if (demoContainer) {
-      demoContainer.addEventListener("scroll", handleScroll);
+    if (container) {
+      container.addEventListener("scroll", handleScroll);
     }
 
     return () => {
-      if (demoContainer) {
-        demoContainer.removeEventListener("scroll", handleScroll);
+      if (container) {
+        container.removeEventListener("scroll", handleScroll);
       }
     };
   }, []);
@@ -116,7 +126,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
 
       <div
         className="w-full overflow-x-scroll relative cursor-grab active:cursor-grabbing"
-        id="Demo"
+        ref={containerRef} // Use the container reference
         onMouseDown={handleMouseDown}
         onMouseMove={handleMouseMove}
         onMouseUp={handleMouseUp}
@@ -136,7 +146,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
               header={project.header}
               description={project.description}
               techStack={project.techStack}
-              isDragging={isDragging}
+              githubLink={project.githubLink}
               index={index}
               isEnd={isEnd}
               length={slides.length}
