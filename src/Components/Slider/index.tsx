@@ -43,7 +43,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
     const demoContainer = document.getElementById("Demo");
     if (demoContainer) {
       demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
-      demoContainer.scrollLeft -= 400;
+      demoContainer.scrollLeft -= 375;
       setTimeout(() => {
         demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
       }, 300);
@@ -54,7 +54,7 @@ const Slider = ({ slides, height, width }: SliderProps) => {
     const demoContainer = document.getElementById("Demo");
     if (demoContainer) {
       demoContainer.style.scrollBehavior = "smooth"; // Enable smooth scrolling
-      demoContainer.scrollLeft += 400;
+      demoContainer.scrollLeft += 375;
       setTimeout(() => {
         demoContainer.style.scrollBehavior = "auto"; // Revert to normal scrolling
       }, 300);
