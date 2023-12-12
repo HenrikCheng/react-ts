@@ -134,7 +134,7 @@ const Modal = () => {
 									</button>
 								</li>
 								<li>
-									<SocialMediaSection />
+									<SocialMediaSection customTextColor="text-white py-2" />
 								</li>
 								<li className={linkStyles}>
 									<LangSelect />

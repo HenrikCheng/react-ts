@@ -6,10 +6,13 @@ import { selectTextColor } from "../../Pages/Hero/colorSlice";
 
 type SocialMediaSectionProps = {
 	displayName?: boolean;
-	textColor?: string;
+	customTextColor?: string;
 };
 
-const SocialMediaSection = ({ displayName }: SocialMediaSectionProps) => {
+const SocialMediaSection = ({
+	displayName,
+	customTextColor,
+}: SocialMediaSectionProps) => {
 	const textColor = useAppSelector(selectTextColor);
 
 	return (
@@ -22,19 +25,25 @@ const SocialMediaSection = ({ displayName }: SocialMediaSectionProps) => {
 			>
 				<FontAwesomeIcon
 					icon={faLinkedin}
-					className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
+					className={`${
+						customTextColor || textColor
+					} fa-xl lg:fa-2x hover:drop-shadow-lg`}
 				/>
 			</a>
 			<a href="mailto:henrikcheng@live.se" className="mr-3">
 				<FontAwesomeIcon
 					icon={faEnvelope}
-					className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
+					className={`${
+						customTextColor || textColor
+					} fa-xl lg:fa-2x hover:drop-shadow-lg`}
 				/>
 			</a>
 			<a href="tel:+46725133704">
 				<FontAwesomeIcon
 					icon={faPhone}
-					className={`${textColor} fa-xl lg:fa-2x hover:drop-shadow-lg`}
+					className={`${
+						customTextColor || textColor
+					} fa-xl lg:fa-2x hover:drop-shadow-lg`}
 				/>
 			</a>
 			{displayName && (
