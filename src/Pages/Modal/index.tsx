@@ -7,6 +7,7 @@ import { useAppSelector, useAppDispatch } from "../../app/hooks";
 import { toggleModal, selectModal } from "./modalSlice";
 import LangSelect from "../../components/LangSelect";
 import QRCodeComponent from "../../components/QRCodeComponent";
+import SocialMediaSection from "../../components/SocialMediaSection";
 
 const Modal = () => {
 	const showModal = useAppSelector(selectModal);
@@ -132,10 +133,15 @@ const Modal = () => {
 										</a>
 									</button>
 								</li>
+								<li>
+									<SocialMediaSection />
+								</li>
 								<li className={linkStyles}>
 									<LangSelect />
 								</li>
-								<QRCodeComponent />
+								<li>
+									<QRCodeComponent />
+								</li>
 							</ul>
 						</div>
 					</div>
