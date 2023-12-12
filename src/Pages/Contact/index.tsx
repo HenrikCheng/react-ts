@@ -79,16 +79,9 @@ const Contact: React.FC<{}> = (props) => {
 					<p>
 						<span className="font-semibold">Henrik Cheng</span>
 					</p>
-					<p>
-						<FormattedMessage id="contact_company" />
-						<span className="font-semibold">tretton37</span>
-					</p>
 					<div>
 						<FormattedMessage id="contact_address" />
-						<p className="font-semibold">The Waterfront Building</p>
-						<p className="font-semibold">
-							Klarabergsviadukten 63, 111 64 Stockholm
-						</p>
+						<p className="font-semibold">Solåsvägen 5, 17061 SOLNA</p>
 					</div>
 					<p>
 						<FormattedMessage id="contact_phone" />
@@ -102,7 +95,7 @@ const Contact: React.FC<{}> = (props) => {
 							href="mailto:johan.lundborg@tretton37.com"
 							className="font-semibold"
 						>
-							henrik.cheng@tretton37.com
+							henrikcheng@live.se
 						</a>
 					</p>
 				</div>
