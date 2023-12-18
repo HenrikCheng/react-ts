@@ -80,6 +80,9 @@ export const messages: LocalizedMessages = {
 		demo_weatherguru_description:
 			"During my shifts as a doctor in the ER, I often found it challenging to stay updated on the weather without access to windows. Many weather apps I tried were filled with distracting commercials. This app provides a simple solution to that problem.",
 		cm_title: "Consultant manager",
+		smoliakova_portfolio_title: "Architect Maria Smoliakova Portfolio",
+		smoliakova_portfolio_description:
+			"CMS-based portfolio site built on Next.js and Sanity.io",
 	},
 	[LOCALES.SWEDISH]: {
 		home_title: "Hem",
@@ -139,6 +142,9 @@ export const messages: LocalizedMessages = {
 		demo_sourcecode: "Källkod",
 		demo_portfolio_title: "Henriks portfolio",
 		demo_portfolio_description: "Mitt digitala portfolio och CV",
+		smoliakova_portfolio_title: "Arkitekt Mariia Smoliakova Portfolio",
+		smoliakova_portfolio_description:
+			"CMS-baserad portföljsida gjord på Next.js och Sanity.io",
 		demo_tretton_description:
 			"tretton37 är ett konsultföretag där IT-talanger arbetar. Företaget strävade efter att omdefiniera sin online-närvaro för att tydligare kommunicera sitt budskap, och det var då Henrik trädde in som en av de tre utvecklare. Med en passionerad inställning och starkt engagemang lärde han sig low-code programmering samtidigt som han skapade fram komponenter med pixel-perfekt precision.",
 		demo_leetpeople_description:
@@ -230,6 +236,9 @@ export const messages: LocalizedMessages = {
 		demo_weatherguru_description:
 			"在急诊室当医生的时候，我常常发现没有窗户让我难以及时了解天气情况。我尝试了许多天气应用，但其中很多都充斥着令人分心的广告。这个应用为这个问题提供了一个简单的解决方案。",
 		cm_title: "顾问经理",
+		smoliakova_portfolio_title: "建筑师玛丽亚·斯莫利亚科娃的作品集",
+		smoliakova_portfolio_description:
+			"基于Next.js和Sanity.io构建的CMS型作品集网站",
 	},
 };
 // export const testMessages = {

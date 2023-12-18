@@ -36,7 +36,7 @@ const Slide = ({
 				style={{ height: `${height}px`, width: `${width}px` }}
 			>
 				{(header || description) && (
-					<div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black p-6 text-lg font-medium flex-col overflow-y-auto group">
+					<div className="absolute top-0 bottom-0 left-0 right-0 hover:bg-white opacity-90 text-transparent focus:text-black active:hover:text-black hover:text-black p-10 text-lg font-medium flex-col overflow-y-auto group">
 						{header && (
 							<h5 className="font-bold">
 								<FormattedMessage id={header} />
