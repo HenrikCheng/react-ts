@@ -38,8 +38,6 @@ const QR = ({
 						y={y * factor}
 						width={1 * factor}
 						height={1 * factor}
-						// gives better visual result then cell & <Rect .../>
-						// due to rounding errors with factor
 						fill={cell ? foreground : background}
 					/>
 				)),
