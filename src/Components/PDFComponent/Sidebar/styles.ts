@@ -43,7 +43,8 @@ export const styles = StyleSheet.create({
 	},
 	competenceHeader: {
 		fontSize: 13,
-		marginBottom: 8,
+		marginTop: 6,
+		marginBottom: 4,
 		fontFamily: "Helvetica-Bold",
 	},
 	competence: {
