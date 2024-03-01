@@ -46,7 +46,7 @@ export const styles = StyleSheet.create({
 	},
 	pillContainer: {
 		backgroundColor: ColorPalette["Sunset Yellow"],
-		borderRadius: 20,
+		borderRadius: 4,
 		justifyContent: "center",
 		paddingVertical: 4,
 		paddingHorizontal: 6,

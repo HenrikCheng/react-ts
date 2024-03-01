@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
 		backgroundColor: ColorPalette["Sunset Yellow"],
 		borderRadius: "50%",
 		position: "absolute",
-		left: 150,
+		left: 135,
 		top: 15,
 		width: 55,
 		height: 55,
