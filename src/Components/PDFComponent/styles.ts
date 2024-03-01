@@ -10,65 +10,8 @@ export const styles = StyleSheet.create({
 		flexWrap: "wrap",
 		gap: 20,
 	},
-	image: {
-		borderRadius: "50%",
-	},
-	bgCircle: {
-		backgroundColor: ColorPalette["Sunset Yellow"],
-		borderRadius: "50%",
-		position: "absolute",
-		left: -150,
-		top: -200,
-		width: 300,
-		height: 300,
-	},
-	imageContainer: {
-		backgroundColor: ColorPalette["Pure White"],
-		borderRadius: "50%",
-		padding: 10,
-		marginTop: 10,
-	},
-	frontCircle: {
-		backgroundColor: ColorPalette["Sunset Yellow"],
-		borderRadius: "50%",
-		position: "absolute",
-		left: 150,
-		top: 15,
-		width: 55,
-		height: 55,
-		opacity: 0.7,
-	},
-	left: {
-		flex: 1,
-		paddingHorizontal: 20,
-		backgroundColor: ColorPalette["Ghost White"],
-		position: "relative",
-	},
-	competenceContainer: {
-		flexDirection: "row",
-		alignItems: "flex-start",
-		gap: 4,
-	},
-	competenceHeader: {
-		fontSize: "13pt",
-		marginBottom: 6,
-		fontFamily: "Helvetica-Bold",
-	},
-	competence: {
-		fontSize: "12pt",
-		marginBottom: 6,
-	},
-	QRWebsite: {
-		width: "100%",
-		justifyContent: "flex-end",
-	},
-	right: {
-		flex: 2,
-		paddingRight: 20,
-	},
 	hero: {
-		paddingTop: 20,
-		paddingBottom: 60,
+		paddingVertical: 50,
 	},
 	heroName: {
 		flexDirection: "row",
@@ -78,7 +21,9 @@ export const styles = StyleSheet.create({
 	heroLastname: {
 		color: ColorPalette["Sunset Yellow"],
 	},
-	heroTitle: {},
+	heroTitle: {
+		fontFamily: "Helvetica-Bold",
+	},
 	altHero: {
 		backgroundColor: ColorPalette["Celestial Blue"],
 		width: 350,
@@ -86,11 +31,6 @@ export const styles = StyleSheet.create({
 		borderRadius: 6,
 		padding: 20,
 		marginBottom: 10,
-	},
-	altHeroIconStyles: {
-		color: ColorPalette["Sunset Yellow"],
-		height: "auto",
-		width: 15,
 	},
 	altHeroSearchBar: {
 		display: "flex",
@@ -120,33 +60,15 @@ export const styles = StyleSheet.create({
 		fontSize: 30,
 		paddingBottom: 4,
 	},
-	subheading: {
-		fontSize: 16,
-		paddingBottom: 10,
-	},
 	emphasisText: {
-		fontSize: 12,
-	},
-	chapterWrapper: {
-		marginTop: 10,
-	},
-	chapterHeading: {
-		fontSize: 20,
-		paddingVertical: 4,
-	},
-	text: {
-		paddingBottom: 10,
 		fontSize: 12,
 	},
 	pageNumber: {
 		flexDirection: "row-reverse",
-		paddingTop: 20,
-		paddingRight: 15,
-	},
-	currentPage: {
-		fontSize: 20,
-	},
-	totalPages: {
-		fontSize: 24,
+		paddingTop: 10,
+		paddingRight: 20,
+		position: "absolute",
+		top: 0,
+		right: 0,
 	},
 });

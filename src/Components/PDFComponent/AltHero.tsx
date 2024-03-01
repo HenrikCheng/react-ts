@@ -13,20 +13,11 @@ const AltHero: React.FC<{}> = (props) => {
 	return (
 		<View style={styles.altHero}>
 			<View style={styles.altHeroSearchBar}>
-				<PDFText style={styles.chapterHeading}>Vem vill du anställa?</PDFText>
+				<PDFText>Vem vill du anställa?</PDFText>
 				<View style={styles.altHeroSearchBar}>
-					<FontAwesomeCustomIcon
-						faIcon={faPlane}
-						style={styles.altHeroIconStyles}
-					/>
-					<FontAwesomeCustomIcon
-						faIcon={faSun}
-						style={styles.altHeroIconStyles}
-					/>
-					<FontAwesomeCustomIcon
-						faIcon={faLaptopCode}
-						style={styles.altHeroIconStyles}
-					/>
+					<FontAwesomeCustomIcon faIcon={faPlane} />
+					<FontAwesomeCustomIcon faIcon={faSun} />
+					<FontAwesomeCustomIcon faIcon={faLaptopCode} />
 				</View>
 			</View>
 			<View style={styles.altHeroSearchBar}>

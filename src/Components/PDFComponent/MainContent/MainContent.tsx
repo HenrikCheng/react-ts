@@ -1,6 +1,6 @@
 import { Text as PDFText, View } from "@react-pdf/renderer";
 import { styles } from "./styles";
-import Hero from "./Hero";
+import Hero from "../Hero";
 
 const MainContent: React.FC<{}> = () => {
 	return (
@@ -18,30 +18,24 @@ const MainContent: React.FC<{}> = () => {
 			<Hero />
 
 			<PDFText style={styles.text}>
-				Som frontend-utvecklare strävar Henrik ständigt efter att lära sig och
-				utvecklas inom sitt område. Hans passion för att utforska nya
-				teknologier och koncept är tydlig, och han tar alltid initiativ för att
-				hålla sig uppdaterad med de senaste trenderna inom branschen. Med sin
-				sociala kompetens har han en förmåga att skapa en positiv arbetsmiljö
-				där samarbete och produktivitet blomstrar, oavsett om det är på kontoret
-				eller under fritidsaktiviteter.
+				Som frontend-utvecklare strävar jag ständigt efter att lära mig och
+				utvecklas. Med min sociala kompetens har jag en förmåga att skapa en
+				positiv arbetsmiljö där samarbete och produktivitet blomstrar.
 			</PDFText>
 
-			<PDFText style={styles.chapterHeading}>Personligt</PDFText>
 			<PDFText style={styles.text}>
-				Henrik tycker om att spendera tid med vänner och familj. Henrik är
-				nyfiken på omvärlden och tycker om att resa och uppleva nya saker.
-				Tidigare har Henrik åkt på äventyresor, bland annat har han cyklat till
-				Paris från Sverige, bestigit Kilimanjaro och varit på surfläger vid
-				Great Ocean Road i Victoria, Australien. Sista tiden har Henrik åkt med
-				familjen på lite lugnare resor, Lollo & Bernie är två karaktärer som
-				både Henrik och hans familj bokstavligen älskar.
+				Jag är nyfiken på omvärlden och tycker om att resa och uppleva nya
+				saker. Tidigare har jag bland annat cyklat till Paris från Sverige,
+				bestigit Kilimanjaro och varit på surfläger vid Great Ocean Road i
+				Victoria, Australien. Sista tiden har jag åkt med familjen på lite
+				lugnare resor, Lollo & Bernie är två karaktärer som både jag och min
+				familj tycker mycket om.
 			</PDFText>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
-				<PDFText style={styles.subheading}>Frontend-utvecklare</PDFText>
-				<PDFText style={styles.emphasisText}>
+				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
+				<PDFText style={styles.subheading}>
 					Konsult på smart Europe GmbH via tretton37: augusti 2023 - nuvarande
 				</PDFText>
 				<PDFText style={styles.text}>
@@ -58,7 +52,7 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
 				<PDFText style={styles.subheading}>
 					Staylive AB: augusti 2021 - mars 2023
@@ -76,7 +70,7 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
 				<PDFText style={styles.subheading}>
 					Aspia: mars 2020 - mars 2021
@@ -103,7 +97,7 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>
 					Systemutvecklare och SCRUM-master
 				</PDFText>
@@ -122,7 +116,7 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Läkare</PDFText>
 				<PDFText style={styles.subheading}>
 					Region Stockholm och Region Dalarna: Sep. 2013 - Feb. 2019
@@ -134,7 +128,7 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false}>
+			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Utbildning</PDFText>
 				<PDFText style={styles.subheading}>
 					2019: C#-programmering hos Academy by Academic Work

@@ -9,8 +9,8 @@ import {
 	PDFViewer,
 } from "@react-pdf/renderer";
 import { styles } from "./styles";
-import MainContent from "./MainContent";
-import Sidebar from "./Sidebar";
+import MainContent from "./MainContent/MainContent";
+import Sidebar from "./Sidebar/Sidebar";
 
 const PDFComponent: React.FC<{}> = (props) => {
 	const CVDocument = () => (

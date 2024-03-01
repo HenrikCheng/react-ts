@@ -1,5 +1,5 @@
 export const competencesByCategory = {
-	"Design and Frontend": [
+	"Design och Frontend": [
 		"Accessible design",
 		"Figma",
 		"JavaScript",
@@ -11,8 +11,8 @@ export const competencesByCategory = {
 		"Tailwind CSS",
 		"TypeScript",
 	],
-	"Backend and API": ["GraphQL", "NextJS", "Node.js", "REST API"],
-	"Project Management and Tools": [
+	"Backend och API": ["GraphQL", "NextJS", "Node.js", "REST API"],
+	"Arbetsflöde och verktyg": [
 		"Agil Scrum",
 		"CMS - Adobe Experience Manager & Sanity",
 		"JIRA",
@@ -21,8 +21,8 @@ export const competencesByCategory = {
 		"Storybook",
 		"Version Control - GIT",
 	],
-	"State Management and Utilities": ["Redux", "React context"],
-	"Testing and Documentation": ["Jest"],
+	"State Management och Utils": ["Redux", "React context"],
+	"Test och Dokumentation": ["Jest"],
 };
 
 export enum ColorPalette {
