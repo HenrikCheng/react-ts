@@ -16,9 +16,6 @@ export const styles = StyleSheet.create({
 	heroTitle: {
 		fontFamily: "Helvetica-Bold",
 	},
-	heroSubtitle: {
-		fontSize: 12,
-	},
 	//Depreciated
 	altHero: {
 		backgroundColor: ColorPalette["Sunset Yellow"],

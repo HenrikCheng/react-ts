@@ -56,4 +56,13 @@ export const styles = StyleSheet.create({
 		fontFamily: "Helvetica-Bold",
 		color: ColorPalette["Ghost White"],
 	},
+	educationRow: {
+		flexDirection: "row",
+		alignItems: "center",
+		marginBottom: 2,
+		gap: 4,
+	},
+	educationDescription: {
+		fontSize: "12pt",
+	},
 });

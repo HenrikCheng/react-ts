@@ -64,7 +64,7 @@ const Sidebar: React.FC<{}> = (props) => {
 			<Languages />
 
 			<View style={styles.sidebarSection}>
-				<PDFText style={styles.competenceHeader}>Website</PDFText>
+				<PDFText style={styles.competenceHeader}>Hemsida</PDFText>
 				<QR url="https://henrikcheng.github.io/react-ts/" width={96} />
 			</View>
 			<View style={styles.sidebarSection}>

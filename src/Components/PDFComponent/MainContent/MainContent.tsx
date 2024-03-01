@@ -144,14 +144,23 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.occupationTitle}>Utbildning</PDFText>
-				<PDFText style={styles.subheading}>
-					2019: C#-programmering hos Academy by Academic Work
-				</PDFText>
-				<PDFText style={styles.subheading}>
-					2018-2013: Läkarprogrammet på Karolinska Institutet
-				</PDFText>
-				<PDFText style={styles.subheading}>2019: SCRUM.org PSM-1</PDFText>
+				<PDFText style={styles.chapterHeading}>Utbildning</PDFText>
+				<View style={styles.educationRow}>
+					<PDFText style={styles.educationDescription}>
+						C#-intensivutbildning: Academic Work
+					</PDFText>
+					<Pill dateString="feb-19 till mar-19" />
+				</View>
+				<View style={styles.educationRow}>
+					<PDFText style={styles.educationDescription}>
+						Läkarprogrammet: Karolinska Institutet (330 hp)
+					</PDFText>
+					<Pill dateString="2018-2013" />
+				</View>
+				<View style={styles.educationRow}>
+					<PDFText style={styles.educationDescription}>SCRUM.org PSM-1</PDFText>
+					<Pill dateString="2019" />
+				</View>
 			</View>
 		</View>
 	);
