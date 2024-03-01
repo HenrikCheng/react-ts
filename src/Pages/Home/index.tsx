@@ -18,7 +18,7 @@ const Home = () => {
 			<div className="flex flex-col w-full items-center z-20 space-y-4">
 				<About />
 				<Competences />
-				{/* <CV /> */}
+				<CV />
 				<Demo />
 				<Contact />
 			</div>

@@ -1,0 +1,33 @@
+export const competences: string[] = [
+	"Responsiv design",
+	"SCSS/SASS",
+	"Tailwind CSS",
+	"Agil Scrum",
+	"CMS - Adobe Experience Manager & Sanity",
+	"Figma",
+	"JavaScript",
+	"React",
+	"React Hooks",
+	"Accessible design",
+	"GraphQL",
+	"JIRA",
+	"Kanban",
+	"Microsoft Azure",
+	"NextJS",
+	"Node.js",
+	"React-storybook",
+	"Redux",
+	"React Native",
+	"REST API",
+	"Storybook",
+	"TypeScript",
+	"Version Control - GIT",
+];
+
+export enum ColorPalette {
+	"Bright Pink (Crayola)" = "#EA526F",
+	"Smoky Black" = "#070600",
+	"Ghost White" = "#F7F7FF",
+	"Pacific Cyan" = "#23B5D3",
+	"Celestial Blue" = "#279AF1",
+}
