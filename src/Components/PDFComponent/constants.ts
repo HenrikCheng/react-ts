@@ -26,9 +26,6 @@ export const competencesByCategory = {
 };
 
 export enum ColorPalette {
-	"Bright Pink (Crayola)" = "#EA526F",
-	"Pacific Cyan" = "#23B5D3",
-	"Celestial Blue" = "#279AF1",
 	"Smoky Black" = "#070600",
 	"Ghost White" = "#F3F4F6",
 	"Sunset Yellow" = "#F1AE12",

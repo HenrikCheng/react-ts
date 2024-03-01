@@ -50,16 +50,13 @@ export const styles = StyleSheet.create({
 		fontSize: "12pt",
 		marginBottom: 6,
 	},
-	QRWebsite: {
-		width: "100%",
-		justifyContent: "flex-end",
-	},
 	sidebarSection: {
 		marginTop: 20,
 	},
 	sidebarHeading: {
 		fontSize: 22,
 		paddingVertical: 4,
+		marginBottom: 4,
 	},
 	altHeroIconStyles: {
 		color: ColorPalette["Sunset Yellow"],

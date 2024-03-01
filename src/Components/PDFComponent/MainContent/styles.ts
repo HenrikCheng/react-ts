@@ -1,5 +1,5 @@
 import { StyleSheet } from "@react-pdf/renderer";
-// import { ColorPalette } from "../constants";
+import { ColorPalette } from "../constants";
 
 export const styles = StyleSheet.create({
 	right: {
@@ -11,15 +11,18 @@ export const styles = StyleSheet.create({
 		fontSize: 12,
 	},
 	mainContentSection: {
-		marginTop: 20,
+		marginTop: 10,
 	},
 	chapterHeading: {
 		fontSize: 22,
-		paddingVertical: 4,
+		paddingBottom: 4,
+	},
+	occupationTitle: {
+		fontFamily: "Helvetica-Bold",
+		fontSize: 16,
 	},
 	subheading: {
 		fontSize: 16,
-		paddingBottom: 10,
 	},
 	currentPage: {
 		fontSize: 18,
@@ -34,5 +37,23 @@ export const styles = StyleSheet.create({
 		position: "absolute",
 		top: 0,
 		right: 0,
+	},
+	occupationDescription: {
+		flexDirection: "row",
+		gap: 4,
+		alignItems: "center",
+		marginBottom: 4,
+	},
+	pillContainer: {
+		backgroundColor: ColorPalette["Sunset Yellow"],
+		borderRadius: 20,
+		justifyContent: "center",
+		paddingVertical: 4,
+		paddingHorizontal: 6,
+	},
+	pillText: {
+		fontSize: 12,
+		fontFamily: "Helvetica-Bold",
+		color: ColorPalette["Ghost White"],
 	},
 });

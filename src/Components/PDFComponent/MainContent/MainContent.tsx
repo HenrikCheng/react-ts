@@ -1,8 +1,14 @@
 import { Text as PDFText, View } from "@react-pdf/renderer";
 import { styles } from "./styles";
-import Hero from "../Hero";
+import Hero from "../Hero/Hero";
 
 const MainContent: React.FC<{}> = () => {
+	const Pill = ({ dateString }: any) => (
+		<View style={styles.pillContainer}>
+			<PDFText style={styles.pillText}>{dateString}</PDFText>
+		</View>
+	);
+
 	return (
 		<View style={styles.right}>
 			<View fixed style={styles.pageNumber}>
@@ -34,9 +40,12 @@ const MainContent: React.FC<{}> = () => {
 
 			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
-				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
+				<View style={styles.occupationDescription}>
+					<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
+					<Pill dateString="aug-23 till nuv" />
+				</View>
 				<PDFText style={styles.subheading}>
-					Konsult på smart Europe GmbH via tretton37: augusti 2023 - nuvarande
+					Konsult på smart Europe GmbH via tretton37
 				</PDFText>
 				<PDFText style={styles.text}>
 					Smartcar är ett bilmärke som är samägt av Mercedes-Benz och Geely.
@@ -53,10 +62,11 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
-				<PDFText style={styles.subheading}>
-					Staylive AB: augusti 2021 - mars 2023
-				</PDFText>
+				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
+				<View style={styles.occupationDescription}>
+					<PDFText style={styles.subheading}>Staylive AB</PDFText>
+					<Pill dateString="aug-21 till mar-23" />
+				</View>
 				<PDFText style={styles.text}>
 					Ändra Staylive är ett företag som hjälper content-innehavare att nå ut
 					till tittare via streaming-tjänster. Företaget består av ett tjugotal
@@ -70,11 +80,12 @@ const MainContent: React.FC<{}> = () => {
 				</PDFText>
 			</View>
 
-			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.chapterHeading}>Frontend-utvecklare</PDFText>
-				<PDFText style={styles.subheading}>
-					Aspia: mars 2020 - mars 2021
-				</PDFText>
+			<View wrap={false} style={{ marginTop: 20 }}>
+				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
+				<View style={styles.occupationDescription}>
+					<PDFText style={styles.subheading}>Aspia</PDFText>
+					<Pill dateString="mar-20 till mar-21" />
+				</View>
 				<PDFText style={styles.text}>
 					Aspia är ett företag som genom sin produkt MyBusiness hjälper
 					företagare med bl.a. bokslut, redovisning, kvittohantering, anställdas
@@ -98,12 +109,13 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.chapterHeading}>
-					Systemutvecklare och SCRUM-master
+				<PDFText style={styles.occupationTitle}>
+					Systemutvecklare & SCRUM-master
 				</PDFText>
-				<PDFText style={styles.subheading}>
-					Nore Technology AB: Maj 2019 - Feb. 2020
-				</PDFText>
+				<View style={styles.occupationDescription}>
+					<PDFText style={styles.subheading}>Nore Technology AB</PDFText>
+					<Pill dateString="maj-19 till feb-20" />
+				</View>
 				<PDFText style={styles.text}>
 					Nore Technology är ett dotterbolag till Söderberg & Partners som
 					arbetar med IT-lösningar för finansiell rådgivning och
@@ -117,9 +129,12 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.chapterHeading}>Läkare</PDFText>
+				<View style={styles.occupationDescription}>
+					<PDFText style={styles.occupationTitle}>Läkare</PDFText>
+					<Pill dateString="sep-13 till feb-19" />
+				</View>
 				<PDFText style={styles.subheading}>
-					Region Stockholm och Region Dalarna: Sep. 2013 - Feb. 2019
+					Region Stockholm och Region Dalarna
 				</PDFText>
 				<PDFText style={styles.text}>
 					Henrik har arbetat först som underläkare, sedan AT- och ST-läkare,
@@ -129,7 +144,7 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
-				<PDFText style={styles.chapterHeading}>Utbildning</PDFText>
+				<PDFText style={styles.occupationTitle}>Utbildning</PDFText>
 				<PDFText style={styles.subheading}>
 					2019: C#-programmering hos Academy by Academic Work
 				</PDFText>

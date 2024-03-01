@@ -1,22 +1,29 @@
 import { Text as PDFText, View, Image } from "@react-pdf/renderer";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
-import FontAwesomeCustomIcon from "../FontAwesomeCustomIcon";
-import { bernie } from "../bernie";
-import QR from "../QR";
+import FontAwesomeCustomIcon from "../Components/FontAwesomeCustomIcon";
+import { Bernie } from "../Images/Bernie";
+import QR from "../Components/QR";
 import { styles } from "./styles";
 import { competencesByCategory } from "../constants";
 
 const Sidebar: React.FC<{}> = (props) => {
 	const Contact = () => {
 		return (
-			<View style={styles.sidebarSection} break>
+			<View style={styles.sidebarSection}>
 				<PDFText style={styles.sidebarHeading}>Kontakt</PDFText>
-				<PDFText style={styles.competence}>
-					Adress: Solåsvägen 5, 17061 SOLNA
-				</PDFText>
-				<PDFText style={styles.competence}>Telefon: +46725133704</PDFText>
-				<PDFText style={styles.competence}>E-post: henrikcheng@live.se</PDFText>
+				<View>
+					<PDFText style={styles.competenceHeader}>Adress:</PDFText>
+					<PDFText style={styles.competence}>Solåsvägen 5, 17061 SOLNA</PDFText>
+				</View>
+				<View>
+					<PDFText style={styles.competenceHeader}>Telefon:</PDFText>
+					<PDFText style={styles.competence}>+46725133704</PDFText>
+				</View>
+				<View>
+					<PDFText style={styles.competenceHeader}>E-post:</PDFText>
+					<PDFText style={styles.competence}>henrikcheng@live.se</PDFText>
+				</View>
 			</View>
 		);
 	};
@@ -25,24 +32,47 @@ const Sidebar: React.FC<{}> = (props) => {
 		return (
 			<View style={styles.sidebarSection}>
 				<PDFText style={styles.sidebarHeading}>Språk</PDFText>
-				<PDFText style={styles.competence}>
-					Kinesiska (Mandarin): Modersmål
-				</PDFText>
-				<PDFText style={styles.competence}>Svenska: Modersmål</PDFText>
-				<PDFText style={styles.competence}>Engelska: Flytande</PDFText>
+				<View>
+					<PDFText style={styles.competenceHeader}>Svenska:</PDFText>
+					<PDFText style={styles.competence}>Modersmål</PDFText>
+				</View>
+				<View>
+					<PDFText style={styles.competenceHeader}>
+						Kinesiska (Mandarin):
+					</PDFText>
+					<PDFText style={styles.competence}>Modersmål</PDFText>
+				</View>
+				<View>
+					<PDFText style={styles.competenceHeader}>Engelska:</PDFText>
+					<PDFText style={styles.competence}>Flytande</PDFText>
+				</View>
 			</View>
 		);
 	};
 
 	return (
 		<View style={styles.left}>
-			<View style={styles.bgCircle} />
-			<View style={styles.imageContainer}>
-				<Image src={bernie} style={styles.image} />
+			<View fixed>
+				<View style={styles.bgCircle} />
+				<View style={styles.imageContainer}>
+					<Image src={Bernie} style={styles.image} />
+				</View>
+				<View style={styles.frontCircle} />
 			</View>
-			<View style={styles.frontCircle} />
 
-			<View>
+			<Contact />
+			<Languages />
+
+			<View style={styles.sidebarSection}>
+				<PDFText style={styles.competenceHeader}>Website</PDFText>
+				<QR url="https://henrikcheng.github.io/react-ts/" width={96} />
+			</View>
+			<View style={styles.sidebarSection}>
+				<PDFText style={styles.competenceHeader}>LinkedIn</PDFText>
+				<QR url="https://www.linkedin.com/in/henrik-cheng/" width={96} />
+			</View>
+
+			<View break style={styles.sidebarSection}>
 				<PDFText style={styles.sidebarHeading}>Expertis i urval</PDFText>
 				{Object.entries(competencesByCategory).map(
 					([category, competencesArray]) => {
@@ -64,24 +94,6 @@ const Sidebar: React.FC<{}> = (props) => {
 						);
 					},
 				)}
-			</View>
-
-			<Contact />
-			<Languages />
-
-			<View style={styles.sidebarSection}>
-				<View>
-					<PDFText break style={styles.sidebarHeading}>
-						LinkedIn
-					</PDFText>
-					<QR url="https://www.linkedin.com/in/henrik-cheng/" />
-				</View>
-				<View style={styles.QRWebsite}>
-					<PDFText break style={styles.sidebarHeading}>
-						Website
-					</PDFText>
-					<QR url="https://henrikcheng.github.io/react-ts/" />
-				</View>
 			</View>
 		</View>
 	);

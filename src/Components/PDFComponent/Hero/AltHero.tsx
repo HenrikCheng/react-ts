@@ -4,7 +4,7 @@ import {
 	faSun,
 } from "@fortawesome/free-solid-svg-icons";
 
-import FontAwesomeCustomIcon from "./FontAwesomeCustomIcon";
+import FontAwesomeCustomIcon from "../Components/FontAwesomeCustomIcon";
 
 import { Text as PDFText, View } from "@react-pdf/renderer";
 import { styles } from "./styles";
