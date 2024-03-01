@@ -13,32 +13,73 @@ export const styles = StyleSheet.create({
 	image: {
 		borderRadius: "50%",
 	},
+	bgCircle: {
+		backgroundColor: ColorPalette["Sunset Yellow"],
+		borderRadius: "50%",
+		position: "absolute",
+		left: -150,
+		top: -200,
+		width: 300,
+		height: 300,
+	},
 	imageContainer: {
-		backgroundColor: ColorPalette["Bright Pink (Crayola)"],
+		backgroundColor: ColorPalette["Pure White"],
 		borderRadius: "50%",
 		padding: 10,
-		marginVertical: 10,
+		marginTop: 10,
+	},
+	frontCircle: {
+		backgroundColor: ColorPalette["Sunset Yellow"],
+		borderRadius: "50%",
+		position: "absolute",
+		left: 150,
+		top: 15,
+		width: 55,
+		height: 55,
+		opacity: 0.7,
 	},
 	left: {
 		flex: 1,
 		paddingHorizontal: 20,
-		paddingTop: 10,
 		backgroundColor: ColorPalette["Ghost White"],
-		borderRight: `2pt solid ${ColorPalette["Pacific Cyan"]}`,
+		position: "relative",
+	},
+	competenceContainer: {
+		flexDirection: "row",
+		alignItems: "flex-start",
+		gap: 4,
+	},
+	competenceHeader: {
+		fontSize: "13pt",
+		marginBottom: 6,
+		fontFamily: "Helvetica-Bold",
 	},
 	competence: {
-		fontSize: "13pt",
-		marginBottom: 2,
+		fontSize: "12pt",
+		marginBottom: 6,
 	},
-	QRWrapper: {
-		paddingTop: 10,
+	QRWebsite: {
+		width: "100%",
+		justifyContent: "flex-end",
 	},
 	right: {
 		flex: 2,
 		paddingRight: 20,
-		paddingTop: 20,
 	},
 	hero: {
+		paddingTop: 20,
+		paddingBottom: 60,
+	},
+	heroName: {
+		flexDirection: "row",
+		fontSize: 36,
+		paddingBottom: 2,
+	},
+	heroLastname: {
+		color: ColorPalette["Sunset Yellow"],
+	},
+	heroTitle: {},
+	altHero: {
 		backgroundColor: ColorPalette["Celestial Blue"],
 		width: 350,
 		height: 100,
@@ -46,14 +87,18 @@ export const styles = StyleSheet.create({
 		padding: 20,
 		marginBottom: 10,
 	},
-	iconStyles: { color: "#000", height: 20, width: 20 },
-	heroSearchBar: {
+	altHeroIconStyles: {
+		color: ColorPalette["Sunset Yellow"],
+		height: "auto",
+		width: 15,
+	},
+	altHeroSearchBar: {
 		display: "flex",
 		flexDirection: "row",
 		justifyContent: "space-between",
 		gap: 4,
 	},
-	heroName: {
+	altHeroName: {
 		borderRadius: 2,
 		backgroundColor: "white",
 		padding: 6,
@@ -82,6 +127,9 @@ export const styles = StyleSheet.create({
 	emphasisText: {
 		fontSize: 12,
 	},
+	chapterWrapper: {
+		marginTop: 10,
+	},
 	chapterHeading: {
 		fontSize: 20,
 		paddingVertical: 4,
@@ -90,18 +138,15 @@ export const styles = StyleSheet.create({
 		paddingBottom: 10,
 		fontSize: 12,
 	},
-	footer: {
-		position: "absolute",
-		bottom: 0,
-		right: 0,
-		flexDirection: "row",
-		paddingBottom: 5,
-		paddingRight: 10,
+	pageNumber: {
+		flexDirection: "row-reverse",
+		paddingTop: 20,
+		paddingRight: 15,
 	},
 	currentPage: {
-		fontSize: 10,
+		fontSize: 20,
 	},
 	totalPages: {
-		fontSize: 16,
+		fontSize: 24,
 	},
 });
