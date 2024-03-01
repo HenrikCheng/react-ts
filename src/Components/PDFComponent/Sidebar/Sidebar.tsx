@@ -72,7 +72,7 @@ const Sidebar: React.FC<{}> = (props) => {
 				<QR url="https://www.linkedin.com/in/henrik-cheng/" width={96} />
 			</View>
 
-			<View break style={styles.sidebarSection}>
+			<View style={styles.sidebarSection}>
 				<PDFText style={styles.sidebarHeading}>Expertis i urval</PDFText>
 				{Object.entries(competencesByCategory).map(
 					([category, competencesArray]) => {
