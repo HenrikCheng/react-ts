@@ -23,6 +23,7 @@ const MainContent: React.FC<{}> = () => {
 			</View>
 			<Hero />
 
+			<PDFText style={styles.chapterHeading}>Om mig</PDFText>
 			<PDFText style={styles.text}>
 				Som frontend-utvecklare strävar jag ständigt efter att lära mig och
 				utvecklas. Med min sociala kompetens har jag en förmåga att skapa en

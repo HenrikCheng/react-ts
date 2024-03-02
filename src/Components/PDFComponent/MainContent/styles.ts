@@ -11,11 +11,11 @@ export const styles = StyleSheet.create({
 		fontSize: 12,
 	},
 	mainContentSection: {
-		marginTop: 10,
+		marginTop: 20,
 	},
 	chapterHeading: {
 		fontSize: 22,
-		paddingBottom: 4,
+		paddingBottom: 10,
 	},
 	occupationTitle: {
 		fontFamily: "Helvetica-Bold",

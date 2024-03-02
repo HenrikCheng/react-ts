@@ -3,11 +3,11 @@ import { ColorPalette } from "../constants";
 
 export const styles = StyleSheet.create({
 	hero: {
-		paddingVertical: 50,
+		paddingVertical: 40,
 	},
 	heroName: {
 		flexDirection: "row",
-		fontSize: 36,
+		fontSize: 44,
 		paddingBottom: 2,
 	},
 	heroLastname: {

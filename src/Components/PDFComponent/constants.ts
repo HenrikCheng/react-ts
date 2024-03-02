@@ -8,7 +8,7 @@ export const competencesByCategory = {
 		"React Native",
 		"Responsive design",
 		"SCSS/SASS",
-		"VUE",
+		"Vue",
 		"Tailwind CSS",
 		"TypeScript",
 	],

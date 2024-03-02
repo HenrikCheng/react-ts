@@ -10,7 +10,7 @@ import { competencesByCategory } from "../constants";
 const Sidebar: React.FC<{}> = (props) => {
 	const Contact = () => {
 		return (
-			<View style={styles.sidebarSection}>
+			<View>
 				<PDFText style={styles.sidebarHeading}>Kontakt</PDFText>
 				<View>
 					<PDFText style={styles.competenceHeader}>Adress:</PDFText>
@@ -72,7 +72,7 @@ const Sidebar: React.FC<{}> = (props) => {
 				<QR url="https://www.linkedin.com/in/henrik-cheng/" width={96} />
 			</View>
 
-			<View style={styles.sidebarSection}>
+			<View break>
 				<PDFText style={styles.sidebarHeading}>Expertis i urval</PDFText>
 				{Object.entries(competencesByCategory).map(
 					([category, competencesArray]) => {
