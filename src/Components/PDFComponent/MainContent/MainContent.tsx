@@ -35,8 +35,7 @@ const MainContent: React.FC<{}> = () => {
 				saker. Tidigare har jag bland annat cyklat till Paris från Sverige,
 				bestigit Kilimanjaro och varit på surfläger vid Great Ocean Road i
 				Victoria, Australien. Sista tiden har jag åkt med familjen på lite
-				lugnare resor, Lollo & Bernie är två karaktärer som både jag och min
-				familj tycker mycket om.
+				lugnare resor såsom lugna charterresor till värmen.
 			</PDFText>
 
 			<View wrap={false} style={styles.mainContentSection}>

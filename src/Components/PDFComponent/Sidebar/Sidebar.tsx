@@ -2,7 +2,8 @@ import { Text as PDFText, View, Image } from "@react-pdf/renderer";
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 
 import FontAwesomeCustomIcon from "../Components/FontAwesomeCustomIcon";
-import { Bernie } from "../Images/Bernie";
+// import { Bernie } from "../Images/Bernie";
+import { HenrikProfile } from "../Images/HenrikProfile";
 import QR from "../Components/QR";
 import { styles } from "./styles";
 import { competencesByCategory } from "../constants";
@@ -49,13 +50,14 @@ const Sidebar: React.FC<{}> = (props) => {
 			</View>
 		);
 	};
+	console.log("🚀 ~ HenrikProfile:", HenrikProfile);
 
 	return (
 		<View style={styles.left}>
 			<View fixed>
 				<View style={styles.bgCircle} />
 				<View style={styles.imageContainer}>
-					<Image src={Bernie} style={styles.image} />
+					<Image src={HenrikProfile} style={styles.image} />
 				</View>
 				<View style={styles.frontCircle} />
 			</View>

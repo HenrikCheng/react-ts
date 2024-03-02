@@ -40,21 +40,17 @@ export const styles = StyleSheet.create({
 	},
 	occupationDescription: {
 		flexDirection: "row",
-		gap: 4,
+		gap: 10,
 		alignItems: "center",
 		marginBottom: 4,
 	},
 	pillContainer: {
-		backgroundColor: ColorPalette["Sunset Yellow"],
-		borderRadius: 4,
-		justifyContent: "center",
-		paddingVertical: 4,
-		paddingHorizontal: 6,
+		gap: 4,
 	},
 	pillText: {
 		fontSize: 12,
 		fontFamily: "Helvetica-Bold",
-		color: ColorPalette["Ghost White"],
+		color: ColorPalette["Sunset Yellow"],
 	},
 	educationRow: {
 		flexDirection: "row",
