@@ -54,11 +54,29 @@ export const styles = StyleSheet.create({
 	},
 	educationRow: {
 		flexDirection: "row",
-		alignItems: "center",
+		alignItems: "flex-start",
 		marginBottom: 2,
 		gap: 4,
 	},
+	scrumRow: {
+		flexDirection: "row",
+		justifyContent: "space-between",
+		gap: 4,
+	},
+	educationTitle: {
+		fontSize: 13,
+		marginTop: 6,
+		marginBottom: 4,
+		fontFamily: "Helvetica-Bold",
+	},
 	educationDescription: {
 		fontSize: "12pt",
+		marginBottom: 6,
+	},
+	altHeroIconStyles: {
+		color: ColorPalette["Smoky Black"],
+		height: "auto",
+		width: 8,
+		marginRight: 4,
 	},
 });

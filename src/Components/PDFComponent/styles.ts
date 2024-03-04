@@ -1,7 +1,6 @@
 import { StyleSheet } from "@react-pdf/renderer";
-import { ColorPalette } from "./constants";
 
-export const styles = StyleSheet.create({
+export const globalStyles = StyleSheet.create({
 	full: {
 		display: "flex",
 		flex: 1,
@@ -9,5 +8,8 @@ export const styles = StyleSheet.create({
 		flexGrow: 1,
 		flexWrap: "wrap",
 		gap: 20,
+	},
+	row: {
+		flexDirection: "row",
 	},
 });

@@ -24,7 +24,7 @@ export const styles = StyleSheet.create({
 		backgroundColor: ColorPalette["Sunset Yellow"],
 		borderRadius: "50%",
 		position: "absolute",
-		left: 135,
+		left: 130,
 		top: 15,
 		width: 55,
 		height: 55,
@@ -35,6 +35,7 @@ export const styles = StyleSheet.create({
 		paddingHorizontal: 20,
 		backgroundColor: ColorPalette["Ghost White"],
 		position: "relative",
+		paddingBottom: 33,
 	},
 	competenceContainer: {
 		flexDirection: "row",

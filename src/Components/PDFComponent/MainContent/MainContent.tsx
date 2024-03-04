@@ -1,9 +1,14 @@
 import { Text as PDFText, View } from "@react-pdf/renderer";
+import { faTrademark } from "@fortawesome/free-solid-svg-icons";
+
+import FontAwesomeCustomIcon from "../Components/FontAwesomeCustomIcon";
+import { globalStyles } from "../styles";
 import { styles } from "./styles";
 import Hero from "../Hero/Hero";
+import QR from "../Components/QR";
 
 const MainContent: React.FC<{}> = () => {
-	const Pill = ({ dateString }: any) => (
+	const Pill = ({ dateString }: { dateString: string }) => (
 		<View style={styles.pillContainer}>
 			<PDFText style={styles.pillText}>{dateString}</PDFText>
 		</View>
@@ -42,22 +47,18 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
 				<View style={styles.occupationDescription}>
 					<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
-					<Pill dateString="aug-23 till nuv" />
+					<Pill dateString="mar-23 till nuv" />
 				</View>
-				<PDFText style={styles.subheading}>
-					Konsult på smart Europe GmbH via tretton37
+				<PDFText style={styles.subheading}>tretton37</PDFText>
+				<PDFText style={styles.text}>
+					Jag arbetar som konsult och frontendutvecklare på ett bilföretag via
+					tretton37.
 				</PDFText>
 				<PDFText style={styles.text}>
-					Smartcar är ett bilmärke som är samägt av Mercedes-Benz och Geely.
-					Henrik arbetar med att introducera bilen på den europeiska marknaden.
-					Under sin tid i projektet har Henrik varit en viktig komponent i
-					teamet.
-				</PDFText>
-				<PDFText style={styles.text}>
-					Exempelvis tog Henrik initiativ till att lära sig ett framework för
-					att skapa PDF-dokumentation vilket är viktigt i fordonsindustrin.
-					Detta gjorde att Henrik på kort tid blev en nyckelspelare för hela
-					teamet.
+					Exempelvis tog jag initiativ till att lära sig ett framework för React
+					med vilken man kan skapa PDF-dokumentation vilket är viktigt i
+					fordonsindustrin. Detta gjorde att jag på kort tid blev en
+					nyckelspelare för hela teamet.
 				</PDFText>
 			</View>
 
@@ -70,11 +71,11 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.text}>
 					Ändra Staylive är ett företag som hjälper content-innehavare att nå ut
 					till tittare via streaming-tjänster. Företaget består av ett tjugotal
-					anställda där ungefär hälften arbetar med utveckling. Henrik tog fram
+					anställda där ungefär hälften arbetar med utveckling. Jag tog fram
 					delar till ett content management system (CMS) som gjorde att kunderna
 					själva kunde skapa samt göra ändringar på deras egna streaming-sidor.
 					Detta frigjorde tid för utvecklarna som då kunde fokusera mer på att
-					ta fram nya features. Han utvecklade även en filuppladdare som gjorde
+					ta fram nya features. Jag utvecklade även en filuppladdare som gjorde
 					att kunder själva kunde ladda upp bilder och filmer, vilket tidigare
 					behövdes göras manuellt av medarbetare.
 				</PDFText>
@@ -93,17 +94,14 @@ const MainContent: React.FC<{}> = () => {
 					verksamhet. Företaget var i en fas där man skrev om stora delar av
 					kodbasen. Syftet var bl.a. att gå över till React, dela upp produkten
 					i mikrotjänster, vilket underlättar vidareutveckling och deployments.
-					Henrik arbetade med ca 20 andra utvecklare, testare, UI/UX-designers
-					och kravanalytiker.
+					Jag arbetade med ca 20 andra utvecklare, testare, UI/UX-designers och
+					kravanalytiker.
 				</PDFText>
 				<PDFText style={styles.text}>
-					Henrik arbetade som frontendutvecklare i React. Han levererade
+					Jag arbetade som frontendutvecklare i React. Jag levererade
 					komponenter efter mockups i Figma. Data hanterades i Redux, och
-					automatiska tester gjordes i Jest. Henrik arbetade i Microsoft Azure
-					med CD/CI.
-				</PDFText>
-				<PDFText style={styles.text}>
-					Henrik bidrog till att man fick en ny produkt som är lättare att
+					automatiska tester gjordes i Jest. Jag arbetade i Microsoft Azure med
+					CD/CI. Mitt arbete bidrog till en produkt som är lättare att
 					vidareutveckla, som är snabbare och lättare att navigera.
 				</PDFText>
 			</View>
@@ -119,11 +117,11 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.text}>
 					Nore Technology är ett dotterbolag till Söderberg & Partners som
 					arbetar med IT-lösningar för finansiell rådgivning och
-					pensionsrådgivning. Henrik arbetade med att implementera nya steg i
+					pensionsrådgivning. Jag arbetade med att implementera nya steg i
 					rådgivningsprocessen samt att förbättringar av dokumentation.
 					Relevanta tekniker inkluderar Javascript, CSS, HTML, jQuery,
-					versionshantering sköttes via Git och arbetssättet var i scrum. Utöver
-					detta så var Henrik dev-teamets scrum-master deltid, samt presenterade
+					versionshantering sköttes via Git och arbetssättet var i Scrum. Utöver
+					detta så var jag dev-teamets scrum-master på deltid, samt presenterade
 					gruppens arbete för stakeholders efter varje sprint.
 				</PDFText>
 			</View>
@@ -137,29 +135,53 @@ const MainContent: React.FC<{}> = () => {
 					Region Stockholm och Region Dalarna
 				</PDFText>
 				<PDFText style={styles.text}>
-					Henrik har arbetat först som underläkare, sedan AT- och ST-läkare,
-					samt även legitimerad läkare. Han lärde sig värdefulla egenskaper om
-					hur man möter människor, hur man arbetar bäst i team och ledarskap.
+					Jag har arbetat först som underläkare, sedan AT- och ST-läkare, samt
+					även legitimerad läkare. Jag lärde sig värdefulla egenskaper om hur
+					man möter människor, hur man arbetar bäst i team och ledarskap.
 				</PDFText>
 			</View>
 
 			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Utbildning</PDFText>
-				<View style={styles.educationRow}>
-					<PDFText style={styles.educationDescription}>
-						C#-intensivutbildning: Academic Work
-					</PDFText>
-					<Pill dateString="feb-19 till mar-19" />
+
+				<View>
+					<PDFText style={styles.educationTitle}>C#-intensivutbildning</PDFText>
+					<View style={styles.educationRow}>
+						<PDFText style={styles.educationDescription}>Academic Work</PDFText>
+						<Pill dateString="feb-19 till mar-19" />
+					</View>
 				</View>
-				<View style={styles.educationRow}>
-					<PDFText style={styles.educationDescription}>
-						Läkarprogrammet: Karolinska Institutet (330 hp)
-					</PDFText>
-					<Pill dateString="2018-2013" />
+
+				<View>
+					<PDFText style={styles.educationTitle}>Läkarprogrammet</PDFText>
+					<View style={styles.educationRow}>
+						<PDFText style={styles.educationDescription}>
+							Karolinska Institutet (330 högskolepoäng)
+						</PDFText>
+						<Pill dateString="jan-08 till jun-13" />
+					</View>
 				</View>
-				<View style={styles.educationRow}>
-					<PDFText style={styles.educationDescription}>SCRUM.org PSM-1</PDFText>
-					<Pill dateString="2019" />
+
+				<View>
+					<View style={globalStyles.row}>
+						<PDFText style={styles.educationTitle}>
+							Professional Scrum Master
+						</PDFText>
+						<FontAwesomeCustomIcon
+							faIcon={faTrademark}
+							style={styles.altHeroIconStyles}
+						/>
+						<PDFText style={styles.educationTitle}>I (PSM 1)</PDFText>
+					</View>
+
+					<View style={styles.scrumRow}>
+						<View>
+							<PDFText style={styles.educationDescription}>Scrum.org</PDFText>
+						</View>
+						<View>
+							<QR url="https://www.credly.com/badges/2a9cab26-ef59-4dbf-abe0-d9acd4c9bb0d/public_url" />
+						</View>
+					</View>
 				</View>
 			</View>
 		</View>

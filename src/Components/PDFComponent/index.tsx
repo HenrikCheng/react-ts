@@ -8,7 +8,7 @@ import {
 	PDFDownloadLink,
 	PDFViewer,
 } from "@react-pdf/renderer";
-import { styles } from "./styles";
+import { globalStyles } from "./styles";
 import MainContent from "./MainContent/MainContent";
 import Sidebar from "./Sidebar/Sidebar";
 
@@ -16,7 +16,7 @@ const PDFComponent: React.FC<{}> = (props) => {
 	const CVDocument = () => (
 		<Document>
 			<Page size="A4">
-				<View style={styles.full}>
+				<View style={globalStyles.full}>
 					<Sidebar />
 					<MainContent />
 				</View>

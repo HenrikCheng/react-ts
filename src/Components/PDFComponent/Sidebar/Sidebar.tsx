@@ -50,7 +50,6 @@ const Sidebar: React.FC<{}> = (props) => {
 			</View>
 		);
 	};
-	console.log("🚀 ~ HenrikProfile:", HenrikProfile);
 
 	return (
 		<View style={styles.left}>
@@ -67,11 +66,11 @@ const Sidebar: React.FC<{}> = (props) => {
 
 			<View style={styles.sidebarSection}>
 				<PDFText style={styles.competenceHeader}>Hemsida</PDFText>
-				<QR url="https://henrikcheng.github.io/react-ts/" width={96} />
+				<QR url="https://henrikcheng.github.io/react-ts/" />
 			</View>
 			<View style={styles.sidebarSection}>
 				<PDFText style={styles.competenceHeader}>LinkedIn</PDFText>
-				<QR url="https://www.linkedin.com/in/henrik-cheng/" width={96} />
+				<QR url="https://www.linkedin.com/in/henrik-cheng/" />
 			</View>
 
 			<View break>
