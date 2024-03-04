@@ -39,17 +39,18 @@ const MainContent: React.FC<{}> = () => {
 				Jag är nyfiken på omvärlden och tycker om att resa och uppleva nya
 				saker. Tidigare har jag bland annat cyklat till Paris från Sverige,
 				bestigit Kilimanjaro och varit på surfläger vid Great Ocean Road i
-				Victoria, Australien. Sista tiden har jag åkt med familjen på lite
-				lugnare resor såsom lugna charterresor till värmen.
+				Victoria, Australien. Sista tiden har jag åkt med familj och vänner på
+				lite lugnare resor såsom charterresor till värmen eller weekendresor
+				inom Europa.
 			</PDFText>
 
 			<View wrap={false} style={styles.mainContentSection}>
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
+				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
 				<View style={styles.occupationDescription}>
-					<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
+					<PDFText style={styles.subheading}>tretton37</PDFText>
 					<Pill dateString="mar-23 till nuv" />
 				</View>
-				<PDFText style={styles.subheading}>tretton37</PDFText>
 				<PDFText style={styles.text}>
 					Jag arbetar som konsult och frontendutvecklare på ett bilföretag via
 					tretton37.
