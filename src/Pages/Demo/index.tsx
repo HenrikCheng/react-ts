@@ -17,14 +17,14 @@ import Smoliakova from "../../images/smoliakova.png";
 
 const Demo: React.FC<{}> = (props) => {
 	const projects = [
-		{
-			href: "https://smoliakova.vercel.app/",
-			imageSrc: Smoliakova,
-			imageAlt: "Architect Mariia Smoliakova Portfolio",
-			header: "smoliakova_portfolio_title",
-			description: "smoliakova_portfolio_description",
-			techStack: ["Next.js", "React", "Sanity Headless CMS", "Tailwind"],
-		},
+		// {
+		// 	href: "https://smoliakova.vercel.app/",
+		// 	imageSrc: Smoliakova,
+		// 	imageAlt: "Architect Mariia Smoliakova Portfolio",
+		// 	header: "smoliakova_portfolio_title",
+		// 	description: "smoliakova_portfolio_description",
+		// 	techStack: ["Next.js", "React", "Sanity Headless CMS", "Tailwind"],
+		// },
 		{
 			href: "https://henrikcheng.github.io/react-ts",
 			imageSrc: PortfolioPic,
