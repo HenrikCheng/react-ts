@@ -9,7 +9,7 @@ import {
 	PDFViewer,
 } from "@react-pdf/renderer";
 import { globalStyles } from "./styles";
-import MainContent from "./MainContent/MainContent";
+import MainContent from "./MainContent";
 import Sidebar from "./Sidebar/Sidebar";
 
 const PDFComponent: React.FC<{}> = (props) => {

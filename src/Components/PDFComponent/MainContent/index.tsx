@@ -48,12 +48,18 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
 				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
 				<View style={styles.occupationDescription}>
-					<PDFText style={styles.subheading}>tretton37</PDFText>
+					<PDFText style={styles.subheading}>Smartcar via tretton37</PDFText>
 					<Pill dateString="mar-23 till nuv" />
 				</View>
 				<PDFText style={styles.text}>
-					Jag arbetar som konsult och frontendutvecklare på ett bilföretag via
-					tretton37.
+					Ändra Smartcar är ett multikontinentalt företag som säljer elbilar.
+					Företaget var i en expansiv fas, jag arbetar med att utveckla och
+					förbättra deras användargränssnitt, med särskild fokus på responsiv
+					design och optimering för olika enheter. Genom att samarbeta med både
+					design-, och back-end teamet kunde vi implementera nya funktioner som
+					inte bara förbättrade kundens upplevelse utan också ökade företagets
+					försäljning och kundnöjdhet. Det är en utmanande men oerhört givande
+					tid som ger mig möjlighet att växa både professionellt och personligt.
 				</PDFText>
 				<PDFText style={styles.text}>
 					Exempelvis tog jag initiativ till att lära sig ett framework för React
