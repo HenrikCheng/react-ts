@@ -52,14 +52,14 @@ const MainContent: React.FC<{}> = () => {
 					<Pill dateString="mar-23 till nuv" />
 				</View>
 				<PDFText style={styles.text}>
-					Ändra Smartcar är ett multikontinentalt företag som säljer elbilar.
-					Företaget var i en expansiv fas, jag arbetar med att utveckla och
-					förbättra deras användargränssnitt, med särskild fokus på responsiv
-					design och optimering för olika enheter. Genom att samarbeta med både
-					design-, och back-end teamet kunde vi implementera nya funktioner som
-					inte bara förbättrade kundens upplevelse utan också ökade företagets
-					försäljning och kundnöjdhet. Det är en utmanande men oerhört givande
-					tid som ger mig möjlighet att växa både professionellt och personligt.
+					Ändra Smartcar är ett företag som tillverkar och säljer elbilar. Jag
+					arbetar med att utveckla och förbättra deras användargränssnitt, med
+					särskild fokus på responsiv design och optimering för olika enheter.
+					Genom att samarbeta med både design-, och back-end teamet kunde vi
+					implementera nya funktioner som inte bara förbättrade kundens
+					upplevelse utan också ökade företagets försäljning och kundnöjdhet.
+					Det är en utmanande men oerhört givande tid som ger mig möjlighet att
+					växa både professionellt och personligt.
 				</PDFText>
 				<PDFText style={styles.text}>
 					Exempelvis tog jag initiativ till att lära sig ett framework för React
