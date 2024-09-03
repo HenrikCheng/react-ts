@@ -48,24 +48,22 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.chapterHeading}>Uppdrag och arbeten</PDFText>
 				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
 				<View style={styles.occupationDescription}>
-					<PDFText style={styles.subheading}>Smartcar via tretton37</PDFText>
-					<Pill dateString="aug-23 till aug-24" />
+					<PDFText style={styles.subheading}>tretton37</PDFText>
+					<Pill dateString="mar-23 till nuv" />
 				</View>
 				<PDFText style={styles.text}>
-					Ändra Smartcar är ett företag som tillverkar och säljer elbilar. Jag
-					arbetar med att utveckla och förbättra deras användargränssnitt, med
-					särskild fokus på responsiv design och optimering för olika enheter.
-					Genom att samarbeta med både design-, och back-end teamet kunde vi
-					implementera nya funktioner som inte bara förbättrade kundens
-					upplevelse utan också ökade företagets försäljning och kundnöjdhet.
-					Det är en utmanande men oerhört givande tid som ger mig möjlighet att
-					växa både professionellt och personligt.
+					På uppdrag hos Smartcar mellan aug 23 - aug 24. Smartcar tillverkar
+					och säljer elbilar. Jag arbetade som konsult via tretton37 med att
+					utveckla och förbättra deras användargränssnitt. Genom att samarbeta
+					med både design- och backendteamet har vi implementerat nya funktioner
+					som inte bara har förbättrat kundupplevelsen utan även ökat företagets
+					försäljning och kundnöjdhet. Det var en utmanande men oerhört givande
+					tid som gav mig möjlighet att växa både professionellt och personligt.
 				</PDFText>
 				<PDFText style={styles.text}>
-					Exempelvis tog jag initiativ till att lära sig ett framework för React
-					med vilken man kan skapa PDF-dokumentation vilket är viktigt i
-					fordonsindustrin. Detta gjorde att jag på kort tid blev en
-					nyckelspelare för hela teamet.
+					Exempelvis tog jag initiativ till att lära mig ett React-ramverk för
+					att skapa PDF-dokumentation, vilket är viktigt i fordonsindustrin.
+					Detta gjorde att jag snabbt blev en nyckelspelare för hela teamet.
 				</PDFText>
 			</View>
 
