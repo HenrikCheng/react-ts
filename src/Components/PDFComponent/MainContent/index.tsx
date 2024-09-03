@@ -49,7 +49,7 @@ const MainContent: React.FC<{}> = () => {
 				<PDFText style={styles.occupationTitle}>Frontend-utvecklare</PDFText>
 				<View style={styles.occupationDescription}>
 					<PDFText style={styles.subheading}>Smartcar via tretton37</PDFText>
-					<Pill dateString="mar-23 till nuv" />
+					<Pill dateString="aug-23 till aug-24" />
 				</View>
 				<PDFText style={styles.text}>
 					Ändra Smartcar är ett företag som tillverkar och säljer elbilar. Jag
