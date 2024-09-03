@@ -169,31 +169,30 @@ const MainContent: React.FC<{}> = () => {
 					</View>
 				</View>
 
-				<View style={globalStyles.row}>
-					<PDFText style={styles.educationTitle}>
-						Professional Scrum Master
-					</PDFText>
-					<FontAwesomeCustomIcon
-						faIcon={faTrademark}
-						style={styles.altHeroIconStyles}
-					/>
-					<PDFText style={styles.educationTitle}>I (PSM 1)</PDFText>
-					{/* <View style={styles.scrumRow}>
-						<View>
-							<PDFText style={styles.educationDescription}>Scrum.org</PDFText>
-						</View>
-						<View>
-							<QR url="https://www.credly.com/badges/2a9cab26-ef59-4dbf-abe0-d9acd4c9bb0d/public_url" />
-						</View>
-					</View> */}
+				<View>
+					<View style={globalStyles.row}>
+						<PDFText style={styles.educationTitle}>
+							Professional Scrum Master
+						</PDFText>
+						<FontAwesomeCustomIcon
+							faIcon={faTrademark}
+							style={styles.altHeroIconStyles}
+						/>
+						<PDFText style={styles.educationTitle}>I (PSM 1)</PDFText>
+					</View>
+
+					<View style={styles.educationRow}>
+						<PDFText style={styles.educationDescription}>Scrum.org</PDFText>
+						<Pill dateString="mar-19" />
+					</View>
 				</View>
 
 				<View>
-					<PDFText style={styles.educationTitle}>Läkarprogrammet</PDFText>
+					<PDFText style={styles.educationTitle}>
+						WAI0.1x: Introduction to Web Accessibility
+					</PDFText>
 					<View style={styles.educationRow}>
-						<PDFText style={styles.educationDescription}>
-							WAI0.1x: Introduction to Web Accessibility by W3Cx
-						</PDFText>
+						<PDFText style={styles.educationDescription}>W3Cx</PDFText>
 						<Pill dateString="aug-24" />
 					</View>
 				</View>
